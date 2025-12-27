@@ -7,9 +7,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: cosmic-files
     steps:
       - run: sudo apt-get update; sudo apt-get install libclang-dev libglib2.0-dev libxkbcommon-dev
       - run: rustup update stable && rustup default stable
@@ -18,7 +15,6 @@ jobs:
         with:
           repository: pop-os/cosmic-files
           ref: epoch-1.0.0
-          path: cosmic-files
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
