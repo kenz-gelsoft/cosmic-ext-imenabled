@@ -1,0 +1,14 @@
+name: Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+        with:
+          repository: pop-os/cosmic-files
+          ref: epoch-1.0.0
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
