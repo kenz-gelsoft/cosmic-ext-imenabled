@@ -34,10 +34,8 @@ jobs:
           # debian/control を解析して必要なライブラリを自動インストール
           sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
-      - run: rustup update stable && rustup default stable
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
 
       # Rustのキャッシュを有効化（ビルド時間を大幅短縮）
       # 2. カスタムパスのCargoキャッシュを有効化
@@ -71,16 +69,12 @@ jobs:
           debuild -e CARGO_HOME=$CARGO_HOME \
             -us -uc -b -j$(nproc)
 
-      - name: Move artifacts
-        run: |
-          # debuild は上の階層 (..) に成果物を出力するため、整理する
-          mkdir -p ../dist
-          mv ../*.deb ../dist/
-          mv ../*.changes ../dist/ || true
-          mv ../*.buildinfo ../dist/ || true
-
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: debian-packages
-          path: dist/
+          path: |
+            # debuild は上の階層 (..) に成果物を出力する
+            ../*.deb
+            ../*.changes
+            ../*.buildinfo
