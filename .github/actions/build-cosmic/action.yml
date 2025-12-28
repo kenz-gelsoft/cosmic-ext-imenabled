@@ -72,7 +72,7 @@ runs:
           -e CARGO_HOME=$CARGO_HOME \
           -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
           -e PATH=$PATH \
-          -us -uc -b -j$(nproc)
+          -us -uc -b -nc -j$(nproc)
 
     - name: Prepare Artifacts
       shell: bash
