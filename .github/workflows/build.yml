@@ -46,4 +46,8 @@ jobs:
           # -us: ソースに署名しない
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
-          debuild -us -uc -b
+          # 
+          # PATH を維持したまま debuild を実行
+          # -ePATH: 現在の PATH をビルド環境に持ち込む
+          # -eHOME: rustup が設定ファイルを読みに行くために必要
+          debuild -us -uc -b -ePATH -eHOME
