@@ -62,13 +62,13 @@ jobs:
       
       - name: Build package using debuild
         run: |
+          # 3. -e オプションで CARGO_HOME を引き継ぐ
           # -us: ソースに署名しない
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
           # プロセッサ数に合わせて並列ビルドを指定 (-j)
-          # 3. -e オプションで CARGO_HOME を引き継ぐ
-          debuild -us -uc -b -j$(nproc) \
-            -e CARGO_HOME=$CARGO_HOME
+          debuild -e CARGO_HOME=$CARGO_HOME \
+            -us -uc -b -j$(nproc)
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
