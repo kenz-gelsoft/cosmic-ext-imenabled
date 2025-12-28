@@ -3,6 +3,8 @@ on: [push]
 
 env:
   CARGO_TERM_COLOR: always
+  # 1. Cargoのホームをワークスペース内に設定
+  CARGO_HOME: ${{ github.workspace }}/.cargo
 
 jobs:
   build:
@@ -38,10 +40,14 @@ jobs:
           ls ${{ github.workspace }}
 
       # Rustのキャッシュを有効化（ビルド時間を大幅短縮）
+      # 2. カスタムパスのCargoキャッシュを有効化
       - name: Rust Cache
         uses: swatinem/rust-cache@v2
         with:
           workspaces: "cosmic-files -> target"
+          # CARGO_HOME の場所を明示
+          cache-directories: |
+            ${{ env.CARGO_HOME }}
 
       - name: Patch Cargo.toml to use the libcosmic fork with IME support backported
         run: |
@@ -60,8 +66,9 @@ jobs:
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
           # プロセッサ数に合わせて並列ビルドを指定 (-j)
-          debuild -us -uc -b -j$(nproc)
-
+          # 3. -e オプションで CARGO_HOME を引き継ぐ
+          debuild -us -uc -b -j$(nproc) \
+            -e CARGO_HOME=$CARGO_HOME
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
