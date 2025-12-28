@@ -47,11 +47,8 @@ runs:
       with:
         # すべてのジョブで同じキーを使用
         shared-key: "cosmic-apps-shared"
-        # 特定のアプリのディレクトリではなく、
-        # 共通のターゲットディレクトリをキャッシュ対象にする
         cache-directories: |
           ${{ env.CARGO_HOME }}
-          ${{ env.CARGO_TARGET_DIR }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
@@ -70,7 +67,6 @@ runs:
         cd ${{ inputs.app_name }}
         debuild \
           -e CARGO_HOME=$CARGO_HOME \
-          -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
           -e PATH=$PATH \
           -us -uc -b -j$(nproc)
 
