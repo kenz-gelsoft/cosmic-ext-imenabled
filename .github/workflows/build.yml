@@ -38,6 +38,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: patch -p1 < ../patches/cosmic-files.patch
+      - run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)'
       # - run: cargo update libcosmic
       # - run: cargo build --release
 
@@ -46,8 +47,4 @@ jobs:
           # -us: ソースに署名しない
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
-          # 
-          # PATH を維持したまま debuild を実行
-          # -ePATH: 現在の PATH をビルド環境に持ち込む
-          # -eHOME: rustup が設定ファイルを読みに行くために必要
-          debuild -us -uc -b -ePATH -eHOME
+          debuild -us -uc -b
