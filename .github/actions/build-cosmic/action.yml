@@ -45,9 +45,13 @@ runs:
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
       with:
-        workspaces: "${{ inputs.app_name }} -> target"
-        shared-key: "cosmic-apps-${{ inputs.app_name }}"
-        cache-directories: ${{ env.CARGO_HOME }}
+        # すべてのジョブで同じキーを使用
+        shared-key: "cosmic-apps-shared"
+        # 特定のアプリのディレクトリではなく、
+        # 共通のターゲットディレクトリをキャッシュ対象にする
+        cache-directories: |
+          ${{ env.CARGO_HOME }}
+          ${{ env.CARGO_TARGET_DIR }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
@@ -64,7 +68,11 @@ runs:
       shell: bash
       run: |
         cd ${{ inputs.app_name }}
-        debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
+        debuild \
+          -e CARGO_HOME=$CARGO_HOME \
+          -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
+          -e PATH=$PATH \
+          -us -uc -b -j$(nproc)
 
     - name: Prepare Artifacts
       shell: bash
