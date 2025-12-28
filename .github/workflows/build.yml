@@ -37,6 +37,12 @@ jobs:
         run: |
           ls ${{ github.workspace }}
 
+      # Rustのキャッシュを有効化（ビルド時間を大幅短縮）
+      - name: Rust Cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: "cosmic-files -> target"
+
       - name: Patch Cargo.toml to use the libcosmic fork with IME support backported
         run: |
           cat <<EOF >> Cargo.toml
@@ -58,7 +64,7 @@ jobs:
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
-          mkdir dist
+          mkdir ../dist/
           mv ../*.deb dist/
           mv ../*.changes dist/ || true
           mv ../*.buildinfo dist/ || true
