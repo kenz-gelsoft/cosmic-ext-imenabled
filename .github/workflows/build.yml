@@ -62,21 +62,8 @@ jobs:
           # debuildを実行した「cosmic-files」の一つ上（＝ルート）にファイルが出ているはず
           mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
 
-      - name: Upload debian package
-        # 以前提案したYAMLアンカーを使って記述をスッキリさせています
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: deb-package
-          path: dist/*.deb
-
-      - name: Upload changes
-        uses: actions/upload-artifact@v4
-        with:
-          name: changes
-          path: dist/*.changes
-
-      - name: Upload buildinfo
-        uses: actions/upload-artifact@v4
-        with:
-          name: buildinfo
-          path: dist/*.buildinfo
+          name: debian-packages
+          path: dist/*
