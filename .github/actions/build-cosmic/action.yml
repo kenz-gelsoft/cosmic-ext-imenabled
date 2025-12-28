@@ -27,7 +27,6 @@ runs:
       with:
         repository: ${{ inputs.repository }}
         ref: ${{ inputs.ref }}
-        path: ${{ inputs.app_name }}
         fetch-depth: 0
 
     - name: Install build tools
@@ -39,8 +38,8 @@ runs:
     - name: Overwrite and install package build dependencies
       shell: bash
       run: |
-        cp debian/${{ inputs.app_name }}/{changelog,control,rules} ${{ inputs.app_name }}/debian/
-        sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" ${{ inputs.app_name }}/debian/control
+        cp debian/${{ inputs.app_name }}/{changelog,control,rules} debian/
+        sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
@@ -50,12 +49,11 @@ runs:
       shell: bash
       run: |
         ${{ inputs.cargo_patch }}
-        cargo update --manifest-path ${{ inputs.app_name }}/Cargo.toml libcosmic
+        cargo update libcosmic
 
     - name: Build package using debuild
       shell: bash
       run: |
-        cd ${{ inputs.app_name }}
         debuild \
           -e PATH=$PATH \
           -us -uc -b -j$(nproc)
