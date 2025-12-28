@@ -18,9 +18,18 @@ jobs:
             name: cosmic-files
             repo: pop-os/cosmic-files
             ref: epoch-1.0.0
-            # cosmic-files専用のパッチ処理を渡す
             patch: |
               cat <<EOF >> cosmic-files/Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+              EOF
+
+          - id: launcher
+            name: cosmic-launcher
+            repo: pop-os/cosmic-launcher
+            ref: epoch-1.0.0
+            patch: |
+              cat <<EOF >> cosmic-launcher/Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
