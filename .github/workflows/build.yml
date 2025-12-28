@@ -69,16 +69,6 @@ jobs:
           debuild -e CARGO_HOME=$CARGO_HOME \
             -us -uc -b -j$(nproc)
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: debian-packages
-          path: |
-            # debuild は上の階層 (..) に成果物を出力する
-            ../*.deb
-            ../*.changes
-            ../*.buildinfo
-
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
