@@ -39,7 +39,7 @@ runs:
     - name: Overwrite and install package build dependencies
       shell: bash
       run: |
-        cp debian/${{ inputs.app_name }}/{changelog,control} ${{ inputs.app_name }}/debian/
+        cp debian/${{ inputs.app_name }}/{changelog,control,rules} ${{ inputs.app_name }}/debian/
         sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" ${{ inputs.app_name }}/debian/control
 
     - name: Rust Cache
