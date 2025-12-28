@@ -59,15 +59,16 @@ jobs:
           # -us: ソースに署名しない
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
-          debuild -us -uc -b
+          # プロセッサ数に合わせて並列ビルドを指定 (-j)
+          debuild -us -uc -b -j$(nproc)
 
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
-          mkdir ../dist/
-          mv ../*.deb dist/
-          mv ../*.changes dist/ || true
-          mv ../*.buildinfo dist/ || true
+          mkdir -p ../dist
+          mv ../*.deb ../dist/
+          mv ../*.changes ../dist/ || true
+          mv ../*.buildinfo ../dist/ || true
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
