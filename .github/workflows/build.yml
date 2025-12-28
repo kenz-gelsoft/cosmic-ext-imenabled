@@ -67,3 +67,54 @@ jobs:
         with:
           name: debian-packages
           path: dist/*
+
+  build-term:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out app code (cosmic-term)
+        uses: actions/checkout@v4
+        with:
+          repository: kenz-gelsoft/cosmic-term
+          ref: backport-input-method
+          path: cosmic-term
+          fetch-depth: 0
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y devscripts debhelper equivs
+
+      - name: Install package build dependencies
+        run: |
+          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-files/debian/control
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust Cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: "cosmic-files -> target"
+          cache-directories: ${{ env.CARGO_HOME }}
+
+      - name: Patch debian/rules
+        run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" cosmic-term/debian/rules -i
+      
+      - name: Build package using debuild
+        # ここだけ cd で移動して実行するのが最も確実
+        run: |
+          cd cosmic-term
+          debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
+
+      - name: Prepare Artifacts
+        if: success()
+        run: |
+          mkdir -p dist
+          # debuildを実行した「cosmic-term」の一つ上（＝ルート）にファイルが出ているはず
+          mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cosmic-term
+          path: dist/*
