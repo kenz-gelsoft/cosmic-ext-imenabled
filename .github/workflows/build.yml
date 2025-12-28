@@ -3,93 +3,79 @@ on: [push]
 
 env:
   CARGO_TERM_COLOR: always
-  # 1. Cargoのホームをワークスペース内に設定
   CARGO_HOME: ${{ github.workspace }}/.cargo
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: cosmic-files
     steps:
-      - name: Check out patches
-        uses: actions/checkout@v6
-      - name: Check out app code
-        uses: actions/checkout@v6
+      - name: Check out app code (cosmic-files)
+        uses: actions/checkout@v4
         with:
           repository: pop-os/cosmic-files
           ref: epoch-1.0.0
           path: cosmic-files
+          fetch-depth: 0
 
-      - name: Install build dependencies
+      - name: Install build tools
         run: |
           sudo apt-get update
-          # devscripts は debuild を含むパッケージ
-          # equivs は Build-Depends から依存関係を自動インストールするために使用
           sudo apt-get install -y devscripts debhelper equivs
 
       - name: Install package build dependencies
         run: |
-          # debian/control を解析して必要なライブラリを自動インストール
-          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
+          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-files/debian/control
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      # Rustのキャッシュを有効化（ビルド時間を大幅短縮）
-      # 2. カスタムパスのCargoキャッシュを有効化
       - name: Rust Cache
         uses: swatinem/rust-cache@v2
         with:
           workspaces: "cosmic-files -> target"
-          # CARGO_HOME の場所を明示
-          cache-directories: |
-            ${{ env.CARGO_HOME }}
+          cache-directories: ${{ env.CARGO_HOME }}
 
-      - name: Patch Cargo.toml to use the libcosmic fork with IME support backported
+      - name: Patch Cargo.toml
         run: |
-          cat <<EOF >> Cargo.toml
+          # ファイルへのパスを明示
+          cat <<EOF >> cosmic-files/Cargo.toml
           
           [patch.'https://github.com/pop-os/libcosmic']
           libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
           EOF
-          cargo update libcosmic
+          # --manifest-path で対象を指定
+          cargo update --manifest-path cosmic-files/Cargo.toml libcosmic
 
-      - name: Patch debian/rules to allow using the rust toolchain installed by rustup
-        run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
+      - name: Patch debian/rules
+        run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" cosmic-files/debian/rules -i
       
       - name: Build package using debuild
+        # ここだけ cd で移動して実行するのが最も確実
         run: |
-          # 3. -e オプションで CARGO_HOME を引き継ぐ
-          # -us: ソースに署名しない
-          # -uc: .changes ファイルに署名しない
-          # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
-          # プロセッサ数に合わせて並列ビルドを指定 (-j)
-          debuild -e CARGO_HOME=$CARGO_HOME \
-            -us -uc -b -j$(nproc)
+          cd cosmic-files
+          debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
 
-      - name: Move artifacts
+      - name: Prepare Artifacts
+        if: success()
         run: |
-          # debuild は上の階層 (..) に成果物を出力するため、整理する
-          mkdir -p ../dist
-          mv ../*.deb ../dist/
-          mv ../*.changes ../dist/ || true
-          mv ../*.buildinfo ../dist/ || true
+          mkdir -p dist
+          # debuildを実行した「cosmic-files」の一つ上（＝ルート）にファイルが出ているはず
+          mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
 
-      - name: Upload deb Artifact
+      - name: Upload debian package
+        # 以前提案したYAMLアンカーを使って記述をスッキリさせています
         uses: actions/upload-artifact@v4
         with:
-          name: debian-package
+          name: deb-package
           path: dist/*.deb
 
-      - name: Upload changes Artifact
+      - name: Upload changes
         uses: actions/upload-artifact@v4
         with:
           name: changes
           path: dist/*.changes
 
-      - name: Upload buildinfo Artifact
+      - name: Upload buildinfo
         uses: actions/upload-artifact@v4
         with:
           name: buildinfo
