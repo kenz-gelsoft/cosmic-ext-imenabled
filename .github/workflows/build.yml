@@ -38,7 +38,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: patch -p1 < ../patches/cosmic-files.patch
-      - run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)'
+      - run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
+      - run: sed '\|export VENDOR|a cargo --version' debian/rules -i
+      
       # - run: cargo update libcosmic
       # - run: cargo build --release
 
