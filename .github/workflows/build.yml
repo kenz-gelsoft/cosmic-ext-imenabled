@@ -18,7 +18,7 @@ jobs:
             repo: pop-os/cosmic-files
             ref: epoch-1.0.0
             patch: |
-              cat <<EOF >> cosmic-files/Cargo.toml
+              cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
