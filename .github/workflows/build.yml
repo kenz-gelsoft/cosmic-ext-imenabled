@@ -1,3 +1,4 @@
+# .github/workflows/build.yml
 name: Build
 on: [push]
 
@@ -6,115 +7,48 @@ env:
   CARGO_HOME: ${{ github.workspace }}/.cargo
 
 jobs:
-  build:
+  build-all:
     runs-on: ubuntu-latest
+    strategy:
+      # 片方が失敗しても、もう片方のビルドを続行させる
+      fail-fast: false
+      matrix:
+        include:
+          - id: files
+            name: cosmic-files
+            repo: pop-os/cosmic-files
+            ref: epoch-1.0.0
+            # cosmic-files専用のパッチ処理を渡す
+            patch: |
+              cat <<EOF >> cosmic-files/Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+              EOF
+
+          - id: term
+            name: cosmic-term
+            repo: kenz-gelsoft/cosmic-term
+            ref: backport-input-method
+            patch: "" # termはパッチ不要
+
+    name: Build ${{ matrix.name }}
     steps:
-      - name: Check out app code (cosmic-files)
+      - name: Checkout this repo
         uses: actions/checkout@v4
-        with:
-          repository: pop-os/cosmic-files
-          ref: epoch-1.0.0
-          path: cosmic-files
-          fetch-depth: 0
-
-      - name: Install build tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y devscripts debhelper equivs
-
-      - name: Install package build dependencies
-        run: |
-          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-files/debian/control
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Rust Cache
-        uses: swatinem/rust-cache@v2
+      - name: Build Component
+        uses: ./.github/actions/build-cosmic
         with:
-          workspaces: "cosmic-files -> target"
-          cache-directories: ${{ env.CARGO_HOME }}
-
-      - name: Patch Cargo.toml
-        run: |
-          # ファイルへのパスを明示
-          cat <<EOF >> cosmic-files/Cargo.toml
-          
-          [patch.'https://github.com/pop-os/libcosmic']
-          libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
-          EOF
-          # --manifest-path で対象を指定
-          cargo update --manifest-path cosmic-files/Cargo.toml libcosmic
-
-      - name: Patch debian/rules
-        run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" cosmic-files/debian/rules -i
-      
-      - name: Build package using debuild
-        # ここだけ cd で移動して実行するのが最も確実
-        run: |
-          cd cosmic-files
-          debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
-
-      - name: Prepare Artifacts
-        if: success()
-        run: |
-          mkdir -p dist
-          # debuildを実行した「cosmic-files」の一つ上（＝ルート）にファイルが出ているはず
-          mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
+          app_name: ${{ matrix.name }}
+          repository: ${{ matrix.repo }}
+          ref: ${{ matrix.ref }}
+          cargo_patch: ${{ matrix.patch }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: debian-packages
-          path: dist/*
-
-  build-term:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out app code (cosmic-term)
-        uses: actions/checkout@v4
-        with:
-          repository: kenz-gelsoft/cosmic-term
-          ref: backport-input-method
-          path: cosmic-term
-          fetch-depth: 0
-
-      - name: Install build tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y devscripts debhelper equivs
-
-      - name: Install package build dependencies
-        run: |
-          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-term/debian/control
-
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Rust Cache
-        uses: swatinem/rust-cache@v2
-        with:
-          workspaces: "cosmic-term -> target"
-          cache-directories: ${{ env.CARGO_HOME }}
-
-      - name: Patch debian/rules
-        run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" cosmic-term/debian/rules -i
-      
-      - name: Build package using debuild
-        # ここだけ cd で移動して実行するのが最も確実
-        run: |
-          cd cosmic-term
-          debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
-
-      - name: Prepare Artifacts
-        if: success()
-        run: |
-          mkdir -p dist
-          # debuildを実行した「cosmic-term」の一つ上（＝ルート）にファイルが出ているはず
-          mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
-
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: cosmic-term
+          name: ${{ matrix.name }}-package
           path: dist/*
