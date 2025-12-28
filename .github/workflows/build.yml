@@ -20,6 +20,13 @@ jobs:
           ref: epoch-1.0.0
           path: cosmic-files
 
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          # devscripts は debuild を含むパッケージ
+          # equivs は Build-Depends から依存関係を自動インストールするために使用
+          sudo apt-get install -y devscripts debhelper equivs
+
       - name: Install package build dependencies
         run: |
           # debian/control を解析して必要なライブラリを自動インストール
