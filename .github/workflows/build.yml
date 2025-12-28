@@ -14,12 +14,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - id: app-library
-            name: cosmic-app-library
-            repo: pop-os/cosmic-app-library
+          - id: applibrary
+            name: cosmic-applibrary
+            repo: pop-os/cosmic-applibrary
             ref: epoch-1.0.0
             patch: |
-              cat <<EOF >> cosmic-app-library/Cargo.toml
+              cat <<EOF >> cosmic-applibrary/Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
