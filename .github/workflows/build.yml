@@ -18,4 +18,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: patch -p1 < patches/cosmic-files.patch
+      - run: cargo update libcosmic
       - run: cargo build --release
