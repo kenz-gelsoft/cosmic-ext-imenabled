@@ -11,7 +11,9 @@ jobs:
       run:
         working-directory: cosmic-files
     steps:
-      - name: Check out repository code
+      - name: Check out patches
+        uses: actions/checkout@v6
+      - name: Check out app code
         uses: actions/checkout@v6
         with:
           repository: pop-os/cosmic-files
