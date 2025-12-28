@@ -39,7 +39,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: patch -p1 < ../patches/cosmic-files.patch
       - run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
-      - run: sed '\|override_dh_auto_clean:|a \tcargo --version' debian/rules -i
       
       # - run: cargo update libcosmic
       # - run: cargo build --release
