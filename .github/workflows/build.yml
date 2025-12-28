@@ -78,3 +78,17 @@ jobs:
             ../*.deb
             ../*.changes
             ../*.buildinfo
+
+      - name: Move artifacts
+        run: |
+          # debuild は上の階層 (..) に成果物を出力するため、整理する
+          mkdir -p ../dist
+          mv ../*.deb ../dist/
+          mv ../*.changes ../dist/ || true
+          mv ../*.buildinfo ../dist/ || true
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: debian-packages
+          path: dist/*
