@@ -44,11 +44,6 @@ runs:
 
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
-      with:
-        # すべてのジョブで同じキーを使用
-        shared-key: "cosmic-apps-shared"
-        cache-directories: |
-          ${{ env.CARGO_HOME }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
@@ -57,16 +52,11 @@ runs:
         ${{ inputs.cargo_patch }}
         cargo update --manifest-path ${{ inputs.app_name }}/Cargo.toml libcosmic
 
-    - name: Patch debian/rules
-      shell: bash
-      run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" ${{ inputs.app_name }}/debian/rules -i
-
     - name: Build package using debuild
       shell: bash
       run: |
         cd ${{ inputs.app_name }}
         debuild \
-          -e CARGO_HOME=$CARGO_HOME \
           -e PATH=$PATH \
           -us -uc -b -j$(nproc)
 

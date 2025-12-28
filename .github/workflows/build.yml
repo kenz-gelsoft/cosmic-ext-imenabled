@@ -4,8 +4,6 @@ on: [push]
 
 env:
   CARGO_TERM_COLOR: always
-  CARGO_HOME: ${{ github.workspace }}/.cargo
-  # 共通のターゲットディレクトリを指定
 
 jobs:
   build-all:
