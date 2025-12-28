@@ -15,11 +15,11 @@ jobs:
       matrix:
         include:
           - id: applibrary
-            name: cosmic-applibrary
-            repo: pop-os/cosmic-applibrary
+            name: cosmic-store
+            repo: pop-os/cosmic-store
             ref: epoch-1.0.0
             patch: |
-              cat <<EOF >> cosmic-applibrary/Cargo.toml
+              cat <<EOF >> cosmic-store/Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
