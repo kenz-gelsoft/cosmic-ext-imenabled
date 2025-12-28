@@ -32,20 +32,39 @@ jobs:
           # debian/control を解析して必要なライブラリを自動インストール
           sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
-      # - run: sudo apt-get update; sudo apt-get install libclang-dev libglib2.0-dev libxkbcommon-dev
       - run: rustup update stable && rustup default stable
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: patch -p1 < ../patches/cosmic-files.patch
-      - run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
-      
-      # - run: cargo update libcosmic
-      # - run: cargo build --release
 
+      - name: Patch Cargo.toml to use the libcosmic fork with IME support backported
+        run: |
+          cat <<EOF >> cosmic-files/Cargo.toml
+          
+          [patch.'https://github.com/pop-os/libcosmic']
+          libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+          EOF
+
+      - name: Patch debian/rules to allow using the rust toolchain installed by rustup
+        run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
+      
       - name: Build package using debuild
         run: |
           # -us: ソースに署名しない
           # -uc: .changes ファイルに署名しない
           # -b: バイナリパッケージのみビルド (ソースを含める場合は不要)
           debuild -us -uc -b
+
+      - name: Move artifacts
+        run: |
+          # debuild は上の階層 (..) に成果物を出力するため、整理する
+          mkdir dist
+          mv ../*.deb dist/
+          mv ../*.changes dist/ || true
+          mv ../*.buildinfo dist/ || true
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: debian-packages
+          path: dist/
