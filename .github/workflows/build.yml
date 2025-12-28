@@ -86,7 +86,7 @@ jobs:
 
       - name: Install package build dependencies
         run: |
-          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-files/debian/control
+          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" cosmic-term/debian/control
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -94,7 +94,7 @@ jobs:
       - name: Rust Cache
         uses: swatinem/rust-cache@v2
         with:
-          workspaces: "cosmic-files -> target"
+          workspaces: "cosmic-term -> target"
           cache-directories: ${{ env.CARGO_HOME }}
 
       - name: Patch debian/rules
