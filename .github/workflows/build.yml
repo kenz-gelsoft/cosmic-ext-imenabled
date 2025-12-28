@@ -25,6 +25,12 @@ jobs:
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
 
+          - id: edit
+            name: cosmic-edit
+            repo: kenz-gelsoft/cosmic-edit
+            ref: backport-input-method
+            patch: "" # editはパッチ不要
+
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
