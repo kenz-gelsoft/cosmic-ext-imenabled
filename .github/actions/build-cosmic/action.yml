@@ -1,0 +1,68 @@
+# .github/actions/build-cosmic/action.yml
+name: 'Build COSMIC Package'
+description: 'Common build steps for COSMIC components'
+inputs:
+  app_name:
+    description: 'Name of the application (e.g., cosmic-files)'
+    required: true
+  repository:
+    description: 'Repository to clone'
+    required: true
+  ref:
+    description: 'Branch or tag'
+    required: true
+  cargo_patch:
+    description: 'Shell commands to patch Cargo.toml (optional)'
+    required: false
+    default: ''
+
+runs:
+  using: "composite"
+  steps:
+    - name: Check out app code
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repository }}
+        ref: ${{ inputs.ref }}
+        path: ${{ inputs.app_name }}
+        fetch-depth: 0
+
+    - name: Install build tools
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y devscripts debhelper equivs
+
+    - name: Install package build dependencies
+      shell: bash
+      run: |
+        sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" ${{ inputs.app_name }}/debian/control
+
+    - name: Rust Cache
+      uses: swatinem/rust-cache@v2
+      with:
+        workspaces: "${{ inputs.app_name }} -> target"
+        cache-directories: ${{ env.CARGO_HOME }}
+
+    - name: Patch Cargo.toml
+      if: ${{ inputs.cargo_patch != '' }}
+      shell: bash
+      run: |
+        ${{ inputs.cargo_patch }}
+        cargo update --manifest-path ${{ inputs.app_name }}/Cargo.toml libcosmic
+
+    - name: Patch debian/rules
+      shell: bash
+      run: sed "\|export DESTDIR|a export PATH := $CARGO_HOME/bin:\$(PATH)" ${{ inputs.app_name }}/debian/rules -i
+
+    - name: Build package using debuild
+      shell: bash
+      run: |
+        cd ${{ inputs.app_name }}
+        debuild -e CARGO_HOME=$CARGO_HOME -e PATH=$PATH -us -uc -b -j$(nproc)
+
+    - name: Prepare Artifacts
+      shell: bash
+      run: |
+        mkdir -p dist
+        mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
