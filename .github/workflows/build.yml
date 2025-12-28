@@ -77,8 +77,20 @@ jobs:
           mv ../*.changes ../dist/ || true
           mv ../*.buildinfo ../dist/ || true
 
-      - name: Upload Artifacts
+      - name: Upload deb Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: debian-packages
-          path: dist/*
+          name: debian-package
+          path: dist/*.deb
+
+      - name: Upload changes Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: changes
+          path: dist/*.changes
+
+      - name: Upload buildinfo Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: buildinfo
+          path: dist/*.buildinfo
