@@ -39,7 +39,7 @@ jobs:
 
       - name: Patch Cargo.toml to use the libcosmic fork with IME support backported
         run: |
-          cat <<EOF >> cosmic-files/Cargo.toml
+          cat <<EOF >> Cargo.toml
           
           [patch.'https://github.com/pop-os/libcosmic']
           libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
