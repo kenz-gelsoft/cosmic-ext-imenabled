@@ -46,7 +46,7 @@ runs:
       uses: swatinem/rust-cache@v2
       with:
         workspaces: "${{ inputs.app_name }} -> target"
-        shared-key: "cosmic-apps"
+        shared-key: "cosmic-apps-${{ inputs.app_name }}"
         cache-directories: ${{ env.CARGO_HOME }}
 
     - name: Patch Cargo.toml
