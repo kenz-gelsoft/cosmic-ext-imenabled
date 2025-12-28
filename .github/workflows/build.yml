@@ -56,6 +56,7 @@ jobs:
           [patch.'https://github.com/pop-os/libcosmic']
           libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
           EOF
+          cargo update libcosmic
 
       - name: Patch debian/rules to allow using the rust toolchain installed by rustup
         run: sed '\|export DESTDIR|a export PATH := $(HOME)/.cargo/bin:$(PATH)' debian/rules -i
@@ -69,6 +70,7 @@ jobs:
           # プロセッサ数に合わせて並列ビルドを指定 (-j)
           debuild -e CARGO_HOME=$CARGO_HOME \
             -us -uc -b -j$(nproc)
+
       - name: Move artifacts
         run: |
           # debuild は上の階層 (..) に成果物を出力するため、整理する
