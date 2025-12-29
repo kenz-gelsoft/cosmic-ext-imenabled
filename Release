@@ -1,0 +1,17 @@
+Date: Mon, 29 Dec 2025 03:10:53 +0000
+MD5Sum:
+ 7d9ef6e0b6585669125be9ba703d608b             4664 Packages
+ 8193d6b3f69bde1abf5cf86ee9b359c0             1618 Packages.gz
+ b0f081540c02aca187d8f2a1b6901e86               38 Release
+SHA1:
+ b328c5c96f0c927306f1c50b8d24754196f562d8             4664 Packages
+ 406d413d000772e4115f7d438f3107ea6cef5244             1618 Packages.gz
+ b95bb53d63f796ce7e1edb8cacb47dfa99d140a5               38 Release
+SHA256:
+ 63cfa1856b2ddac6d7867071d7a5bc15ad955301ba92ab201c5a1e18c4685aad             4664 Packages
+ bff4460a5dd02cc5b6eb6e5eb06399ee4dde34fec0f5b779371144d7ccae2a17             1618 Packages.gz
+ 33f0002afc0a3272df2fcaa4a96bbe28a6e36f3846be751b4f08f3ffa003564c               38 Release
+SHA512:
+ 4199a16f52b9fb29eec3dd0a8ff89e57d0aec1ec9b79483e737ca07aa0d3c247e909025af982457357c19138d27a91f3ae11ca42963c30476958acd9baec7fc2             4664 Packages
+ 80bbe239689eef7847cf75eac401c4501ffd1a29924a72aa63e2f754084b00d7afed4c010cea091f58ce6704c7926007bd300611ec56d47daafc4ab85f4f3fae             1618 Packages.gz
+ eba9e15c8ca09bcb78f5f2944aa2685935149cab810f466eab42274d5e3398854031533bc1a21a5f9ee70aaa914d6e92a54c781b5b6b3f6ee493b5804143c350               38 Release
