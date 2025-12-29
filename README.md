@@ -7,8 +7,14 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 ## Supported COSMIC Apps
 
 * **cosmic-term-ime**
-* **cosmic-files-ime**
+  * Fork: https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method
+  * From: https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0
 * **cosmic-edit-ime**
+  * Fork: https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method
+  * From: https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0
+* **cosmic-files-ime**
+  * Source: https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0
+  * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 
 ## How to Install
 
@@ -20,14 +26,12 @@ deb [trusted=yes] https://kenz-gelsoft.github.io/cosmic-ext-imenabled stable mai
 EOF
 
 $ sudo apt update
-
 ```
 
 You can now install the desired apps via `apt install`. For example:
 
 ```shell
 $ sudo apt install cosmic-term-ime
-
 ```
 
 ---
