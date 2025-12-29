@@ -84,23 +84,27 @@ jobs:
 
       - name: Structure Apt Repository
         run: |
+          sudo apt-get update && sudo apt-get install -y reprepro
+          
           mkdir -p repo-site/conf
-          # パッケージファイルを構造化ディレクトリに移動
-          mkdir -p repo-site/pool/main
-          cp downloaded-packages/*.deb repo-site/pool/main/
+          
+          # 1. reprepro の設定ファイルを作成
+          cat <<EOF > repo-site/conf/distributions
+          Origin: MyCosmicRepo
+          Label: MyCosmicRepo
+          Codename: stable
+          Architectures: amd64 arm64
+          Components: main
+          Description: Backported Cosmic Components
+          EOF
 
-          # apt-ftparchive を使用してインデックス作成
+          # 2. パッケージをリポジトリに追加
+          # --basedir で repo-site を指定し、全 .deb を一括インポート
           cd repo-site
-          
-          # 1. Packages ファイル生成
-          apt-ftparchive packages pool/main > Packages
-          gzip -c Packages > Packages.gz
-          
-          # 2. Release ファイル生成
-          apt-ftparchive release . > Release
-          
-          # (オプション) GPG署名を行う場合はここに gpg --clearsign 等を追加
-          
+          for deb in ../downloaded-packages/*.deb; do
+            reprepro includedeb stable "$deb"
+          done
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
