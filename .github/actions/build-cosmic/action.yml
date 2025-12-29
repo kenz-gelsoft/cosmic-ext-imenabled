@@ -40,7 +40,8 @@ runs:
     - name: Overwrite and install package build dependencies
       shell: bash
       run: |
-        cp build/debian/${{ inputs.app_name }}/{changelog,control,rules} debian/
+        sed -i "/^export DESTDIR/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
+        cp build/debian/${{ inputs.app_name }}/{changelog,control} debian/
         # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
         sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
