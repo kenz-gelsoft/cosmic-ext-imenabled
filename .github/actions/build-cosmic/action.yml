@@ -57,17 +57,20 @@ runs:
     - name: Build package using debuild
       shell: bash
       run: |
-        # VENDOR=0 を指定して、debian/rules 内のクリーン・展開処理をスキップさせる
-        # これにより通常の cargo build が走り、~/.cargo/registry や target が再利用される
-        export VENDOR=0
+        # 1. rulesファイルを物理的に書き換える
+        # 'just build-vendored' を 'just build-release' に置換
+        sed -i 's/just build-vendored/just build-release/g' debian/rules
         
-        # キャッシュの場所を debuild 内部に教える
+        # 2. VENDOR変数を0に固定する（念のため）
+        sed -i 's/export VENDOR ?= 1/export VENDOR = 0/g' debian/rules
+
+        # 3. 環境変数を設定して実行
         export CARGO_TARGET_DIR=$(pwd)/target
         export CARGO_HOME=$HOME/.cargo
         
         debuild \
           -e PATH=$PATH \
-          -e VENDOR=$VENDOR \
+          -e VENDOR=0 \
           -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
           -e CARGO_HOME=$CARGO_HOME \
           -us -uc -b -j$(nproc)
