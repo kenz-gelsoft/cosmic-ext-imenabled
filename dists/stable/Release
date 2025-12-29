@@ -1,0 +1,28 @@
+Origin: MyCosmicRepo
+Label: MyCosmicRepo
+Codename: stable
+Date: Mon, 29 Dec 2025 05:17:20 UTC
+Architectures: amd64 arm64
+Components: main
+Description: Backported Cosmic Components
+MD5Sum:
+ a951d5488e94b196aaeb5ab852e50e28 1976 main/binary-amd64/Packages
+ 91e6ffba789dca3951e4eea55c80330a 785 main/binary-amd64/Packages.gz
+ 3cf578fe316d8bd3ef236672ea0c7647 119 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-arm64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-arm64/Packages.gz
+ b6a4bb1459e784d9521b7e9689674a8e 119 main/binary-arm64/Release
+SHA1:
+ a6164e667b56739ecce9f42e3311c64f49bd4400 1976 main/binary-amd64/Packages
+ cd2cab59ed76cd89c711aa44506477430c81ec47 785 main/binary-amd64/Packages.gz
+ c13722a1c4db74cbbc996179ed0b64166fe3878b 119 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-arm64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-arm64/Packages.gz
+ c11d545febdb3f510d7470bb732eb3dfe03d735d 119 main/binary-arm64/Release
+SHA256:
+ a4a4381839c1d6737a56fedf7ac004cc23acf473c584c06389c35f19332fcc92 1976 main/binary-amd64/Packages
+ fb59a657c20aa884d20cf2cc43b2367bce8584437dceda7e00eeaebbcdcc8217 785 main/binary-amd64/Packages.gz
+ c9a4ecb8590a3937d43cc9577c0074a19aa3550b576fe4b9045552a75e6da094 119 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-arm64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-arm64/Packages.gz
+ c0d332d9c9634efed444de58553230fdeca39d940c0b3d2b2f03e711ef90df35 119 main/binary-arm64/Release

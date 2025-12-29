@@ -1,0 +1,6 @@
+Origin: MyCosmicRepo
+Label: MyCosmicRepo
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: Backported Cosmic Components

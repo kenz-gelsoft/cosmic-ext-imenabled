@@ -1,0 +1,57 @@
+Package: cosmic-edit-ime
+Version: 0.1.0
+Architecture: amd64
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Installed-Size: 43891
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0)
+Conflicts: cosmic-edit
+Replaces: cosmic-edit
+Provides: cosmic-edit
+Homepage: https://github.com/kenz-gelsoft/cosmic-edit
+Priority: optional
+Section: admin
+Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0_amd64.deb
+Size: 13150024
+SHA256: 680575b955ecf4fbc53de614df78b9326e2770592618c2b18b96830d8cb921e1
+SHA1: 03afd279381c3b6fdb9a6cd31234360f9ebc8342
+MD5sum: a9efa89ee86ac53853637f8721f338ef
+Description: Cosmic Text Editor
+
+Package: cosmic-files-ime
+Version: 0.1.0
+Architecture: amd64
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Installed-Size: 86554
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0), xdg-utils
+Conflicts: cosmic-files
+Replaces: cosmic-files
+Provides: cosmic-files
+Homepage: https://github.com/pop-os/cosmic-files
+Priority: optional
+Section: admin
+Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0_amd64.deb
+Size: 24903208
+SHA256: 3daf6ca8d2cf305f20bb7c0d472dd3fb563ad97bc52dc50586146f9f6662f820
+SHA1: 19b2afc53c4c3200d2d780b833d1422f2132b1b4
+MD5sum: 96948947e832477d08f226dc9293f22e
+Description: Cosmic File Manager
+
+Package: cosmic-term-ime
+Version: 0.1.0
+Architecture: amd64
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Installed-Size: 42088
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libxkbcommon0 (>= 0.5.0)
+Conflicts: cosmic-term
+Replaces: cosmic-term
+Provides: cosmic-term, x-terminal-emulator
+Homepage: https://github.com/kenz-gelsoft/cosmic-term
+Priority: optional
+Section: admin
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0_amd64.deb
+Size: 12017532
+SHA256: 0ada1df4c0e6f69ab9cdb460771e6c556cc9e712269ea0a29d443e6639f9f23f
+SHA1: 9008cda66c6944bb62e05e32a031f33e47b92257
+MD5sum: b14f98f22bd038c750796f48e4f65a91
+Description: COSMIC Terminal
+
