@@ -39,12 +39,14 @@ jobs:
     steps:
       - name: Checkout this repo
         uses: actions/checkout@v4
+        with:
+            path: 'build'
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
       - name: Build Component
-        uses: ./.github/actions/build-cosmic
+        uses: ./build/.github/actions/build-cosmic
         with:
           app_name: ${{ matrix.name }}
           repository: ${{ matrix.repo }}
