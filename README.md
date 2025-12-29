@@ -6,6 +6,10 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 
 ## Supported COSMIC Apps
 
+|term|edit|files|
+|-|-|-|
+|![](screenshots/term.png)|![](screenshots/edit.png)|![](screenshots/files.png)|
+
 * **cosmic-term-ime**
   * Fork: https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method
   * From: https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0
