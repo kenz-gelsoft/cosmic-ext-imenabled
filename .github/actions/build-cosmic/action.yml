@@ -69,7 +69,6 @@ runs:
         
         # -a オプションでアーキテクチャを指定
         debuild \
-          -a${{ inputs.arch }} \
           -e PATH=$PATH \
           -e VENDOR=0 \
           -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
