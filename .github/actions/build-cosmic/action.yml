@@ -46,19 +46,38 @@ runs:
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
 
-    - name: Patch Cargo.toml
-      if: ${{ inputs.cargo_patch != '' }}
+    - name: Pre-extract and Patch
       shell: bash
       run: |
-        ${{ inputs.cargo_patch }}
-        cargo update libcosmic
+        # debuildが走る前に、手動でvendorを展開してしまう
+        just vendor-extract
+        
+        # 展開された後にパッチを適用（これでvendor内のソースではなく、現在のCargo.tomlの指示が優先される）
+        if [ -n "${{ inputs.cargo_patch }}" ]; then
+          ${{ inputs.cargo_patch }}
+          # --offlineでも、すでにvendorにあるものとの整合性を取るためにupdateが必要
+          cargo update libcosmic --offline || cargo update libcosmic
+        fi
 
     - name: Build package using debuild
       shell: bash
       run: |
+        # キャッシュ対象となるディレクトリを環境変数で固定
+        export CARGO_TARGET_DIR=$(pwd)/target
+        
+        # -e で環境変数を debuild の内部に引き継ぐ
+        # vendor-extractが二度走り、パッチが消えるのを防ぐために
+        # debuild 経由ではなく直接的なビルドコマンドを検討したいが、
+        # まずは環境変数の維持を試す
         debuild \
           -e PATH=$PATH \
+          -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
+          -e CARGO_HOME=$HOME/.cargo \
           -us -uc -b -j$(nproc)
+
+    - name: Check Cache Size (Debug)
+      shell: bash
+      run: du -sh target || echo "target not found"
 
     - name: Prepare Artifacts
       shell: bash
