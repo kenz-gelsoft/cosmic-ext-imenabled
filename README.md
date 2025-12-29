@@ -6,17 +6,13 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 
 ## Supported COSMIC Apps
 
-|term|edit|files|
-|-|-|-|
-|![](screenshots/term.png)|![](screenshots/edit.png)|![](screenshots/files.png)|
-
-* **cosmic-term-ime**
+* **cosmic-term-ime**<br>![](screenshots/term.png)
   * Fork: https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method
   * From: https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0
-* **cosmic-edit-ime**
+* **cosmic-edit-ime**<br>![](screenshots/edit.png)
   * Fork: https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method
   * From: https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0
-* **cosmic-files-ime**
+* **cosmic-files-ime**<br>![](screenshots/files.png)
   * Source: https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0
   * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 
