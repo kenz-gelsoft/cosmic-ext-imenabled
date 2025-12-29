@@ -45,6 +45,12 @@ runs:
 
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
+      with:
+        # ワークスペースを明示的に指定（これをしないと target を見失うことがあります）
+        workspaces: |
+          .
+        # キャッシュのキーに debian/control を含める（依存関係の変化を検知するため）
+        key: ${{ inputs.app_name }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
@@ -57,23 +63,28 @@ runs:
     - name: Build package using debuild
       shell: bash
       run: |
-        # 1. rulesファイルを物理的に書き換える
-        # 'just build-vendored' を 'just build-release' に置換
+        # rulesの書き換え
         sed -i 's/just build-vendored/just build-release/g' debian/rules
-        
-        # 2. VENDOR変数を0に固定する（念のため）
         sed -i 's/export VENDOR ?= 1/export VENDOR = 0/g' debian/rules
 
-        # 3. 環境変数を設定して実行
+        # 重要: target ディレクトリを絶対パスで固定
         export CARGO_TARGET_DIR=$(pwd)/target
         export CARGO_HOME=$HOME/.cargo
         
+        # debuild実行。-nc (no-clean) オプションを付けて、ビルド後の掃除を抑制する
         debuild \
           -e PATH=$PATH \
           -e VENDOR=0 \
           -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
           -e CARGO_HOME=$CARGO_HOME \
-          -us -uc -b -j$(nproc)
+          -us -uc -b -j$(nproc) --no-pre-clean --no-post-clean
+
+    - name: Post Build Debug
+      shell: bash
+      run: |
+        echo "Checking if target directory exists for caching..."
+        ls -d target || echo "TARGET DIRECTORY MISSING!"
+        du -sh target || echo "0MB"
 
     - name: Prepare Artifacts
       shell: bash
