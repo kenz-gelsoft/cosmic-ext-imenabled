@@ -3,18 +3,18 @@ name: 'Build COSMIC Package'
 description: 'Common build steps for COSMIC components'
 inputs:
   app_name:
-    description: 'Name of the application (e.g., cosmic-files)'
     required: true
   repository:
-    description: 'Repository to clone'
     required: true
   ref:
-    description: 'Branch or tag'
     required: true
   cargo_patch:
-    description: 'Shell commands to patch Cargo.toml (optional)'
     required: false
     default: ''
+  arch:
+    description: 'Target architecture (amd64 or arm64)'
+    required: true
+    default: 'amd64'
 
 runs:
   using: "composite"
@@ -41,53 +41,44 @@ runs:
       shell: bash
       run: |
         cp build/debian/${{ inputs.app_name }}/{changelog,control,rules} debian/
+        # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
         sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
       with:
-        # ワークスペースを明示的に指定（これをしないと target を見失うことがあります）
-        workspaces: |
-          .
-        # キャッシュのキーに debian/control を含める（依存関係の変化を検知するため）
-        key: ${{ inputs.app_name }}
+        workspaces: .
+        # アーキテクチャごとにキャッシュを分ける
+        key: ${{ inputs.app_name }}-${{ inputs.arch }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
       shell: bash
       run: |
         ${{ inputs.cargo_patch }}
-        # オンラインで依存関係を更新
         cargo update libcosmic
 
     - name: Build package using debuild
       shell: bash
       run: |
-        # rulesの書き換え
         sed -i 's/just build-vendored/just build-release/g' debian/rules
         sed -i 's/export VENDOR ?= 1/export VENDOR = 0/g' debian/rules
 
-        # 重要: target ディレクトリを絶対パスで固定
         export CARGO_TARGET_DIR=$(pwd)/target
         export CARGO_HOME=$HOME/.cargo
         
-        # debuild実行。-nc (no-clean) オプションを付けて、ビルド後の掃除を抑制する
+        # -a オプションでアーキテクチャを指定
         debuild \
+          -a${{ inputs.arch }} \
           -e PATH=$PATH \
           -e VENDOR=0 \
           -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
           -e CARGO_HOME=$CARGO_HOME \
           -us -uc -b -j$(nproc) --no-pre-clean --no-post-clean
 
-    - name: Post Build Debug
-      shell: bash
-      run: |
-        echo "Checking if target directory exists for caching..."
-        ls -d target || echo "TARGET DIRECTORY MISSING!"
-        du -sh target || echo "0MB"
-
     - name: Prepare Artifacts
       shell: bash
       run: |
         mkdir -p dist
-        mv *.deb *.changes *.buildinfo dist/ 2>/dev/null || true
+        # 拡張子が異なる場合を考慮してコピー
+        mv ../*.deb ../*.changes ../*.buildinfo dist/ 2>/dev/null || true

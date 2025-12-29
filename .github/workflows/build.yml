@@ -7,11 +7,14 @@ env:
 
 jobs:
   build-all:
-    runs-on: ubuntu-latest
+    # archがarm64の場合はarm専用ランナー、それ以外はlatest(x86)を使用
+    runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
     strategy:
-      # 片方が失敗しても、もう片方のビルドを続行させる
       fail-fast: false
       matrix:
+        # アプリケーションとアーキテクチャを組み合わせる
+        arch: [amd64, arm64]
+        id: [files, edit, term]
         include:
           - id: files
             name: cosmic-files
@@ -27,23 +30,26 @@ jobs:
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
             ref: backport-input-method
-            patch: "" # editはパッチ不要
+            patch: ""
 
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
             ref: backport-input-method
-            patch: "" # termはパッチ不要
+            patch: ""
 
-    name: Build ${{ matrix.name }}
+    name: Build ${{ matrix.name }} (${{ matrix.arch }})
     steps:
       - name: Checkout this repo
         uses: actions/checkout@v4
         with:
-            path: 'build'
+          path: 'build'
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
+        with:
+          # ARM64時はターゲットを追加
+          targets: ${{ matrix.arch == 'arm64' && 'aarch64-unknown-linux-gnu' || '' }}
 
       - name: Build Component
         uses: ./build/.github/actions/build-cosmic
@@ -52,9 +58,11 @@ jobs:
           repository: ${{ matrix.repo }}
           ref: ${{ matrix.ref }}
           cargo_patch: ${{ matrix.patch }}
+          arch: ${{ matrix.arch }} # アーキテクチャを渡す
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.name }}-package
+          # アーティファクト名にアーキテクチャを含める
+          name: ${{ matrix.name }}-${{ matrix.arch }}-package
           path: dist/
