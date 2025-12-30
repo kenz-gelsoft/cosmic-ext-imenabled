@@ -12,7 +12,11 @@ jobs:
       fail-fast: false
       matrix:
         arch: [amd64, arm64]
-        id: [files, edit, term]
+        id: 
+          - files
+          - applibrary
+          - edit
+          - term
         include:
           - id: files
             name: cosmic-files
