@@ -1,6 +1,6 @@
 # .github/actions/build-cosmic/action.yml
-name: 'Build COSMIC Package'
-description: 'Common build steps for COSMIC components'
+name: "Build COSMIC Package"
+description: "Common build steps for COSMIC components"
 inputs:
   app_name:
     required: true
@@ -10,11 +10,11 @@ inputs:
     required: true
   cargo_patch:
     required: false
-    default: ''
+    default: ""
   arch:
-    description: 'Target architecture (amd64 or arm64)'
+    description: "Target architecture (amd64 or arm64)"
     required: true
-    default: 'amd64'
+    default: "amd64"
 
 runs:
   using: "composite"
@@ -29,7 +29,7 @@ runs:
     - name: Check out repository
       uses: actions/checkout@v4
       with:
-        path: 'build'
+        path: "build"
 
     - name: Install build tools
       shell: bash
@@ -41,7 +41,7 @@ runs:
       shell: bash
       run: |
         sed -i "/^export DESTDIR/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
-        cp build/debian/${{ inputs.app_name }}/{changelog,control} debian/
+        cp build/${{ inputs.app_name }}/debian/{changelog,control} debian/
         # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
         sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
@@ -67,7 +67,7 @@ runs:
 
         export CARGO_TARGET_DIR=$(pwd)/target
         export CARGO_HOME=$HOME/.cargo
-        
+
         # -a オプションでアーキテクチャを指定
         debuild \
           -e PATH=$PATH \
