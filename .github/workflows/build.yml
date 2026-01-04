@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         arch: [amd64, arm64]
-        id: 
+        id:
           - files
           - applibrary
           - edit
@@ -28,7 +28,7 @@ jobs:
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
               EOF
           - id: applibrary
-            name: cosmic-applibrary
+            name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
             ref: epoch-1.0.0
             patch: |
@@ -52,7 +52,7 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
         with:
-          path: 'build'
+          path: "build"
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -98,9 +98,9 @@ jobs:
       - name: Structure Apt Repository
         run: |
           sudo apt-get update && sudo apt-get install -y reprepro
-          
+
           mkdir -p repo-site/conf
-          
+
           # 1. reprepro の設定ファイルを作成
           cat <<EOF > repo-site/conf/distributions
           Origin: MyCosmicRepo
