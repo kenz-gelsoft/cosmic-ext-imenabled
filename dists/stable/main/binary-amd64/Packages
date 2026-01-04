@@ -1,5 +1,5 @@
 Package: cosmic-app-library-ime
-Version: 0.1.0+gd065468-77
+Version: 0.1.0+gd065468-78
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 8
@@ -9,67 +9,65 @@ Provides: cosmic-app-library
 Homepage: https://github.com/pop-os/cosmic-app-library
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+gd065468-77_amd64.deb
-Size: 1250
-SHA256: 8d92f68f5ea3e2d9be57d5daa8b384be387ab41618721e7fc261e755942f0327
-SHA1: e10e227ca73f40f2a80f160900b23ae41bec5b29
-MD5sum: cae916156d800526a77868063fb73e6b
+Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+gd065468-78_amd64.deb
+Size: 1242
+SHA256: c20a85af7c19476e16822513df215198e5d99b66028f9fd8d3544cdc682cf716
+SHA1: 44e43e9604944ef1e6eca30d9045ee6836276242
+MD5sum: 7032e837a825b00a8aee34e08761e0fa
 Description: Cosmic App Library
 
 Package: cosmic-edit-ime
-Version: 0.1.0+g2acf07b-77
+Version: 0.1.0+g2acf07b-78
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 43891
-Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0)
+Installed-Size: 8
 Conflicts: cosmic-edit
 Replaces: cosmic-edit
 Provides: cosmic-edit
 Homepage: https://github.com/kenz-gelsoft/cosmic-edit
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+g2acf07b-77_amd64.deb
-Size: 13150160
-SHA256: 8f9d1e6f04dc08b797509504522e95f54740191dcb4202de8ca1a2601c0e4a8f
-SHA1: c6a18ea53beacaffddf23920e8081b3d8a1f6623
-MD5sum: 960974567efaab953e5be9917921a85e
+Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+g2acf07b-78_amd64.deb
+Size: 1306
+SHA256: a7fa2653ba6fc1bd8c59b1eb984fff9efa97a8bbd39defcd1606361b7ca51f66
+SHA1: f1550ea719c071eea2cef9d4d069417158f7c508
+MD5sum: d266a0cb9b73c45e43f0d1e14d842724
 Description: Cosmic Text Editor
 
 Package: cosmic-files-ime
-Version: 0.1.0+ge65529d-77
+Version: 0.1.0+ge65529d-78
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 86553
-Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0), xdg-utils
+Installed-Size: 8
+Depends: xdg-utils
 Conflicts: cosmic-files
 Replaces: cosmic-files
 Provides: cosmic-files
 Homepage: https://github.com/pop-os/cosmic-files
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+ge65529d-77_amd64.deb
-Size: 24913760
-SHA256: 62340f44140108d89a8b2f6bd9bff2f7606d0ba0e797db2656cb7aeea1305ff1
-SHA1: 6e5dd4ff8ac568f049f6f525dc710efbf6da3ce7
-MD5sum: c38b7aba25889efcd2d4e9e05e7a5e56
+Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+ge65529d-78_amd64.deb
+Size: 1320
+SHA256: 3737b2acb7f4519e8ae09875dc5d5a7c7e7a34e6e20142e9968901543139b4f8
+SHA1: 817e1503b16538e9f4513e7c83bdcef12333a2b7
+MD5sum: df6678e35ab97a6e86db22f56a826b55
 Description: Cosmic File Manager
 
 Package: cosmic-term-ime
-Version: 0.1.0+gc04afbc-77
+Version: 0.1.0+gc04afbc-78
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 42088
-Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libxkbcommon0 (>= 0.5.0)
+Installed-Size: 10
 Conflicts: cosmic-term
 Replaces: cosmic-term
 Provides: cosmic-term, x-terminal-emulator
 Homepage: https://github.com/kenz-gelsoft/cosmic-term
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+gc04afbc-77_amd64.deb
-Size: 12017134
-SHA256: 8ed18ebc092e37edd5117aff0bb902b466e74ab1688f1ad04337e22543a746d2
-SHA1: c175823e7f354b5220d2b74de9bc8bd25cb3d14f
-MD5sum: 8688dcecfb05a299cc09bc54234b1e04
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+gc04afbc-78_amd64.deb
+Size: 1486
+SHA256: 8ff4593ff404fc81937e2c629eeb5c03842ce1482f894a9ec1b48b89436ebd26
+SHA1: f96ff0759d0688e20367d4358b9e6ac863158252
+MD5sum: f3a9ac69b8a24c2fbd8f6053549b5829
 Description: COSMIC Terminal
 
