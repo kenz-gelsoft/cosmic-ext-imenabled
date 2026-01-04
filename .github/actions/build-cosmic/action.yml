@@ -57,7 +57,7 @@ runs:
       shell: bash
       run: |
         ${{ inputs.cargo_patch }}
-        cargo update libcosmic
+        cp build/${{ inputs.app_name }}/Cargo.lock . || true
 
     - name: Build package using debuild
       shell: bash
