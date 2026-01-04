@@ -59,6 +59,27 @@ runs:
         ${{ inputs.cargo_patch }}
         cp build/${{ inputs.app_name }}/Cargo.lock . || true
 
+    - name: Update Version in Changelog
+      shell: bash
+      run: |
+        # 現在のコミットハッシュ（短縮版）を取得
+        SHORT_SHA=$(git rev-parse --short HEAD)
+        # GitHub Actions の Run Number (例: 42)
+        RUN_NUMBER=${{ github.run_number }}
+        
+        # 既存のバージョンを取得 (例: 1.0.0-1)
+        CURRENT_VER=$(dpkg-parsechangelog -S Version)
+        
+        # 新しいバージョンを作成 (例: 1.0.0-1+gabc123-42)
+        # "+g" は git を、ハイフン以降はビルド回数を示す一般的な慣習です
+        NEW_VER="${CURRENT_VER}+g${SHORT_SHA}-${RUN_NUMBER}"
+        
+        echo "Updating version from $CURRENT_VER to $NEW_VER"
+        
+        # dch コマンドで changelog を更新
+        # --newversion で新しいバージョンを指定し、--force-bad-version で非標準形式を許可
+        dch --newversion "$NEW_VER" --force-bad-version "Automated build for $SHORT_SHA"
+
     - name: Build package using debuild
       shell: bash
       run: |
