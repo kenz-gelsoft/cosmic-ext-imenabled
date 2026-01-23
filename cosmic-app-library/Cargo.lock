@@ -1131,7 +1131,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
@@ -1152,7 +1152,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/libcosmic/#dd3610b8ae4f1bcf2e2299e82f908913d1a4a57d"
+source = "git+https://github.com/pop-os/libcosmic/#beddbf17703728182395a13267954d839226331d"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 0.1.0 (git+https://github.com/pop-os/libcosmic/)",
@@ -1169,7 +1169,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "quote",
  "syn 2.0.108",
@@ -1178,7 +1178,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/libcosmic/#dd3610b8ae4f1bcf2e2299e82f908913d1a4a57d"
+source = "git+https://github.com/pop-os/libcosmic/#beddbf17703728182395a13267954d839226331d"
 dependencies = [
  "quote",
  "syn 2.0.108",
@@ -1229,7 +1229,7 @@ dependencies = [
 [[package]]
 name = "cosmic-settings-config"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-settings-daemon#9111bf0dfc65a4708a219d22616397819f6a6222"
+source = "git+https://github.com/pop-os/cosmic-settings-daemon#ef024bfd06bf9fbd57246a25c91d1fdd28153d05"
 dependencies = [
  "cosmic-config 0.1.0 (git+https://github.com/pop-os/libcosmic/)",
  "ron",
@@ -1242,7 +1242,7 @@ dependencies = [
 [[package]]
 name = "cosmic-settings-daemon"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/dbus-settings-bindings#b2337437d70b3db7a56211a43aa1632306711b2d"
+source = "git+https://github.com/pop-os/dbus-settings-bindings#87c3c35666b926a24a1e8045fd70be2db1145e34"
 dependencies = [
  "zbus 5.12.0",
 ]
@@ -1250,7 +1250,7 @@ dependencies = [
 [[package]]
 name = "cosmic-text"
 version = "0.16.0"
-source = "git+https://github.com/pop-os/cosmic-text.git#0d9af4f7de087878100b296c81d1baca2e05433d"
+source = "git+https://github.com/pop-os/cosmic-text.git#ee702e50901d90cd842dbd88154687bd2512b52c"
 dependencies = [
  "bitflags 2.10.0",
  "fontdb 0.23.0",
@@ -1273,7 +1273,7 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "almost",
  "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
@@ -1584,7 +1584,7 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 [[package]]
 name = "dpi"
 version = "0.1.1"
-source = "git+https://github.com/pop-os/winit.git?tag=iced-xdg-surface-0.13-rc#12a5f17d1811cdebbcbd310a3d92965e9142fa12"
+source = "git+https://github.com/pop-os/winit.git?tag=iced-xdg-surface-0.13-rc#0c4adf468b8397e5b1dc9183418f56b972916e42"
 
 [[package]]
 name = "drm"
@@ -2479,7 +2479,7 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "dnd",
  "iced_accessibility",
@@ -2497,7 +2497,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2506,7 +2506,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "bitflags 2.10.0",
  "bytes",
@@ -2531,7 +2531,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0-dev"
-source = "git+https://github.com/pop-os/libcosmic/#dd3610b8ae4f1bcf2e2299e82f908913d1a4a57d"
+source = "git+https://github.com/pop-os/libcosmic/#beddbf17703728182395a13267954d839226331d"
 dependencies = [
  "bitflags 2.10.0",
  "bytes",
@@ -2553,7 +2553,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "futures",
  "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
@@ -2567,7 +2567,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0-dev"
-source = "git+https://github.com/pop-os/libcosmic/#dd3610b8ae4f1bcf2e2299e82f908913d1a4a57d"
+source = "git+https://github.com/pop-os/libcosmic/#beddbf17703728182395a13267954d839226331d"
 dependencies = [
  "futures",
  "iced_core 0.14.0-dev (git+https://github.com/pop-os/libcosmic/)",
@@ -2592,7 +2592,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "bitflags 2.10.0",
  "bytemuck",
@@ -2614,7 +2614,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2626,7 +2626,7 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
@@ -2642,7 +2642,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2658,7 +2658,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.10.0",
@@ -2689,7 +2689,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2709,7 +2709,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -3132,7 +3132,7 @@ checksum = "2874a2af47a2325c2001a6e6fad9b16a53b802102b528163885171cf92b15976"
 [[package]]
 name = "libcosmic"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#babae1bb73629ed3833630269a6efe45b372f700"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
 dependencies = [
  "apply",
  "ashpd 0.12.0",
@@ -3202,13 +3202,13 @@ checksum = "f9fbbcab51052fe104eb5e5d351cf728d30a5be1fe14d9be8a3b097481fb97de"
 
 [[package]]
 name = "libredox"
-version = "0.1.10"
+version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "416f7e718bdb06000964960ffa43b4335ad4012ae8b99060261aa4a8088d5ccb"
+checksum = "3d0b95e02c851351f877147b7deea7b1afb1df71b63aa5f8270716e0c5720616"
 dependencies = [
  "bitflags 2.10.0",
  "libc",
- "redox_syscall 0.5.18",
+ "redox_syscall 0.7.0",
 ]
 
 [[package]]
@@ -4506,6 +4506,15 @@ name = "redox_syscall"
 version = "0.5.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d"
+dependencies = [
+ "bitflags 2.10.0",
+]
+
+[[package]]
+name = "redox_syscall"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "49f3fe0889e69e2ae9e41f4d6c4c0181701d00e4697b356fb1f74173a5e0ee27"
 dependencies = [
  "bitflags 2.10.0",
 ]
@@ -6636,7 +6645,7 @@ checksum = "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
 [[package]]
 name = "winit"
 version = "0.30.5"
-source = "git+https://github.com/pop-os/winit.git?tag=iced-xdg-surface-0.13-rc#12a5f17d1811cdebbcbd310a3d92965e9142fa12"
+source = "git+https://github.com/pop-os/winit.git?tag=iced-xdg-surface-0.13-rc#0c4adf468b8397e5b1dc9183418f56b972916e42"
 dependencies = [
  "ahash",
  "android-activity",
@@ -6653,6 +6662,7 @@ dependencies = [
  "dpi",
  "js-sys",
  "libc",
+ "libredox",
  "memmap2 0.9.9",
  "ndk",
  "objc2 0.5.2",
@@ -6663,7 +6673,7 @@ dependencies = [
  "percent-encoding",
  "pin-project",
  "raw-window-handle",
- "redox_syscall 0.5.18",
+ "redox_syscall 0.7.0",
  "rustix 0.38.44",
  "sctk-adwaita",
  "smithay-client-toolkit 0.19.2",
