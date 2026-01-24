@@ -15,6 +15,7 @@ jobs:
         id:
           - files
           - applibrary
+          - launcher
           - edit
           - term
         include:
