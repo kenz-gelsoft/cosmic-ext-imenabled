@@ -22,7 +22,7 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: epoch-1.0.0
+            ref: epoch-1.0.1
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
@@ -31,7 +31,7 @@ jobs:
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
-            ref: epoch-1.0.0
+            ref: epoch-1.0.1
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
@@ -40,7 +40,7 @@ jobs:
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
-            ref: epoch-1.0.0
+            ref: epoch-1.0.1
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
