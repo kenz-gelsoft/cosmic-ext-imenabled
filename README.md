@@ -11,16 +11,16 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 |cosmic-term-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method)|
 |cosmic-edit-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method)|
 |cosmic-files-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-launcher|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-app-library|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-launcher-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-app-library-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
 
 ## Screenshots
 
 * **cosmic-term-ime**<br>![](screenshots/term.png)
 * **cosmic-edit-ime**<br>![](screenshots/edit.png)
 * **cosmic-files-ime**<br>![](screenshots/files.png)
-* **cosmic-launcher**<br>![](screenshots/launcher.png)
-* **cosmic-app-library**<br>![](screenshots/app-library.png)
+* **cosmic-launcher-ime**<br>![](screenshots/launcher.png)
+* **cosmic-app-library-ime**<br>![](screenshots/app-library.png)
 
 ## How to Install
 
@@ -55,8 +55,8 @@ COSMIC アプリが使っている **iced** ツールキットは最新版にて
 - **cosmic-term-ime**
 - **cosmic-edit-ime**
 - **cosmic-files-ime**
-- **cosmic-launcher**
-- **cosmic-app-library**
+- **cosmic-launcher-ime**
+- **cosmic-app-library-ime**
 
 ## インストール方法
 
