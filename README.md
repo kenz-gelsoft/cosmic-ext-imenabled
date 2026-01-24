@@ -15,6 +15,9 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 * **cosmic-files-ime**<br>![](screenshots/files.png)
   * Source: https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0
   * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
+* **cosmic-app-library**<br>![](screenshots/app-library.png)
+  * Source: https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0
+  * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 
 ## How to Install
 
@@ -47,8 +50,9 @@ COSMIC アプリが使っている **iced** ツールキットは最新版にて
 ## 対応済みの COSMIC アプリ
 
 - **cosmic-term-ime**
-- **cosmic-files-ime**
 - **cosmic-edit-ime**
+- **cosmic-files-ime**
+- **cosmic-app-library**
 
 ## インストール方法
 
