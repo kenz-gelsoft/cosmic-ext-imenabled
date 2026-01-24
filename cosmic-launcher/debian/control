@@ -15,7 +15,7 @@ Build-Depends:
 Standards-Version: 4.3.0
 Homepage: https://github.com/pop-os/cosmic-launcher
 
-Package: cosmic-launcher
+Package: cosmic-launcher-ime
 Architecture: amd64 arm64
 Depends:
   ${misc:Depends},
