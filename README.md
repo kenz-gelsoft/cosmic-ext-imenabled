@@ -6,21 +6,32 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 
 ## Supported COSMIC Apps
 
-|package|version|fork or patch|
+[How to install](#how-to-install) (ja: [インストール方法](#インストール方法)).
+
+|APT Package Name|Upstream Version|Fork or Patch|
 |-|-|-|
-|cosmic-term-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method)|
-|cosmic-edit-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method)|
-|cosmic-files-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-launcher-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-app-library-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-term-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0)|[Fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method)|
+|cosmic-edit-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0)|[Fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method)|
+|cosmic-files-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-launcher-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-app-library-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
 
 ## Screenshots
 
-* **cosmic-term-ime**<br>![](screenshots/term.png)
-* **cosmic-edit-ime**<br>![](screenshots/edit.png)
-* **cosmic-files-ime**<br>![](screenshots/files.png)
-* **cosmic-launcher-ime**<br>![](screenshots/launcher.png)
-* **cosmic-app-library-ime**<br>![](screenshots/app-library.png)
+### cosmic-term-ime
+![](screenshots/term.png)
+
+### cosmic-edit-ime
+![](screenshots/edit.png)
+
+### cosmic-files-ime
+![](screenshots/files.png)
+
+### cosmic-launcher-ime
+![](screenshots/launcher.png)
+
+### cosmic-app-library-ime
+![](screenshots/app-library.png)
 
 ## How to Install
 
@@ -52,11 +63,11 @@ COSMIC アプリが使っている **iced** ツールキットは最新版にて
 
 ## 対応済みの COSMIC アプリ
 
-- **cosmic-term-ime**
-- **cosmic-edit-ime**
-- **cosmic-files-ime**
-- **cosmic-launcher-ime**
-- **cosmic-app-library-ime**
+- cosmic-term-**ime**
+- cosmic-edit-**ime**
+- cosmic-files-**ime**
+- cosmic-launcher-**ime**
+- cosmic-app-library-**ime**
 
 ## インストール方法
 
