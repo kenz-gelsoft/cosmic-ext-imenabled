@@ -63,11 +63,7 @@ COSMIC アプリが使っている **iced** ツールキットは最新版にて
 
 ## 対応済みの COSMIC アプリ
 
-- cosmic-term-**ime**
-- cosmic-edit-**ime**
-- cosmic-files-**ime**
-- cosmic-launcher-**ime**
-- cosmic-app-library-**ime**
+[こちら](#supported-cosmic-apps)
 
 ## インストール方法
 
