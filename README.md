@@ -6,21 +6,21 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 
 ## Supported COSMIC Apps
 
+|package|version|fork or patch|
+|-|-|-|
+|cosmic-term-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method)|
+|cosmic-edit-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0)|[fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method)|
+|cosmic-files-ime|[epoch-1.0.0](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-launcher|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-app-library|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[patched libcosmic](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+
+## Screenshots
+
 * **cosmic-term-ime**<br>![](screenshots/term.png)
-  * Fork: https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method
-  * From: https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0
 * **cosmic-edit-ime**<br>![](screenshots/edit.png)
-  * Fork: https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method
-  * From: https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0
 * **cosmic-files-ime**<br>![](screenshots/files.png)
-  * Source: https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0
-  * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 * **cosmic-launcher**<br>![](screenshots/launcher.png)
-  * Source: https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0
-  * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 * **cosmic-app-library**<br>![](screenshots/app-library.png)
-  * Source: https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0
-  * With [patch](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21) to use libcosmic fork
 
 ## How to Install
 
