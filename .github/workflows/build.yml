@@ -49,7 +49,7 @@ jobs:
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
-            ref: backport-input-method
+            ref: backport-input-method2
             patch: ""
           - id: term
             name: cosmic-term
