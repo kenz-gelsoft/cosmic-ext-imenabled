@@ -31,7 +31,7 @@ jobs:
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
-            ref: epoch-1.0.2
+            ref: epoch-1.0.1
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
