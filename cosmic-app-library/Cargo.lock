@@ -1081,7 +1081,7 @@ dependencies = [
 
 [[package]]
 name = "cosmic-app-library"
-version = "0.1.0"
+version = "1.0.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -1095,7 +1095,7 @@ dependencies = [
  "nix 0.30.1",
  "notify",
  "pretty_env_logger",
- "ron",
+ "ron 0.12.0",
  "rust-embed",
  "serde",
  "shlex",
@@ -1131,17 +1131,17 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "atomicwrites",
- "cosmic-config-derive 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config-derive 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "cosmic-settings-daemon",
  "dirs",
  "futures-util",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "known-folders",
  "notify",
- "ron",
+ "ron 0.11.0",
  "serde",
  "tokio",
  "tracing",
@@ -1160,7 +1160,7 @@ dependencies = [
  "iced_futures 0.14.0-dev (git+https://github.com/pop-os/libcosmic/)",
  "known-folders",
  "notify",
- "ron",
+ "ron 0.11.0",
  "serde",
  "tracing",
  "xdg",
@@ -1169,7 +1169,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "quote",
  "syn 2.0.108",
@@ -1232,7 +1232,7 @@ version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-settings-daemon#ef024bfd06bf9fbd57246a25c91d1fdd28153d05"
 dependencies = [
  "cosmic-config 0.1.0 (git+https://github.com/pop-os/libcosmic/)",
- "ron",
+ "ron 0.11.0",
  "serde",
  "serde_with",
  "tracing",
@@ -1273,14 +1273,14 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "almost",
- "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "csscolorparser",
  "dirs",
  "palette",
- "ron",
+ "ron 0.11.0",
  "serde",
  "serde_json",
  "thiserror 2.0.17",
@@ -1964,9 +1964,9 @@ dependencies = [
 
 [[package]]
 name = "freedesktop-desktop-entry"
-version = "0.7.19"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "528df05c8ed0bfd569c7018914ba1995be2a133ba9ead17628ddb0ff94b86331"
+checksum = "28273c5c6b97a5f07724f6652f064c0c7f637f9aa5e7c09c83bc3bc4ad4ea245"
 dependencies = [
  "bstr",
  "gettext-rs",
@@ -2479,12 +2479,12 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_renderer",
  "iced_widget",
  "iced_winit",
@@ -2497,7 +2497,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2506,7 +2506,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bitflags 2.10.0",
  "bytes",
@@ -2553,10 +2553,10 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "futures",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "log",
  "rustc-hash 2.1.1",
  "tokio",
@@ -2592,14 +2592,14 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bitflags 2.10.0",
  "bytemuck",
  "cosmic-text",
  "half",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "image",
  "kamadak-exif",
  "log",
@@ -2614,7 +2614,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2626,14 +2626,14 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "raw-window-handle",
  "thiserror 1.0.69",
  "window_clipboard",
@@ -2642,7 +2642,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2658,7 +2658,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.10.0",
@@ -2689,7 +2689,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2709,12 +2709,12 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
  "iced_accessibility",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_graphics",
  "iced_runtime",
  "log",
@@ -3132,14 +3132,14 @@ checksum = "2874a2af47a2325c2001a6e6fad9b16a53b802102b528163885171cf92b15976"
 [[package]]
 name = "libcosmic"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "apply",
  "ashpd 0.12.0",
  "auto_enums",
  "chrono",
  "cosmic-client-toolkit",
- "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "cosmic-freedesktop-icons",
  "cosmic-panel-config",
  "cosmic-settings-config",
@@ -3153,8 +3153,8 @@ dependencies = [
  "i18n-embed-fl",
  "iced",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_renderer",
  "iced_runtime",
  "iced_tiny_skia",
@@ -3169,7 +3169,7 @@ dependencies = [
  "phf 0.13.1",
  "raw-window-handle",
  "rfd",
- "ron",
+ "ron 0.11.0",
  "rust-embed",
  "rustix 1.1.2",
  "serde",
@@ -4648,6 +4648,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "ron"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd490c5b18261893f14449cbd28cb9c0b637aebf161cd77900bfdedaff21ec32"
+dependencies = [
+ "bitflags 2.10.0",
+ "once_cell",
+ "serde",
+ "serde_derive",
+ "typeid",
+ "unicode-ident",
+]
+
+[[package]]
 name = "roxmltree"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4655,9 +4669,9 @@ checksum = "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
 
 [[package]]
 name = "rust-embed"
-version = "8.8.0"
+version = "8.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb44e1917075637ee8c7bcb865cf8830e3a92b5b1189e44e3a0ab5a0d5be314b"
+checksum = "947d7f3fad52b283d261c4c99a084937e2fe492248cb9a68a8435a861b8798ca"
 dependencies = [
  "rust-embed-impl",
  "rust-embed-utils",
@@ -4666,9 +4680,9 @@ dependencies = [
 
 [[package]]
 name = "rust-embed-impl"
-version = "8.8.0"
+version = "8.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "382499b49db77a7c19abd2a574f85ada7e9dbe125d5d1160fa5cad7c4cf71fc9"
+checksum = "5fa2c8c9e8711e10f9c4fd2d64317ef13feaab820a4c51541f1a8c8e2e851ab2"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4679,9 +4693,9 @@ dependencies = [
 
 [[package]]
 name = "rust-embed-utils"
-version = "8.8.0"
+version = "8.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21fcbee55c2458836bcdbfffb6ec9ba74bbc23ca7aa6816015a3dd2c4d8fc185"
+checksum = "60b161f275cb337fe0a44d924a5f4df0ed69c2c39519858f931ce61c779d3475"
 dependencies = [
  "sha2",
  "walkdir",
@@ -5579,6 +5593,12 @@ checksum = "cb30dbbd9036155e74adad6812e9898d03ec374946234fbcebd5dfc7b9187b90"
 dependencies = [
  "rustc-hash 2.1.1",
 ]
+
+[[package]]
+name = "typeid"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc7d623258602320d5c55d1bc22793b57daff0ec7efc270ea7d55ce1d5f5471c"
 
 [[package]]
 name = "typenum"

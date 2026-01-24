@@ -22,29 +22,29 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: epoch-1.0.2
+            ref: epoch-1.0.3
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method" }
               EOF
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
-            ref: epoch-1.0.1
+            ref: epoch-1.0.3
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method" }
               EOF
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
-            ref: epoch-1.0.2
+            ref: epoch-1.0.3
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method2" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method" }
               EOF
           - id: edit
             name: cosmic-edit
