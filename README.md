@@ -18,9 +18,9 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 |-|-|-|
 |cosmic-term-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.0)|[Fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method)|
 |cosmic-edit-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.0)|[Fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method)|
-|cosmic-files-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-launcher-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
-|cosmic-app-library-**ime**|[epoch-1.0.0](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.0)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-files-**ime**|[epoch-1.0.1](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.1)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-launcher-**ime**|[epoch-1.0.1](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.1)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
+|cosmic-app-library-**ime**|[epoch-1.0.1](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.1)|[Patched `libcosmic`](https://github.com/kenz-gelsoft/cosmic-ext-imenabled/blob/main/.github/workflows/build.yml#L21)|
 
 ## Screenshots
 
