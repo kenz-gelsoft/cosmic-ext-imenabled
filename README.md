@@ -8,6 +8,8 @@ Since COSMIC apps in Pop!_OS do not currently support IME, there are issues inpu
 
 While the latest version of the **iced** toolkit (which COSMIC apps use) has implemented IME support, it is expected to take several months before COSMIC apps officially adopt this latest version. Therefore, I have backported the IME support in advance to enable IME functionality for specific apps.
 
+![](screenshots/term.png)
+
 ## Supported COSMIC Apps
 
 [How to install](#how-to-install) (ja: [インストール方法](#インストール方法)).
