@@ -1,4 +1,8 @@
-# Unofficial APT Repository of IME-Support Preview for some COSMIC Apps
+# IME enabled COSMIC Apps for Pop!_OS 24.04
+
+(ja: [日本語の説明はこちら](#cosmic-アプリ-日本語入力対応版-apt-リポジトリ))
+
+This is **unofficial** APT repo. **Don't report bugs or issues to official** repos.
 
 Since COSMIC apps in Pop!_OS do not currently support IME, there are issues inputting characters for languages that require an IME, such as Japanese, Chinese, and Korean.
 
@@ -55,7 +59,9 @@ $ sudo apt install cosmic-term-ime
 
 Following is Japanese translation.
 
-# COSMIC アプリの非公式 IME 対応プレビュー apt リポジトリ
+# COSMIC アプリ 日本語入力対応版 apt リポジトリ
+
+これは**非公式** APT リポジトリです。不具合や問題を**公式リポジトリに報告しないでください**。
 
 Pop!_OS の COSMIC アプリは IME に非対応のため、日本語・中国語・韓国語などの IME を必要とする言語の文字入力に問題があります。
 
