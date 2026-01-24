@@ -54,7 +54,7 @@ jobs:
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
-            ref: backport-input-method
+            ref: backport-input-method2
             patch: ""
 
     name: Build ${{ matrix.name }} (${{ matrix.arch }})
