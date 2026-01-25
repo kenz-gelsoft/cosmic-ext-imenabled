@@ -1238,14 +1238,14 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "atomicwrites",
- "cosmic-config-derive 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config-derive 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "cosmic-settings-daemon",
  "dirs",
  "futures-util",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "known-folders",
  "notify",
  "ron",
@@ -1276,7 +1276,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "quote",
  "syn 2.0.111",
@@ -1393,10 +1393,10 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "almost",
- "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "csscolorparser",
  "dirs",
  "palette",
@@ -2092,9 +2092,9 @@ dependencies = [
 
 [[package]]
 name = "freedesktop-desktop-entry"
-version = "0.7.19"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "528df05c8ed0bfd569c7018914ba1995be2a133ba9ead17628ddb0ff94b86331"
+checksum = "28273c5c6b97a5f07724f6652f064c0c7f637f9aa5e7c09c83bc3bc4ad4ea245"
 dependencies = [
  "bstr",
  "gettext-rs",
@@ -2761,12 +2761,12 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_renderer",
  "iced_widget",
  "iced_winit",
@@ -2779,7 +2779,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2788,7 +2788,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bitflags 2.10.0",
  "bytes",
@@ -2835,10 +2835,10 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "futures",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "log",
  "rustc-hash 2.1.1",
  "tokio",
@@ -2874,14 +2874,14 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bitflags 2.10.0",
  "bytemuck",
  "cosmic-text",
  "half",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "image",
  "kamadak-exif",
  "log",
@@ -2896,7 +2896,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2908,14 +2908,14 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "raw-window-handle",
  "thiserror 1.0.69",
  "window_clipboard",
@@ -2924,7 +2924,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2940,7 +2940,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.10.0",
@@ -2971,7 +2971,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2991,12 +2991,12 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0-dev"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
  "iced_accessibility",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_graphics",
  "iced_runtime",
  "log",
@@ -3407,14 +3407,14 @@ checksum = "37c93d8daa9d8a012fd8ab92f088405fb202ea0b6ab73ee2482ae66af4f42091"
 [[package]]
 name = "libcosmic"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2#99059308e11825dea60237462bd4ccc053cb15f0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method#7d342a222dc61ad11b88a13011cda208aded1d82"
 dependencies = [
  "apply",
  "ashpd 0.12.0",
  "auto_enums",
  "chrono",
  "cosmic-client-toolkit",
- "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "cosmic-config 0.1.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "cosmic-freedesktop-icons",
  "cosmic-settings-config",
  "cosmic-settings-daemon",
@@ -3427,8 +3427,8 @@ dependencies = [
  "i18n-embed-fl",
  "iced",
  "iced_accessibility",
- "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
- "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method2)",
+ "iced_core 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
+ "iced_futures 0.14.0-dev (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=backport-input-method)",
  "iced_renderer",
  "iced_runtime",
  "iced_tiny_skia",

@@ -49,12 +49,12 @@ jobs:
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
-            ref: backport-input-method2
+            ref: backport-input-method
             patch: ""
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
-            ref: backport-input-method2
+            ref: backport-input-method
             patch: ""
 
     name: Build ${{ matrix.name }} (${{ matrix.arch }})
