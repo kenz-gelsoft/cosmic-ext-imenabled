@@ -1,0 +1,5 @@
+Component: main
+Origin: MyCosmicRepo
+Label: MyCosmicRepo
+Architecture: arm64
+Description: Backported Cosmic Components
