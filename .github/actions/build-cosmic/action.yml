@@ -70,9 +70,10 @@ runs:
         # 既存のバージョンを取得 (例: 1.0.0-1)
         CURRENT_VER=$(dpkg-parsechangelog -S Version)
 
-        # 新しいバージョンを作成 (例: 1.0.0-1+gabc123-42)
-        # "+g" は git を、ハイフン以降はビルド回数を示す一般的な慣習です
-        NEW_VER="${CURRENT_VER}+g${SHORT_SHA}-${RUN_NUMBER}"
+        # 新しいバージョンを作成 (例: 1.0.0-1-42-abc123)
+        # 単調増加のビルド回数によって新しいビルドがアップデートになるようにします。
+        # ビルドが一意になるように git コミットハッシュを付加します。
+        NEW_VER="${CURRENT_VER}+${RUN_NUMBER}-${SHORT_SHA}"
 
         echo "Updating version from $CURRENT_VER to $NEW_VER"
 
