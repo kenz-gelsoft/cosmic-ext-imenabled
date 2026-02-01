@@ -1,3 +1,6 @@
+%define debug_package %{nil}
+%define _build_id_links none
+
 Name:           cosmic-launcher-ime
 Version:        0.1.0
 Release:        1%{?dist}
