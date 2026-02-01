@@ -19,7 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          repository: https://github.com/kenz-gelsoft/cosmic-edit
+          repository: kenz-gelsoft/cosmic-edit
           ref: backport-input-method
           submodules: true
 
