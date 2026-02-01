@@ -2,9 +2,11 @@
 name: Build and Publish Apt Repo
 on:
   push:
-    - '*/debian/*'
-    - '.github/actions/build-cosmic/action.yml'
-    - '.github/workflows/build.yml'
+    paths:
+      - '*/debian/*'
+      - '.github/actions/build-cosmic/action.yml'
+      - '.github/workflows/build.yml'
+
 env:
   CARGO_TERM_COLOR: always
 
