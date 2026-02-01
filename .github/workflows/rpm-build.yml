@@ -23,6 +23,11 @@ jobs:
           ref: backport-input-method
           submodules: true
 
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          path: build
+
       - name: Install System Dependencies
         run: |
           # EPEL 10 の導入
@@ -71,7 +76,7 @@ jobs:
 
       - name: Execute rpmbuild
         run: |
-          rpmbuild -ba cosmic-edit/rpm/cosmic-edit.spec --define "_topdir $HOME/rpmbuild"
+          rpmbuild -ba build/cosmic-edit/rpm/cosmic-edit.spec --define "_topdir $HOME/rpmbuild"
 
       - name: Upload RPM
         uses: actions/upload-artifact@v4
