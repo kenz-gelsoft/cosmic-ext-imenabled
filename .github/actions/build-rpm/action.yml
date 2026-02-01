@@ -55,6 +55,13 @@ runs:
           libinput-devel \
           libxkbcommon-x11-devel
 
+    - name: Patch Cargo.toml
+      if: ${{ inputs.cargo_patch != '' }}
+      shell: bash
+      run: |
+        ${{ inputs.cargo_patch }}
+        cp build/${{ inputs.app_name }}/Cargo.lock . || true
+
     - name: Prepare Sources
       shell: bash
       run: |
@@ -85,13 +92,6 @@ runs:
         workspaces: .
         # アーキテクチャごとにキャッシュを分ける
         key: ${{ inputs.app_name }}-${{ inputs.arch }}
-
-    - name: Patch Cargo.toml
-      if: ${{ inputs.cargo_patch != '' }}
-      shell: bash
-      run: |
-        ${{ inputs.cargo_patch }}
-        cp build/${{ inputs.app_name }}/Cargo.lock . || true
 
     - name: Execute rpmbuild
       shell: bash
