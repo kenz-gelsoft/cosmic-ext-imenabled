@@ -85,17 +85,20 @@ runs:
         cd ..
         tar -czf ~/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
 
-    # --- 修正: rpmbuild 実行時にキャッシュディレクトリを渡す ---
     - name: Execute rpmbuild
       shell: bash
       env:
-        # 重要: swatinem/rust-cache が使用するパスを rpmbuild 内の cargo にも教える
-        CARGO_HOME: ~/.cargo
+        CARGO_HOME: /root/.cargo
+        # ★ここが重要: 絶対パスで target を指定する
+        CARGO_TARGET_DIR: ${{ github.workspace }}/target
       run: |
-        # rpmbuild 内で HOME が変わる場合があるため、明示的に CARGO_HOME を指定して実行
+        # target ディレクトリが確実に存在するようにする
+        mkdir -p $CARGO_TARGET_DIR
+        
         rpmbuild -ba build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
           --define "_topdir $HOME/rpmbuild" \
-          --define "cargo_home $CARGO_HOME"
+          --define "cargo_home $CARGO_HOME" \
+          --define "cargo_target_dir $CARGO_TARGET_DIR"
 
     - name: Prepare Artifacts
       shell: bash
