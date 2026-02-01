@@ -41,7 +41,8 @@ just build-vendored
 just rootdir=%{buildroot} install
 
 %files
-%{_bindir}/cosmic-files
+%{_bindir}/cosmic-*
+# これで cosmic-files も cosmic-files-applet も一括で含まれます
 %{_datadir}/applications/*.desktop
 # パスを scalable ではなく hicolor 以下の全ての svg を拾うように修正
 %{_datadir}/icons/hicolor/*/apps/*.svg
