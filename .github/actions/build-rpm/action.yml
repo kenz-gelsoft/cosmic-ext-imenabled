@@ -61,7 +61,12 @@ runs:
         workspaces: .
         # アーキテクチャごとにキャッシュを分ける
         key: ${{ inputs.app_name }}-${{ inputs.arch }}
-
+        # rpmbuildが使用する可能性のある場所をすべて網羅する
+        cache-directories: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          ./target
+        
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
       shell: bash
