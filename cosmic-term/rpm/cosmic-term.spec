@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 %define _build_id_links none
 
-Name:           cosmic-term
+Name:           cosmic-term-ime
 Version:        0.1.0
 Release:        1%{?dist}
 Summary:        COSMIC Terminal Emulator(IME)
