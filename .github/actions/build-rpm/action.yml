@@ -1,0 +1,106 @@
+# .github/actions/build-rpm/action.yml
+name: "Build COSMIC Package"
+description: "Common build steps for COSMIC components"
+inputs:
+  app_name:
+    required: true
+  repository:
+    required: true
+  ref:
+    required: true
+  cargo_patch:
+    required: false
+    default: ""
+  arch:
+    description: "Target architecture (amd64 or arm64)"
+    required: true
+    default: "amd64"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Check out app code
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repository }}
+        ref: ${{ inputs.ref }}
+        fetch-depth: 0
+
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        path: "build"
+
+    - name: Install build tools
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y devscripts debhelper equivs
+
+    - name: Overwrite and install package build dependencies
+      shell: bash
+      run: |
+        sed -i "/DESTDIR \?=/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
+        cp build/${{ inputs.app_name }}/debian/{changelog,control} debian/
+        # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
+        sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
+
+    - name: Rust Cache
+      uses: swatinem/rust-cache@v2
+      with:
+        workspaces: .
+        # アーキテクチャごとにキャッシュを分ける
+        key: ${{ inputs.app_name }}-${{ inputs.arch }}
+
+    - name: Patch Cargo.toml
+      if: ${{ inputs.cargo_patch != '' }}
+      shell: bash
+      run: |
+        ${{ inputs.cargo_patch }}
+        cp build/${{ inputs.app_name }}/Cargo.lock . || true
+
+    - name: Update Version in Changelog
+      shell: bash
+      run: |
+        # 現在のコミットハッシュ（短縮版）を取得
+        SHORT_SHA=$(git rev-parse --short HEAD)
+        # GitHub Actions の Run Number (例: 42)
+        RUN_NUMBER=${{ github.run_number }}
+
+        # 既存のバージョンを取得 (例: 1.0.0-1)
+        CURRENT_VER=$(dpkg-parsechangelog -S Version)
+
+        # 新しいバージョンを作成 (例: 1.0.0-1-42-abc123)
+        # 単調増加のビルド回数によって新しいビルドがアップデートになるようにします。
+        # ビルドが一意になるように git コミットハッシュを付加します。
+        NEW_VER="${CURRENT_VER}+${RUN_NUMBER}-${SHORT_SHA}"
+
+        echo "Updating version from $CURRENT_VER to $NEW_VER"
+
+        # dch コマンドで changelog を更新
+        # --newversion で新しいバージョンを指定し、--force-bad-version で非標準形式を許可
+        dch --newversion "$NEW_VER" --force-bad-version "Automated build for $SHORT_SHA"
+
+    - name: Build package using debuild
+      shell: bash
+      run: |
+        sed -i 's/just build-vendored/just build-release/g' debian/rules
+        sed -i 's/VENDOR \?= 1/VENDOR = 0/g' debian/rules
+
+        export CARGO_TARGET_DIR=$(pwd)/target
+        export CARGO_HOME=$HOME/.cargo
+
+        # -a オプションでアーキテクチャを指定
+        debuild \
+          -e PATH=$PATH \
+          -e VENDOR=0 \
+          -e CARGO_TARGET_DIR=$CARGO_TARGET_DIR \
+          -e CARGO_HOME=$CARGO_HOME \
+          -us -uc -b -j$(nproc) --no-pre-clean --no-post-clean
+
+    - name: Prepare Artifacts
+      shell: bash
+      run: |
+        mkdir -p dist
+        # 拡張子が異なる場合を考慮してコピー
+        mv ../*.deb ../*.changes ../*.buildinfo dist/ 2>/dev/null || true
