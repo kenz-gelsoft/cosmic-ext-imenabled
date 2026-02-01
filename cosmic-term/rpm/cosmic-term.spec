@@ -44,8 +44,8 @@ just rootdir=%{buildroot} install
 # パスを scalable ではなく hicolor 以下の全ての svg を拾うように修正
 %{_datadir}/icons/hicolor/*/apps/*.svg
 # その他、必要に応じてマニュアルやメタデータを追加
-# %{_datadir}/metainfo/*.xml
+%{_datadir}/metainfo/*.xml
 
 %changelog
-* Sun Feb 01 2026 Developer <dev@example.com> - 1.0.0-1
+* Sun Feb 01 2026 Developer <dev@example.com> - 0.1.0-1
 - Initial RPM release based on Debian control file
