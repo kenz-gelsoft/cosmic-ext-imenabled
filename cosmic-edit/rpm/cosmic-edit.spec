@@ -22,15 +22,14 @@ Conflicts:      cosmic-edit
 Provides:       cosmic-edit
 
 %description
-COSMIC Edit is a multi-window text editor for the COSMIC Desktop Environment, 
+COSMIC Edit is a multi-window text editor for the COSMIC Desktop Environment,
 built using the iced GUI library and the cosmic-text shaping engine.
 
 %prep
 %setup -q
 
 %build
-# Debianのdh_auto_build相当
-just build-vendored
+just build-release
 
 %install
 # Debianのdh_auto_install相当

@@ -21,15 +21,14 @@ Conflicts:      cosmic-app-library
 Provides:       cosmic-app-library
 
 %description
-The App Library for the COSMIC Desktop Environment. 
+The App Library for the COSMIC Desktop Environment.
 It provides a categorized view of all installed applications.
 
 %prep
 %setup -q
 
 %build
-# debian/rules の override_dh_auto_build: just build-vendored に準拠
-just build-vendored
+just build-release
 
 %install
 # debian/rules の override_dh_install に準拠

@@ -74,20 +74,7 @@ runs:
       run: |
         mkdir -p ~/rpmbuild/SOURCES
 
-        # 1. cargo vendor を直接実行して vendor ディレクトリを強制作成
-        # これにより全依存関係が ./vendor にダウンロードされます
-        cargo vendor
-
-        # 2. just build-vendored が期待する形式に固める
-        # vendor ディレクトリが存在することを確認してから実行
-        if [ -d "vendor" ]; then
-          tar -cf vendor.tar vendor/
-        else
-          echo "Error: vendor directory was not created!"
-          exit 1
-        fi
-
-        # 3. RPMビルド用のディレクトリ構造を作成して固める
+        # RPMビルド用のディレクトリ構造を作成して固める
         mkdir -p ../${{ inputs.app_name }}-ime-0.1.0
         cp -r . ../${{ inputs.app_name }}-ime-0.1.0/
         cd ..

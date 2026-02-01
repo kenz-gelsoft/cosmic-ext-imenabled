@@ -32,9 +32,7 @@ The file manager for the COSMIC Desktop Environment.
 %setup -q
 
 %build
-# Debian の rules (just build-vendored) に合わせる
-# ネットワークアクセスが可能、もしくは vendor 済みのソースがある前提
-just build-vendored
+just build-release
 
 %install
 # rules の override_dh_auto_install と同様の処理
