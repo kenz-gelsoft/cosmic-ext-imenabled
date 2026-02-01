@@ -28,6 +28,7 @@ It provides a fast and extensible way to launch applications and calculate resul
 %setup -q
 
 %build
+export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
 just build-release
 
 %install

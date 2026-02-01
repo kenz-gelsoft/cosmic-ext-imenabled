@@ -28,6 +28,7 @@ It provides a categorized view of all installed applications.
 %setup -q
 
 %build
+export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
 just build-release
 
 %install

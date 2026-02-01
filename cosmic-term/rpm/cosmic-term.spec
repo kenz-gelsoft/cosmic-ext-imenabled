@@ -24,14 +24,14 @@ Conflicts:      cosmic-term
 Provides:       cosmic-term
 
 %description
-The terminal emulator for the COSMIC Desktop Environment, 
+The terminal emulator for the COSMIC Desktop Environment,
 built with the Iced GUI library and the Alacritty terminal backend.
 
 %prep
 %setup -q
 
 %build
-# Debian の rules に合わせ、ベンダー化されたビルドを実行
+export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
 just build-release
 
 %install

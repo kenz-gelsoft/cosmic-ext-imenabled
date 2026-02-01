@@ -32,6 +32,7 @@ The file manager for the COSMIC Desktop Environment.
 %setup -q
 
 %build
+export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
 just build-release
 
 %install
