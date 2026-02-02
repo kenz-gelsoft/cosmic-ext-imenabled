@@ -77,7 +77,7 @@ runs:
     - name: Prepare Sources
       shell: bash
       run: |
-        mkdir -p ~/rpmbuild/SOURCES
+        mkdir -p $GITHUB_WORKSPACE/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 
         # RPMビルド用のディレクトリ構造を作成して固める
         mkdir -p ../${{ inputs.app_name }}-ime-0.1.0
@@ -96,8 +96,7 @@ runs:
         mkdir -p $CARGO_TARGET_DIR
         
         rpmbuild -ba build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
-          --define "_topdir $HOME/rpmbuild" \
-          --define "_builddir $GITHUB_WORKSPACE/rpmbuild/BUILD" \
+          --define "_topdir $GITHUB_WORKSPACE/rpmbuild" \
           --define "cargo_home $CARGO_HOME" \
           --define "cargo_target_dir $CARGO_TARGET_DIR"
 
