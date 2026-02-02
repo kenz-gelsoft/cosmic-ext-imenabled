@@ -32,10 +32,12 @@ It provides a categorized view of all installed applications.
 
 %build
 export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
+export CARGO_TARGET_DIR=%{?cargo_target_dir}%{!?cargo_target_dir:%{_builddir}/target}
 just build-release
 
 %install
 # debian/rules の override_dh_install に準拠
+export CARGO_TARGET_DIR=%{?cargo_target_dir}%{!?cargo_target_dir:%{_builddir}/target}
 just rootdir=%{buildroot} install
 
 %files
