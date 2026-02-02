@@ -97,6 +97,7 @@ runs:
         
         rpmbuild -ba build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
           --define "_topdir $HOME/rpmbuild" \
+          --define "_builddir $GITHUB_WORKSPACE/rpmbuild/BUILD" \
           --define "cargo_home $CARGO_HOME" \
           --define "cargo_target_dir $CARGO_TARGET_DIR"
 
