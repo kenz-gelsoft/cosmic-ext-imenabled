@@ -83,7 +83,7 @@ runs:
         mkdir -p ../${{ inputs.app_name }}-ime-0.1.0
         cp -r . ../${{ inputs.app_name }}-ime-0.1.0/
         cd ..
-        tar -czf ~/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
+        tar -czf $GITHUB_WORKSPACE/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
 
     - name: Execute rpmbuild
       shell: bash
