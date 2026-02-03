@@ -28,7 +28,6 @@ The launcher for the COSMIC Desktop Environment.
 It provides a fast and extensible way to launch applications and calculate results.
 
 %prep
-%setup -q
 
 %build
 
