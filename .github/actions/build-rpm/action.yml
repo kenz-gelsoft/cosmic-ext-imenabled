@@ -105,4 +105,4 @@ runs:
       run: |
         mkdir -p dist
         # 拡張子が異なる場合を考慮してコピー
-        mv ~/rpmbuild/RPMS/*/*.rpm dist/
+        mv $GITHUB_WORKSPACE/rpmbuild/RPMS/*/*.rpm dist/
