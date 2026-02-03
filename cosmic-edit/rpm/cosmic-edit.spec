@@ -26,7 +26,6 @@ COSMIC Edit is a multi-window text editor for the COSMIC Desktop Environment,
 built using the iced GUI library and the cosmic-text shaping engine.
 
 %prep
-%setup -q
 
 %build
 
