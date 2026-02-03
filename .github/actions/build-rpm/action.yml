@@ -54,7 +54,7 @@ runs:
           wayland-devel \
           libinput-devel \
           libxkbcommon-x11-devel
-  
+
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
       shell: bash
@@ -87,25 +87,21 @@ runs:
 
     - name: Execute Build (Out of RPM)
       shell: bash
-      env:
-        CARGO_HOME: /root/.cargo
-        CARGO_TARGET_DIR: ${{ github.workspace }}/target
       run: |
+        export CARGO_TARGET_DIR=$(pwd)/target
+        export CARGO_HOME=$HOME/.cargo
+
         # ここでビルドを行う。パスは常に ${{ github.workspace }}
         just build-release
 
     - name: Execute rpmbuild (Packaging only)
       shell: bash
-      env:
-        CARGO_HOME: /root/.cargo
-        CARGO_TARGET_DIR: ${{ github.workspace }}/target
       run: |
+        export CARGO_TARGET_DIR=$(pwd)/target
+
         # %_builddir を現在のワークスペースに強制することで、
         # rpmbuild が ./target/release 内のバイナリを見つけられるようにします
         rpmbuild -bb build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
-          --define "_topdir $GITHUB_WORKSPACE/rpmbuild" \
-          --define "_builddir ${{ github.workspace }}" \
-          --define "cargo_home $CARGO_HOME" \
           --define "cargo_target_dir $CARGO_TARGET_DIR"
 
     - name: Prepare Artifacts
