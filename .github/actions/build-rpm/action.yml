@@ -100,10 +100,11 @@ runs:
         CARGO_HOME: /root/.cargo
         CARGO_TARGET_DIR: ${{ github.workspace }}/target
       run: |
-        # -bb はバイナリビルドをスキップしてパッケージングのみ行うフラグ
-        # ただし spec 内の %build を調整する必要がある
+        # %_builddir を現在のワークスペースに強制することで、
+        # rpmbuild が ./target/release 内のバイナリを見つけられるようにします
         rpmbuild -bb build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
           --define "_topdir $GITHUB_WORKSPACE/rpmbuild" \
+          --define "_builddir ${{ github.workspace }}" \
           --define "cargo_home $CARGO_HOME" \
           --define "cargo_target_dir $CARGO_TARGET_DIR"
 
