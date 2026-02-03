@@ -31,6 +31,25 @@ runs:
       with:
         path: "build"
 
+    - name: Patch Cargo.toml
+      if: ${{ inputs.cargo_patch != '' }}
+      shell: bash
+      run: |
+        ${{ inputs.cargo_patch }}
+        cp build/${{ inputs.app_name }}/Cargo.lock . || true
+
+    - name: Rust Cache
+      uses: swatinem/rust-cache@v2
+      with:
+        workspaces: .
+        # アーキテクチャごとにキャッシュを分ける
+        key: ${{ inputs.app_name }}-${{ inputs.arch }}
+        # rpmbuildが使用する可能性のある場所をすべて網羅する
+        cache-directories: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          ./target
+
     - name: Install System Dependencies
       shell: bash
       run: |
@@ -54,25 +73,6 @@ runs:
           wayland-devel \
           libinput-devel \
           libxkbcommon-x11-devel
-
-    - name: Rust Cache
-      uses: swatinem/rust-cache@v2
-      with:
-        workspaces: .
-        # アーキテクチャごとにキャッシュを分ける
-        key: ${{ inputs.app_name }}-${{ inputs.arch }}
-        # rpmbuildが使用する可能性のある場所をすべて網羅する
-        cache-directories: |
-          ~/.cargo/registry
-          ~/.cargo/git
-          ./target
-        
-    - name: Patch Cargo.toml
-      if: ${{ inputs.cargo_patch != '' }}
-      shell: bash
-      run: |
-        ${{ inputs.cargo_patch }}
-        cp build/${{ inputs.app_name }}/Cargo.lock . || true
 
     - name: Prepare Sources
       shell: bash
