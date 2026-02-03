@@ -28,7 +28,6 @@ The terminal emulator for the COSMIC Desktop Environment,
 built with the Iced GUI library and the Alacritty terminal backend.
 
 %prep
-%setup -q
 
 %build
 
