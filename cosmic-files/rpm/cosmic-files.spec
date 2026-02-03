@@ -32,9 +32,6 @@ The file manager for the COSMIC Desktop Environment.
 %setup -q
 
 %build
-export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
-export CARGO_TARGET_DIR=%{?cargo_target_dir}%{!?cargo_target_dir:%{_builddir}/target}
-just build-release
 
 %install
 # rules の override_dh_auto_install と同様の処理
