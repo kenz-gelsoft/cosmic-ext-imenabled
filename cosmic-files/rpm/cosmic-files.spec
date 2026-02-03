@@ -29,7 +29,6 @@ Provides:       cosmic-files
 The file manager for the COSMIC Desktop Environment.
 
 %prep
-%setup -q
 
 %build
 
