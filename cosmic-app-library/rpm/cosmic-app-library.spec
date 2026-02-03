@@ -28,7 +28,6 @@ The App Library for the COSMIC Desktop Environment.
 It provides a categorized view of all installed applications.
 
 %prep
-%setup -q
 
 %build
 
