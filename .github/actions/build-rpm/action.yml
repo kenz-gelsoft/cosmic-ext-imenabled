@@ -85,17 +85,24 @@ runs:
         cd ..
         tar -czf $GITHUB_WORKSPACE/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
 
-    - name: Execute rpmbuild
+    - name: Execute Build (Out of RPM)
       shell: bash
       env:
         CARGO_HOME: /root/.cargo
-        # ★ここが重要: 絶対パスで target を指定する
         CARGO_TARGET_DIR: ${{ github.workspace }}/target
       run: |
-        # target ディレクトリが確実に存在するようにする
-        mkdir -p $CARGO_TARGET_DIR
-        
-        rpmbuild -ba build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
+        # ここでビルドを行う。パスは常に ${{ github.workspace }}
+        just build-release
+
+    - name: Execute rpmbuild (Packaging only)
+      shell: bash
+      env:
+        CARGO_HOME: /root/.cargo
+        CARGO_TARGET_DIR: ${{ github.workspace }}/target
+      run: |
+        # -bb はバイナリビルドをスキップしてパッケージングのみ行うフラグ
+        # ただし spec 内の %build を調整する必要がある
+        rpmbuild -bb build/${{ inputs.app_name }}/rpm/${{ inputs.app_name }}.spec \
           --define "_topdir $GITHUB_WORKSPACE/rpmbuild" \
           --define "cargo_home $CARGO_HOME" \
           --define "cargo_target_dir $CARGO_TARGET_DIR"
