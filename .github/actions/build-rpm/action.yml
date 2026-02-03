@@ -77,13 +77,13 @@ runs:
     - name: Prepare Sources
       shell: bash
       run: |
-        mkdir -p $GITHUB_WORKSPACE/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
+        mkdir -p ~/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 
         # RPMビルド用のディレクトリ構造を作成して固める
         mkdir -p ../${{ inputs.app_name }}-ime-0.1.0
         cp -r . ../${{ inputs.app_name }}-ime-0.1.0/
         cd ..
-        tar -czf $GITHUB_WORKSPACE/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
+        tar -czf ~/rpmbuild/SOURCES/${{ inputs.app_name }}-ime-0.1.0.tar.gz ${{ inputs.app_name }}-ime-0.1.0/
 
     - name: Execute Build (Out of RPM)
       shell: bash
@@ -109,4 +109,4 @@ runs:
       run: |
         mkdir -p dist
         # 拡張子が異なる場合を考慮してコピー
-        mv $GITHUB_WORKSPACE/rpmbuild/RPMS/*/*.rpm dist/
+        mv ~/rpmbuild/RPMS/*/*.rpm dist/
