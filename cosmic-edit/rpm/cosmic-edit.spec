@@ -29,9 +29,6 @@ built using the iced GUI library and the cosmic-text shaping engine.
 %setup -q
 
 %build
-export CARGO_HOME=%{?cargo_home}%{!?cargo_home:$HOME/.cargo}
-export CARGO_TARGET_DIR=%{?cargo_target_dir}%{!?cargo_target_dir:%{_builddir}/target}
-just build-release
 
 %install
 # Debianのdh_auto_install相当
