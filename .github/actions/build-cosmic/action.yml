@@ -35,7 +35,8 @@ runs:
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y devscripts debhelper equivs
+        sudo apt-get install -y devscripts debhelper equivs ruby-rubygems rpm
+        sudo gem install fpm
 
     - name: Overwrite and install package build dependencies
       shell: bash
@@ -98,9 +99,14 @@ runs:
           -e CARGO_HOME=$CARGO_HOME \
           -us -uc -b -j$(nproc) --no-pre-clean --no-post-clean
 
+    - name: Repackage deb into rpm
+      shell: bash
+      run: |
+        sh ./${{ inputs.app_name }}/build-rpm.sh ../*.deb
+
     - name: Prepare Artifacts
       shell: bash
       run: |
         mkdir -p dist
         # 拡張子が異なる場合を考慮してコピー
-        mv ../*.deb ../*.changes ../*.buildinfo dist/ 2>/dev/null || true
+        mv ../*.deb ../*.changes ../*.buildinfo *.rpm dist/ 2>/dev/null || true
