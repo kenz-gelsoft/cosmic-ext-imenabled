@@ -102,7 +102,7 @@ runs:
     - name: Repackage deb into rpm
       shell: bash
       run: |
-        sh ./${{ inputs.app_name }}/build-rpm.sh ../*.deb
+        sh build/${{ inputs.app_name }}/build-rpm.sh ../*.deb
 
     - name: Prepare Artifacts
       shell: bash
