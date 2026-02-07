@@ -120,7 +120,7 @@ jobs:
 
           # create Yum repo
           cp downloaded-packages/*.rpm repo-site/
-          createrepo repo-site
+          createrepo_c repo-site
 
           # 1. reprepro の設定ファイルを作成
           cat <<EOF > repo-site/conf/distributions
