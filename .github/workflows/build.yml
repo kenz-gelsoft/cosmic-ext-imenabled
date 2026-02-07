@@ -114,7 +114,7 @@ jobs:
 
       - name: Structure Apt/Yum Repository
         run: |
-          sudo apt-get update && sudo apt-get install -y reprepro createrepo
+          sudo apt-get update && sudo apt-get install -y reprepro createrepo_c
 
           mkdir -p repo-site/conf
 
