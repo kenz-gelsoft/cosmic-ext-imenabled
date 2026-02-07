@@ -34,11 +34,11 @@ runs:
     - name: Install build tools
       shell: bash
       run: |
-        #sudo 
+        #sudo
         apt-get update
-        #sudo 
+        #sudo
         apt-get install -y devscripts debhelper equivs ruby-rubygems rpm
-        #sudo 
+        #sudo
         gem install fpm
         # Install just
         curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
@@ -49,7 +49,7 @@ runs:
         sed -i "/DESTDIR \?=/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
         cp build/${{ inputs.app_name }}/debian/{changelog,control} debian/
         # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
-        #sudo 
+        #sudo
         mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
 
     - name: Rust Cache
@@ -70,7 +70,10 @@ runs:
       shell: bash
       run: |
         # 現在のコミットハッシュ（短縮版）を取得
-        SHORT_SHA=$(git rev-parse --short HEAD)
+        # SHORT_SHA=$(git rev-parse --short HEAD)
+        # git rev-parse の代わりに GitHub の環境変数を使用する（短縮版を作成）
+        FULL_SHA="${{ github.sha }}"
+        SHORT_SHA=${FULL_SHA:0:7}
         # GitHub Actions の Run Number (例: 42)
         RUN_NUMBER=${{ github.run_number }}
 
