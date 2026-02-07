@@ -5,11 +5,11 @@ Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Build-Depends:
     debhelper-compat (=13),
     git,
-    just (>= 1.13.0),
     pkg-config,
     libglib2.0-dev,
     libxkbcommon-dev,
     rust-all,
+#    just (>= 1.13.0),
 Standards-Version: 4.6.2
 Homepage: https://github.com/kenz-gelsoft/cosmic-edit
 
