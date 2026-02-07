@@ -29,7 +29,7 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: epoch-1.0.3
+            ref: epoch-1.0.5
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
@@ -74,9 +74,9 @@ jobs:
       - name: Install prerequisites
         shell: bash
         run: |
-          #sudo 
+          #sudo
           apt-get update
-          #sudo 
+          #sudo
           apt-get install -y curl
 
       - name: Setup Rust
