@@ -13,6 +13,8 @@ env:
 jobs:
   build-all:
     runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
+    container:
+      image: debian:bookworm
     strategy:
       fail-fast: false
       matrix:
