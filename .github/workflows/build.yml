@@ -83,18 +83,14 @@ jobs:
           cargo_patch: ${{ matrix.patch }}
           arch: ${{ matrix.arch }}
 
-      - name: Upload Artifacts (deb)
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           # 全ての成果物を一つの名前空間（packages）に集約しやすくする
-          name: deb-${{ matrix.id }}-${{ matrix.arch }}
-          path: dist/*.deb
-
-      - name: Upload Artifacts (rpm)
-        uses: actions/upload-artifact@v4
-        with:
-          name: rpm-${{ matrix.id }}-${{ matrix.arch }}
-          path: dist/*.rpm
+          name: all-packages-${{ matrix.id }}-${{ matrix.arch }}
+          path: |
+            dist/*.deb
+            dist/*.rpm
 
   publish-repo:
     needs: build-all
@@ -113,7 +109,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: downloaded-packages
-          pattern: deb-*
+          pattern: all-packages-*
           merge-multiple: true
 
       - name: Structure Apt Repository
