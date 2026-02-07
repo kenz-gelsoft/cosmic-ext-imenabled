@@ -3,9 +3,9 @@ name: Build and Publish Apt Repo
 on:
   push:
     paths:
-      - '*/debian/*'
-      - '.github/actions/build-cosmic/action.yml'
-      - '.github/workflows/build.yml'
+      - "*/debian/*"
+      - ".github/actions/build-cosmic/action.yml"
+      - ".github/workflows/build.yml"
 
 env:
   CARGO_TERM_COLOR: always
@@ -112,11 +112,15 @@ jobs:
           pattern: all-packages-*
           merge-multiple: true
 
-      - name: Structure Apt Repository
+      - name: Structure Apt/Yum Repository
         run: |
-          sudo apt-get update && sudo apt-get install -y reprepro
+          sudo apt-get update && sudo apt-get install -y reprepro createrepo
 
           mkdir -p repo-site/conf
+
+          # create Yum repo
+          cp downloaded-packages/*.rpm repo-site/
+          createrepo repo-site
 
           # 1. reprepro の設定ファイルを作成
           cat <<EOF > repo-site/conf/distributions
