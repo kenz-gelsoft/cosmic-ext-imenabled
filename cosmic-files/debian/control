@@ -5,12 +5,12 @@ Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Build-Depends:
     debhelper-compat (=13),
     git,
-    just (>= 1.13.0),
     libclang-dev,
     libglib2.0-dev,
     libxkbcommon-dev,
     pkg-config,
     rust-all,
+#    just (>= 1.13.0),
 Standards-Version: 4.6.2
 Homepage: https://github.com/pop-os/cosmic-files
 
