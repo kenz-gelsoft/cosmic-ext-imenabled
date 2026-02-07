@@ -69,8 +69,6 @@ runs:
     - name: Update Version in Changelog
       shell: bash
       run: |
-        git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        
         # 現在のコミットハッシュ（短縮版）を取得
         SHORT_SHA=$(git rev-parse --short HEAD)
         # GitHub Actions の Run Number (例: 42)
