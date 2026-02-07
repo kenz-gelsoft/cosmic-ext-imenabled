@@ -49,7 +49,7 @@ runs:
       working-directory: app # app 内の debian/ を操作
       run: |
         sed -i "/DESTDIR \?=/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
-        cp ../build/${{ inputs.app_name }}/debian/{changelog,control} debian/
+        cp build/${{ inputs.app_name }}/debian/{changelog,control} debian/
         # mk-build-deps にアーキテクチャ指定は不要（ホストネイティブでビルドするため）
         #sudo 
         mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
