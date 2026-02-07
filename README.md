@@ -16,7 +16,7 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 
 [How to install](#how-to-install) (ja: [インストール方法](#インストール方法)).
 
-|APT Package Name|Upstream Version|Fork or Patch|
+|Package Name|Upstream Version|Fork or Patch|
 |-|-|-|
 |cosmic-term-**ime**|[epoch-1.0.3](https://github.com/pop-os/cosmic-term/releases/tag/epoch-1.0.3)|[Fork](https://github.com/kenz-gelsoft/cosmic-term/tree/backport-input-method2)|
 |cosmic-edit-**ime**|[epoch-1.0.3](https://github.com/pop-os/cosmic-edit/releases/tag/epoch-1.0.3)|[Fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/backport-input-method2)|
