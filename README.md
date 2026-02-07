@@ -1,10 +1,10 @@
 # IME enabled COSMIC Apps for Pop!_OS 24.04/Fedora
 
-(ja: [日本語の説明はこちら](#cosmic-アプリ-日本語入力対応版-apt-リポジトリ))
+(ja: [日本語の説明はこちら](#cosmic-アプリ-日本語入力対応版リポジトリ))
 
 **NEWS!**: Now there are RPM packages for Fedora.
 
-This is **unofficial** APT repo. **Don't report bugs or issues to official** repos.
+This is **unofficial** APT/YUM repo. **Don't report bugs or issues to official** repos.
 
 Since COSMIC apps do not currently support IME, there are issues inputting characters for languages that require an IME, such as Japanese, Chinese, and Korean.
 
@@ -85,11 +85,11 @@ $ sudo dnf install --allowerasing cosmic-term-ime
 
 Following is Japanese translation.
 
-# COSMIC アプリ 日本語入力対応版 apt リポジトリ
+# COSMIC アプリ 日本語入力対応版リポジトリ
 
-これは**非公式** APT リポジトリです。不具合や問題を**公式リポジトリに報告しないでください**。
+これは**非公式** APT/YUM リポジトリです。不具合や問題を**公式リポジトリに報告しないでください**。
 
-Pop!_OS の COSMIC アプリは IME に非対応のため、日本語・中国語・韓国語などの IME を必要とする言語の文字入力に問題があります。
+COSMIC アプリは IME に非対応のため、日本語・中国語・韓国語などの IME を必要とする言語の文字入力に問題があります。
 
 COSMIC アプリが使っている **iced** ツールキットは最新版にて IME サポートが実装されましたが、COSMIC アプリが iced ツールキットの最新版を採用するにはまだ数ヶ月かかる見込みであるため、先行して IME サポートのみをバックポートして一部のアプリのみ IME が動作するようにしました。
 
