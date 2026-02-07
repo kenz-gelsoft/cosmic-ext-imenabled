@@ -74,8 +74,10 @@ jobs:
       - name: Install prerequisites
         shell: bash
         run: |
-          sudo apt-get update
-          sudo apt-get install -y curl
+          #sudo 
+          apt-get update
+          #sudo 
+          apt-get install -y curl
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
