@@ -25,12 +25,12 @@ runs:
         repository: ${{ inputs.repository }}
         ref: ${{ inputs.ref }}
         fetch-depth: 0
-        path: "app" # アプリ本体を app ディレクトリに隔離
 
     - name: Check out repository
       uses: actions/checkout@v4
       with:
         path: "build"
+        clean: false
 
     - name: Install build tools
       shell: bash
@@ -46,7 +46,6 @@ runs:
 
     - name: Overwrite and install package build dependencies
       shell: bash
-      working-directory: app # app 内の debian/ を操作
       run: |
         sed -i "/DESTDIR \?=/s|debian/[^ ]*|debian/${{ inputs.app_name }}-ime|" debian/rules
         cp build/${{ inputs.app_name }}/debian/{changelog,control} debian/
@@ -57,23 +56,26 @@ runs:
     - name: Rust Cache
       uses: swatinem/rust-cache@v2
       with:
-        workspaces: "app" # キャッシュ対象を app に変更
+        workspaces: .
         # アーキテクチャごとにキャッシュを分ける
         key: ${{ inputs.app_name }}-${{ inputs.arch }}
 
     - name: Patch Cargo.toml
       if: ${{ inputs.cargo_patch != '' }}
       shell: bash
-      working-directory: app
       run: |
         ${{ inputs.cargo_patch }}
-        cp ../build/${{ inputs.app_name }}/Cargo.lock . || true
+        cp build/${{ inputs.app_name }}/Cargo.lock . || true
 
     - name: Update Version in Changelog
       shell: bash
-      working-directory: app # app 内で git コマンドを実行
       run: |
-        git config --global --add safe.directory "*"
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        pwd
+        ls -la
+        ls -la .git
+
+        cd ${{ github.workspace }}
         
         # 現在のコミットハッシュ（短縮版）を取得
         SHORT_SHA=$(git rev-parse --short HEAD)
@@ -96,7 +98,6 @@ runs:
 
     - name: Build package using debuild
       shell: bash
-      working-directory: app
       run: |
         sed -i 's/just build-vendored/just build-release/g' debian/rules
         sed -i 's/VENDOR \?= 1/VENDOR = 0/g' debian/rules
@@ -115,11 +116,11 @@ runs:
     - name: Repackage deb into rpm
       shell: bash
       run: |
-        sh build/${{ inputs.app_name }}/build-rpm.sh *.deb
+        sh build/${{ inputs.app_name }}/build-rpm.sh ../*.deb
 
     - name: Prepare Artifacts
       shell: bash
       run: |
         mkdir -p dist
         # 拡張子が異なる場合を考慮してコピー
-        mv *.deb *.changes *.buildinfo *.rpm dist/ 2>/dev/null || true
+        mv ../*.deb ../*.changes ../*.buildinfo *.rpm dist/ 2>/dev/null || true
