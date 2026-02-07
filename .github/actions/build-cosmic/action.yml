@@ -40,6 +40,8 @@ runs:
         apt-get install -y devscripts debhelper equivs ruby-rubygems rpm
         #sudo 
         gem install fpm
+        # Install just
+        curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
 
     - name: Overwrite and install package build dependencies
       shell: bash
