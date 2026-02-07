@@ -41,7 +41,11 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 ### cosmic-app-library-ime
 ![](screenshots/app-library.png)
 
-## How to Install (Pop!_OS 24.04)
+---
+
+## How to Install
+
+### for Pop!_OS 24.04
 
 Add this public APT repository to your `/etc/apt/sources.list` and run `apt update`.
 
@@ -59,9 +63,7 @@ You can now install the desired apps via `apt install`. For example:
 $ sudo apt install cosmic-term-ime
 ```
 
----
-
-## How to Install (Fedora)
+### for Fedora
 
 Add this public YUM repository to your `/etc/yum.repos.d/*.repo`.
 
@@ -97,7 +99,11 @@ COSMIC アプリが使っている **iced** ツールキットは最新版にて
 
 [こちら](#supported-cosmic-apps)
 
-## インストール方法 (Pop!_OS 24.04)
+---
+
+## インストール方法
+
+### Pop!_OS 24.04
 
 `/etc/apt/sources.list` にこのリポジトリから公開されている apt リポジトリを追加し、`apt update` します。
 ```shell
@@ -113,9 +119,7 @@ $ sudo apt update
 $ sudo apt install cosmic-term-ime
 ```
 
----
-
-## インストール方法 (Fedora)
+### Fedora
 
 `/etc/apt/yum.repos.d/*.repo` にこのリポジトリから公開されている yum リポジトリを追加します。
 ```shell
