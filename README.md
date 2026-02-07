@@ -67,7 +67,7 @@ $ sudo apt install cosmic-term-ime
 
 Add this public YUM repository to your `/etc/yum.repos.d/*.repo`.
 
-```
+```shell
 $ sudo sh -c "cat << EOF > /etc/yum.repos.d/cosmic-ext-imenabled.repo
 [cosmic-ext-imenabled]
 name=IME Enabled COSMIC Apps Repository
