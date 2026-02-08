@@ -129,10 +129,7 @@ jobs:
 
           mkdir -p repo-site/conf
 
-          ls downloaded-packages
-          echo existing
-          ls repo-site
-          
+          # Remove old RPMs as they are not deleted automatically.
           rm repo-site/*.rpm
 
           # create Yum repo
