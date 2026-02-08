@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "*/debian/*"
+      - "*/Cargo.lock"
       - ".github/actions/build-cosmic/action.yml"
       - ".github/workflows/build.yml"
 
