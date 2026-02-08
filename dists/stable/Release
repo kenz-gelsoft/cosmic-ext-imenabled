@@ -1,28 +1,28 @@
 Origin: MyCosmicRepo
 Label: MyCosmicRepo
 Codename: stable
-Date: Sat, 07 Feb 2026 23:48:06 UTC
+Date: Sun, 08 Feb 2026 00:48:00 UTC
 Architectures: amd64 arm64
 Components: main
 Description: Backported Cosmic Components
 MD5Sum:
- 44be5695d424e929ca2115ff9085e96e 6761 main/binary-amd64/Packages
- acd588d7f6ef66aa98463030282a906e 1967 main/binary-amd64/Packages.gz
+ 21b196813699629b2b49f167ab9df7fb 6761 main/binary-amd64/Packages
+ 2ef3fe8a98984e5f5d4ae26bdc35c68a 1961 main/binary-amd64/Packages.gz
  3cf578fe316d8bd3ef236672ea0c7647 119 main/binary-amd64/Release
- 3021ed7a9998bc8694d17524f9c05bd7 6762 main/binary-arm64/Packages
- a728b367617698fe61c4179d55cf4ac4 1961 main/binary-arm64/Packages.gz
+ 7ca9d00fb99cb8a1a3145f7c14481e8b 6762 main/binary-arm64/Packages
+ 6c4aee287be0b904fbc41f53e075fe60 1959 main/binary-arm64/Packages.gz
  b6a4bb1459e784d9521b7e9689674a8e 119 main/binary-arm64/Release
 SHA1:
- c4bf8ee951e19402b8096539bafcf0ef39286ec7 6761 main/binary-amd64/Packages
- cc40279ac42398290a9c2cfaf3b182d040d5023b 1967 main/binary-amd64/Packages.gz
+ 5b50f8f4cda738c3a14fab48c49b4c1173b60aca 6761 main/binary-amd64/Packages
+ b8140aef0334ddf761121d5b2e60823439373ef6 1961 main/binary-amd64/Packages.gz
  c13722a1c4db74cbbc996179ed0b64166fe3878b 119 main/binary-amd64/Release
- e0232f100998adaf05529e8a7db4b38370f35f7f 6762 main/binary-arm64/Packages
- 74a9d59d4236228b8be216c6c28e84e5d2e13e53 1961 main/binary-arm64/Packages.gz
+ 751ac2f9638fcd4e79dc2044a6adbacf930e2fb9 6762 main/binary-arm64/Packages
+ 950f6b6b73f2c8562e6f2f91d7c8f4826e785047 1959 main/binary-arm64/Packages.gz
  c11d545febdb3f510d7470bb732eb3dfe03d735d 119 main/binary-arm64/Release
 SHA256:
- cea64e740174084b1c0cb8cd45dafa7c4c19a7e03c13d4ca58c3c64f575a7dd4 6761 main/binary-amd64/Packages
- 31ccadd6e45e4dffa37435e6daf7564f2f9ddb1ce74e0202d924ce47268322bb 1967 main/binary-amd64/Packages.gz
+ 6cad2b98bb4bc3fe7645793080694a247716c5508202a0d02919159e357a3fd0 6761 main/binary-amd64/Packages
+ 1c00eda9da082098a1d9ab20a4c68742fbd8a0d8db8b6179e230eddc487099bf 1961 main/binary-amd64/Packages.gz
  c9a4ecb8590a3937d43cc9577c0074a19aa3550b576fe4b9045552a75e6da094 119 main/binary-amd64/Release
- e46a05d0c2196eea0dad1cef7ea1bc16423657a4ff5aea83558897b0082d8969 6762 main/binary-arm64/Packages
- 9dcab1940953575c5d2a265a07296b9691e721c412c97282cef1cf8af311332c 1961 main/binary-arm64/Packages.gz
+ 0eef36595705bf45f1c3d7c9ab464edda8d0e96fafe0aa749fc8b109766ec154 6762 main/binary-arm64/Packages
+ 1c41456e81855f2ae793e660c0722dd96a2dc644eef02a20a92a3e4b8885cbf4 1959 main/binary-arm64/Packages.gz
  c0d332d9c9634efed444de58553230fdeca39d940c0b3d2b2f03e711ef90df35 119 main/binary-arm64/Release
