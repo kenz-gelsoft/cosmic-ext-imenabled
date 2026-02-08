@@ -129,6 +129,12 @@ jobs:
 
           mkdir -p repo-site/conf
 
+          ls downloaded-packages
+          echo existing
+          ls repo-site
+          
+          rm repo-site/*.rpm
+
           # create Yum repo
           cp downloaded-packages/*.rpm repo-site/
           createrepo_c repo-site
