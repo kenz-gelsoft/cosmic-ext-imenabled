@@ -30,12 +30,9 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: epoch-1.0.5
+            ref: iced-rebase
             patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method" }
-              EOF
+              perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
