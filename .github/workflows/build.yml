@@ -45,9 +45,12 @@ jobs:
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
-            ref: iced-rebase
+            ref: epoch-1.0.5
             patch: |
-              perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "backport-input-method" }
+              EOF
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
