@@ -20,9 +20,9 @@ While the latest version of the **iced** toolkit (which COSMIC apps use) has imp
 |-|-|-|
 |cosmic-term-**ime**|[3657172@iced-rebase](https://github.com/pop-os/cosmic-term/commit/3657172fd83728fa7bc775dc9c08153b385d2527)|[Fork](https://github.com/kenz-gelsoft/cosmic-term/tree/minimal-input-method-support)|
 |cosmic-edit-**ime**|[946c369@iced-rebase](https://github.com/pop-os/cosmic-edit/commit/946c369a25fc980ee6a5938a0efd9a1f92d720f4)|[Fork](https://github.com/kenz-gelsoft/cosmic-edit/tree/minimal-input-method-support)|
-|cosmic-files-**ime**|[864e27b@iced-rebase](https://github.com/pop-os/cosmic-files/commit/864e27b0459266912e6d9f9e74567757e90800e2)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/iced-rebase...kenz-gelsoft:libcosmic:minimal-input-method-support)|
-|cosmic-launcher-**ime**|[epoch-1.0.5](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.5)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:backport-input-method)|
-|cosmic-app-library-**ime**|[epoch-1.0.5](https://github.com/pop-os/cosmic-applibrary/releases/tag/epoch-1.0.5)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:backport-input-method)|
+|cosmic-files-**ime**|[864e27b@iced-rebase](https://github.com/pop-os/cosmic-files/tree/iced-rebase)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/iced-rebase...kenz-gelsoft:libcosmic:minimal-input-method-support)|
+|cosmic-launcher-**ime**|[17cc1df@iced-rebase](https://github.com/pop-os/cosmic-launcher/tree/iced-rebase)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/iced-rebase...kenz-gelsoft:libcosmic:minimal-input-method-support)|
+|cosmic-app-library-**ime**|[8c8f821@iced-rebase](https://github.com/pop-os/cosmic-app-library/tree/iced-rebase)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/iced-rebase...kenz-gelsoft:libcosmic:minimal-input-method-support)|
 
 ## Screenshots
 
