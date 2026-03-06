@@ -21,7 +21,7 @@ checksum = "366ffbaa4442f4684d91e2cd7c5ea7c4ed8add41959a31447066e279e432b618"
 [[package]]
 name = "accesskit"
 version = "0.22.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "uuid",
 ]
@@ -29,7 +29,7 @@ dependencies = [
 [[package]]
 name = "accesskit_atspi_common"
 version = "0.15.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "accesskit_consumer",
@@ -41,7 +41,7 @@ dependencies = [
 [[package]]
 name = "accesskit_consumer"
 version = "0.32.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "hashbrown 0.16.1",
@@ -50,7 +50,7 @@ dependencies = [
 [[package]]
 name = "accesskit_macos"
 version = "0.23.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "accesskit_consumer",
@@ -63,7 +63,7 @@ dependencies = [
 [[package]]
 name = "accesskit_unix"
 version = "0.18.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "accesskit_atspi_common",
@@ -78,7 +78,7 @@ dependencies = [
 [[package]]
 name = "accesskit_windows"
 version = "0.30.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "accesskit_consumer",
@@ -91,7 +91,7 @@ dependencies = [
 [[package]]
 name = "accesskit_winit"
 version = "0.30.0"
-source = "git+https://github.com/wash2/accesskit?branch=iced-0.14#1f893441ec3dc5923f5430c02bba762f5444bbea"
+source = "git+https://github.com/wash2/accesskit?tag=cosmic-0.14#f0599eed5f18111228266fe3f28991cc48b5964f"
 dependencies = [
  "accesskit",
  "accesskit_macos",
@@ -905,19 +905,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "clipboard_macos"
+version = "0.1.0"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
+dependencies = [
+ "objc",
+ "objc-foundation",
+ "objc_id",
+]
+
+[[package]]
 name = "clipboard_wayland"
 version = "0.2.2"
 source = "git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2#6b9faab87bea9cebec6ae036906fd67fed254f5f"
 dependencies = [
- "dnd",
- "mime 0.1.0",
- "smithay-clipboard",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=pop-dnd-5)",
+]
+
+[[package]]
+name = "clipboard_wayland"
+version = "0.2.2"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
+dependencies = [
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=sctk-0.20)",
 ]
 
 [[package]]
 name = "clipboard_x11"
 version = "0.4.2"
 source = "git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2#6b9faab87bea9cebec6ae036906fd67fed254f5f"
+dependencies = [
+ "thiserror 1.0.69",
+ "x11rb",
+]
+
+[[package]]
+name = "clipboard_x11"
+version = "0.4.2"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
 dependencies = [
  "thiserror 1.0.69",
  "x11rb",
@@ -1133,24 +1162,11 @@ dependencies = [
 
 [[package]]
 name = "cosmic-client-toolkit"
-version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-protocols?rev=d0e95be#d0e95be25e423cfe523b11111a3666ed7aaf0dc4"
-dependencies = [
- "bitflags 2.11.0",
- "cosmic-protocols 0.1.0",
- "libc",
- "smithay-client-toolkit 0.20.0",
- "wayland-client",
- "wayland-protocols",
-]
-
-[[package]]
-name = "cosmic-client-toolkit"
 version = "0.2.0"
 source = "git+https://github.com/pop-os/cosmic-protocols?rev=160b086#160b086abe03cd34a8a375d7fbe47b24308d1f38"
 dependencies = [
  "bitflags 2.11.0",
- "cosmic-protocols 0.2.0",
+ "cosmic-protocols",
  "libc",
  "smithay-client-toolkit 0.20.0",
  "wayland-client",
@@ -1177,7 +1193,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -1207,7 +1223,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "quote",
  "syn",
@@ -1256,20 +1272,6 @@ dependencies = [
 
 [[package]]
 name = "cosmic-protocols"
-version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-protocols?rev=d0e95be#d0e95be25e423cfe523b11111a3666ed7aaf0dc4"
-dependencies = [
- "bitflags 2.11.0",
- "wayland-backend",
- "wayland-client",
- "wayland-protocols",
- "wayland-protocols-wlr",
- "wayland-scanner",
- "wayland-server",
-]
-
-[[package]]
-name = "cosmic-protocols"
 version = "0.2.0"
 source = "git+https://github.com/pop-os/cosmic-protocols?rev=160b086#160b086abe03cd34a8a375d7fbe47b24308d1f38"
 dependencies = [
@@ -1285,7 +1287,7 @@ dependencies = [
 [[package]]
 name = "cosmic-settings-config"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-settings-daemon#defa9f790432c70054ca1f39737d879ada5d0252"
+source = "git+https://github.com/pop-os/cosmic-settings-daemon#e37160f14d1e7ee428f973cd2848b4e95f83dfe1"
 dependencies = [
  "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic//?branch=iced-rebase)",
  "ron 0.11.0",
@@ -1329,7 +1331,7 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "almost",
  "configparser",
@@ -1385,7 +1387,7 @@ checksum = "460fbee9c2c2f33933d720630a6a0bac33ba7053db5344fac858d4b8952d77d5"
 [[package]]
 name = "cryoglyph"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/glyphon.git?branch=iced-0.14#c49de15bce4d8254ac136d1be9911960cc85ce12"
+source = "git+https://github.com/pop-os/glyphon.git?tag=cosmic-0.14#c49de15bce4d8254ac136d1be9911960cc85ce12"
 dependencies = [
  "cosmic-text",
  "etagere",
@@ -1577,10 +1579,22 @@ version = "0.1.0"
 source = "git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2#6b9faab87bea9cebec6ae036906fd67fed254f5f"
 dependencies = [
  "bitflags 2.11.0",
- "mime 0.1.0",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
  "raw-window-handle",
  "smithay-client-toolkit 0.19.2",
- "smithay-clipboard",
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=pop-dnd-5)",
+]
+
+[[package]]
+name = "dnd"
+version = "0.1.0"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
+dependencies = [
+ "bitflags 2.11.0",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "raw-window-handle",
+ "smithay-client-toolkit 0.20.0",
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=sctk-0.20)",
 ]
 
 [[package]]
@@ -1601,7 +1615,7 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 [[package]]
 name = "dpi"
 version = "0.1.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 
 [[package]]
 name = "drm"
@@ -2610,9 +2624,9 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
- "dnd",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "iced_accessibility",
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "iced_debug",
@@ -2623,15 +2637,15 @@ dependencies = [
  "iced_widget",
  "iced_winit",
  "image",
- "mime 0.1.0",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "thiserror 2.0.18",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
 ]
 
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2644,11 +2658,11 @@ source = "git+https://github.com/pop-os/libcosmic//?branch=iced-rebase#86f05cd48
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
- "dnd",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
  "glam",
  "lilt",
  "log",
- "mime 0.1.0",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
  "num-traits",
  "palette",
  "raw-window-handle",
@@ -2656,23 +2670,23 @@ dependencies = [
  "smol_str",
  "thiserror 2.0.18",
  "web-time",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
 ]
 
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
- "cosmic-client-toolkit 0.2.0",
- "dnd",
+ "cosmic-client-toolkit",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "glam",
  "iced_accessibility",
  "lilt",
  "log",
- "mime 0.1.0",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "num-traits",
  "palette",
  "raw-window-handle",
@@ -2681,13 +2695,13 @@ dependencies = [
  "smol_str",
  "thiserror 2.0.18",
  "web-time",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
 ]
 
 [[package]]
 name = "iced_debug"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -2710,7 +2724,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "futures",
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -2724,7 +2738,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "bitflags 2.11.0",
  "bytemuck",
@@ -2745,7 +2759,7 @@ dependencies = [
 [[package]]
 name = "iced_program"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -2754,7 +2768,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2766,23 +2780,23 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "bytes",
- "cosmic-client-toolkit 0.2.0",
- "dnd",
+ "cosmic-client-toolkit",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "iced_accessibility",
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "raw-window-handle",
  "thiserror 2.0.18",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
 ]
 
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2799,12 +2813,12 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.11.0",
  "bytemuck",
- "cosmic-client-toolkit 0.2.0",
+ "cosmic-client-toolkit",
  "cryoglyph",
  "futures",
  "glam",
@@ -2830,10 +2844,10 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.2"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
- "cosmic-client-toolkit 0.2.0",
- "dnd",
+ "cosmic-client-toolkit",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "iced_accessibility",
  "iced_renderer",
  "iced_runtime",
@@ -2843,17 +2857,17 @@ dependencies = [
  "rustc-hash 2.1.1",
  "thiserror 2.0.18",
  "unicode-segmentation",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
 ]
 
 [[package]]
 name = "iced_winit"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
- "cosmic-client-toolkit 0.2.0",
+ "cosmic-client-toolkit",
  "cursor-icon",
- "dnd",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "iced_accessibility",
  "iced_debug",
  "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -2871,7 +2885,7 @@ dependencies = [
  "wayland-protocols",
  "web-sys",
  "winapi",
- "window_clipboard",
+ "window_clipboard 0.4.1 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "winit",
  "winit-core",
  "xkbcommon 0.7.0",
@@ -3297,12 +3311,12 @@ checksum = "bcc35a38544a891a5f7c865aca548a982ccb3b8650a5b06d0fd33a10283c56fc"
 [[package]]
 name = "libcosmic"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#8794fe6204e8408a56b82ae90c79b542d4af3a18"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#38d80ee07aad12ee16f86fbd623fd26f7fdf5f0c"
 dependencies = [
  "apply",
  "ashpd 0.12.3",
  "auto_enums",
- "cosmic-client-toolkit 0.1.0",
+ "cosmic-client-toolkit",
  "cosmic-config 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "cosmic-freedesktop-icons",
  "cosmic-settings-config",
@@ -3584,7 +3598,15 @@ name = "mime"
 version = "0.1.0"
 source = "git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2#6b9faab87bea9cebec6ae036906fd67fed254f5f"
 dependencies = [
- "smithay-clipboard",
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=pop-dnd-5)",
+]
+
+[[package]]
+name = "mime"
+version = "0.1.0"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
+dependencies = [
+ "smithay-clipboard 0.8.0 (git+https://github.com/pop-os/smithay-clipboard?tag=sctk-0.20)",
 ]
 
 [[package]]
@@ -5235,6 +5257,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "smithay-clipboard"
+version = "0.8.0"
+source = "git+https://github.com/pop-os/smithay-clipboard?tag=sctk-0.20#859b02c88f45c554049a67c6ddeec1692ce0e20b"
+dependencies = [
+ "libc",
+ "raw-window-handle",
+ "smithay-client-toolkit 0.20.0",
+ "wayland-backend",
+]
+
+[[package]]
 name = "smol_str"
 version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6560,11 +6593,26 @@ version = "0.4.1"
 source = "git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2#6b9faab87bea9cebec6ae036906fd67fed254f5f"
 dependencies = [
  "clipboard-win",
- "clipboard_macos",
- "clipboard_wayland",
- "clipboard_x11",
- "dnd",
- "mime 0.1.0",
+ "clipboard_macos 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "clipboard_wayland 0.2.2 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "clipboard_x11 0.4.2 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=pop-0.13-2)",
+ "raw-window-handle",
+ "thiserror 1.0.69",
+]
+
+[[package]]
+name = "window_clipboard"
+version = "0.4.1"
+source = "git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20#3a7af79e54db6854d8aa9d9e2866a9288d0f95d5"
+dependencies = [
+ "clipboard-win",
+ "clipboard_macos 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "clipboard_wayland 0.2.2 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "clipboard_x11 0.4.2 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "dnd 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
+ "mime 0.1.0 (git+https://github.com/pop-os/window_clipboard.git?tag=sctk-0.20)",
  "raw-window-handle",
  "thiserror 1.0.69",
 ]
@@ -7081,7 +7129,7 @@ checksum = "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
 [[package]]
 name = "winit"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "cfg_aliases",
@@ -7107,7 +7155,7 @@ dependencies = [
 [[package]]
 name = "winit-android"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "android-activity",
  "bitflags 2.11.0",
@@ -7122,7 +7170,7 @@ dependencies = [
 [[package]]
 name = "winit-appkit"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "block2 0.6.2",
@@ -7144,7 +7192,7 @@ dependencies = [
 [[package]]
 name = "winit-common"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "memmap2 0.9.10",
  "objc2 0.6.3",
@@ -7159,7 +7207,7 @@ dependencies = [
 [[package]]
 name = "winit-core"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "cursor-icon",
@@ -7173,7 +7221,7 @@ dependencies = [
 [[package]]
 name = "winit-orbital"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "dpi",
@@ -7189,7 +7237,7 @@ dependencies = [
 [[package]]
 name = "winit-uikit"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "block2 0.6.2",
@@ -7209,7 +7257,7 @@ dependencies = [
 [[package]]
 name = "winit-wayland"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "ahash",
  "bitflags 2.11.0",
@@ -7235,7 +7283,7 @@ dependencies = [
 [[package]]
 name = "winit-web"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "atomic-waker",
  "bitflags 2.11.0",
@@ -7257,7 +7305,7 @@ dependencies = [
 [[package]]
 name = "winit-win32"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "cursor-icon",
@@ -7273,7 +7321,7 @@ dependencies = [
 [[package]]
 name = "winit-x11"
 version = "0.31.0-beta.2"
-source = "git+https://github.com/pop-os/winit.git?branch=iced-0.14-rebase#a610ac9c7a72b39ff102ed4d946291618dc725b6"
+source = "git+https://github.com/pop-os/winit.git?tag=cosmic-0.14#a610ac9c7a72b39ff102ed4d946291618dc725b6"
 dependencies = [
  "bitflags 2.11.0",
  "bytemuck",
