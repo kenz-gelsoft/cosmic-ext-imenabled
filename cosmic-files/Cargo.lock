@@ -1359,7 +1359,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic.git#3d2c018cd1df25697fa2825dbc5d040cff39389a"
+source = "git+https://github.com/pop-os/libcosmic.git#01e5593741c7aa7eedf0692c6087ee3fb97feeb8"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 1.0.0 (git+https://github.com/pop-os/libcosmic.git)",
@@ -1385,7 +1385,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic.git#3d2c018cd1df25697fa2825dbc5d040cff39389a"
+source = "git+https://github.com/pop-os/libcosmic.git#01e5593741c7aa7eedf0692c6087ee3fb97feeb8"
 dependencies = [
  "quote",
  "syn",
@@ -1530,7 +1530,7 @@ dependencies = [
 [[package]]
 name = "cosmic-settings-daemon"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/dbus-settings-bindings#0fa672f8dadb884001ef9a251b149ed432879629"
+source = "git+https://github.com/pop-os/dbus-settings-bindings#507e342c21d3ce6ae41b1d4f3fa2f0ad5ee23e75"
 dependencies = [
  "zbus 5.14.0",
 ]
@@ -1538,7 +1538,7 @@ dependencies = [
 [[package]]
 name = "cosmic-text"
 version = "0.18.2"
-source = "git+https://github.com/pop-os/cosmic-text.git#29034e56b47b7e259f9a18a01fcda8ff267fc2d1"
+source = "git+https://github.com/pop-os/cosmic-text.git#d5a972a2b63649fad11ea3a7e80f7dc4c592f01a"
 dependencies = [
  "bitflags 2.11.0",
  "fontdb",
@@ -2796,7 +2796,7 @@ dependencies = [
  "log",
  "presser",
  "thiserror 1.0.69",
- "windows 0.56.0",
+ "windows 0.58.0",
 ]
 
 [[package]]
@@ -3002,7 +3002,7 @@ dependencies = [
  "js-sys",
  "log",
  "wasm-bindgen",
- "windows-core 0.56.0",
+ "windows-core 0.61.2",
 ]
 
 [[package]]
@@ -3071,7 +3071,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#3d2c018cd1df25697fa2825dbc5d040cff39389a"
+source = "git+https://github.com/pop-os/libcosmic.git#01e5593741c7aa7eedf0692c6087ee3fb97feeb8"
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
@@ -3117,7 +3117,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#3d2c018cd1df25697fa2825dbc5d040cff39389a"
+source = "git+https://github.com/pop-os/libcosmic.git#01e5593741c7aa7eedf0692c6087ee3fb97feeb8"
 dependencies = [
  "futures",
  "iced_core 0.14.0 (git+https://github.com/pop-os/libcosmic.git)",

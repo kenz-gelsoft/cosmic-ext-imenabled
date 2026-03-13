@@ -30,7 +30,7 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: iced-rebase
+            ref: master
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
