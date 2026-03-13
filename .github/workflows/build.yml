@@ -45,7 +45,7 @@ jobs:
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
-            ref: iced-rebase
+            ref: master
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
