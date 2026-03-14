@@ -10,7 +10,7 @@ Since [COSMIC apps do not currently support IME](https://github.com/pop-os/cosmi
 
 While the latest version of the **iced** toolkit (which COSMIC apps use) has implemented IME support, ~~it is expected to take several months before COSMIC apps officially adopt this latest version. Therefore, I have backported the IME support in advance to enable IME functionality for specific apps.~~
 
-Now, COSMIC apps are getting rebased onto the latest iced toolkit, so this repo publishes WIP test builds that have minimum IME functionality for specific apps.
+Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://github.com/pop-os/libcosmic/issues/1089), so this repo publishes WIP test builds that have minimum IME functionality for specific apps.
 
 ![](screenshots/term.png)
 
@@ -97,7 +97,7 @@ Following is Japanese translation.
 
 COSMIC アプリが使っている **iced** ツールキットは最新版にて IME サポートが実装されましたが、~~COSMIC アプリが iced ツールキットの最新版を採用するにはまだ数ヶ月かかる見込みであるため、先行して IME サポートのみをバックポートして一部のアプリのみ IME が動作するようにしました。~~
 
-現在、COSMIC アプリは最新版の iced ツールキットに切り替わりつつあります。そこで、このリポジトリではいくつかのアプリについて最低限の IME 機能をもたせた作業中のテストビルドを公開しています。
+現在、[COSMIC アプリは最新版の iced ツールキットに切り替わりつつあります。](https://github.com/pop-os/libcosmic/issues/1089)そこで、このリポジトリではいくつかのアプリについて最低限の IME 機能をもたせた作業中のテストビルドを公開しています。
 
 ## 対応済みの COSMIC アプリ
 
