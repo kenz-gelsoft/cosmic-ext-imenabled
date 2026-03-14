@@ -6,9 +6,11 @@
 
 This is **unofficial** APT/YUM repo. **Don't report bugs or issues to official** repos.
 
-Since COSMIC apps do not currently support IME, there are issues inputting characters for languages that require an IME, such as Japanese, Chinese, and Korean.
+Since [COSMIC apps do not currently support IME](https://github.com/pop-os/cosmic-epoch/issues/2174), there are issues inputting characters for languages that require an IME, such as Japanese, Chinese, and Korean.
 
-While the latest version of the **iced** toolkit (which COSMIC apps use) has implemented IME support, it is expected to take several months before COSMIC apps officially adopt this latest version. Therefore, I have backported the IME support in advance to enable IME functionality for specific apps.
+While the latest version of the **iced** toolkit (which COSMIC apps use) has implemented IME support, ~~it is expected to take several months before COSMIC apps officially adopt this latest version. Therefore, I have backported the IME support in advance to enable IME functionality for specific apps.~~
+
+Now, COSMIC apps are getting rebased onto the latest iced toolkit, so this repo publishes WIP test builds that have minimum IME functionality for specific apps.
 
 ![](screenshots/term.png)
 
@@ -91,9 +93,11 @@ Following is Japanese translation.
 
 これは**非公式** APT/YUM リポジトリです。不具合や問題を**公式リポジトリに報告しないでください**。
 
-COSMIC アプリは IME に非対応のため、日本語・中国語・韓国語などの IME を必要とする言語の文字入力に問題があります。
+[COSMIC アプリは IME に非対応](https://github.com/pop-os/cosmic-epoch/issues/2174)のため、日本語・中国語・韓国語などの IME を必要とする言語の文字入力に問題があります。
 
-COSMIC アプリが使っている **iced** ツールキットは最新版にて IME サポートが実装されましたが、COSMIC アプリが iced ツールキットの最新版を採用するにはまだ数ヶ月かかる見込みであるため、先行して IME サポートのみをバックポートして一部のアプリのみ IME が動作するようにしました。
+COSMIC アプリが使っている **iced** ツールキットは最新版にて IME サポートが実装されましたが、~~COSMIC アプリが iced ツールキットの最新版を採用するにはまだ数ヶ月かかる見込みであるため、先行して IME サポートのみをバックポートして一部のアプリのみ IME が動作するようにしました。~~
+
+現在、COSMIC アプリは最新版の iced ツールキットに切り替わりつつあります。そこで、このリポジトリではいくつかのアプリについて最低限の IME 機能をもたせた作業中のテストビルドを公開しています。
 
 ## 対応済みの COSMIC アプリ
 
