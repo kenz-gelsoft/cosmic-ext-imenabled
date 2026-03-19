@@ -1034,7 +1034,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -1055,7 +1055,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic#c7ac9cfd31c8c5095d46f9322adc3e7c3208c94e"
+source = "git+https://github.com/pop-os/libcosmic#3da55e807440a99f6ed62edc2e7a84ca4be9b844"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive 1.0.0 (git+https://github.com/pop-os/libcosmic)",
@@ -1072,7 +1072,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "quote",
  "syn",
@@ -1081,7 +1081,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic#c7ac9cfd31c8c5095d46f9322adc3e7c3208c94e"
+source = "git+https://github.com/pop-os/libcosmic#3da55e807440a99f6ed62edc2e7a84ca4be9b844"
 dependencies = [
  "quote",
  "syn",
@@ -1104,7 +1104,7 @@ dependencies = [
 [[package]]
 name = "cosmic-panel-config"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-panel#45a62ed812248544290dba11566aa07b92825f07"
+source = "git+https://github.com/pop-os/cosmic-panel#d518c7d25ef96f1a9696aa8cce008656bf66ece4"
 dependencies = [
  "anyhow",
  "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
@@ -1176,7 +1176,7 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "almost",
  "configparser",
@@ -2330,7 +2330,7 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "dnd",
  "iced_accessibility",
@@ -2351,7 +2351,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -2360,7 +2360,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
@@ -2385,7 +2385,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic#c7ac9cfd31c8c5095d46f9322adc3e7c3208c94e"
+source = "git+https://github.com/pop-os/libcosmic#3da55e807440a99f6ed62edc2e7a84ca4be9b844"
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
@@ -2407,7 +2407,7 @@ dependencies = [
 [[package]]
 name = "iced_debug"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
  "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -2417,7 +2417,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "futures",
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
@@ -2431,7 +2431,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic#c7ac9cfd31c8c5095d46f9322adc3e7c3208c94e"
+source = "git+https://github.com/pop-os/libcosmic#3da55e807440a99f6ed62edc2e7a84ca4be9b844"
 dependencies = [
  "futures",
  "iced_core 0.14.0 (git+https://github.com/pop-os/libcosmic)",
@@ -2444,7 +2444,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "bitflags 2.11.0",
  "bytemuck",
@@ -2465,7 +2465,7 @@ dependencies = [
 [[package]]
 name = "iced_program"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -2474,7 +2474,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -2486,7 +2486,7 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
@@ -2502,7 +2502,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -2519,7 +2519,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.11.0",
@@ -2550,7 +2550,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.2"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -2569,7 +2569,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "cosmic-client-toolkit",
  "cursor-icon",
@@ -2959,9 +2959,9 @@ checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
 name = "known-folders"
-version = "1.4.1"
+version = "1.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "770919970f7d2f74fea948900d35e2ef64f44129e8ae4015f59de1f0aca7c2a5"
+checksum = "7a1886916523694cd6ea3d175f03a1e5010699a2a4cc13696d83d7bea1d80638"
 dependencies = [
  "windows-sys 0.61.2",
 ]
@@ -3028,7 +3028,7 @@ checksum = "b5b646652bf6661599e1da8901b3b9522896f01e736bad5f723fe7a3a27f899d"
 [[package]]
 name = "libcosmic"
 version = "1.0.0"
-source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#c0d0b9ff2fb2f81e310e6162ce6b5bd97bcd58b8"
+source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#3d7fc9c626a4691f087ff3260fb4117579fe3862"
 dependencies = [
  "apply",
  "ashpd 0.12.3",
@@ -3064,7 +3064,6 @@ dependencies = [
  "mime 0.3.17",
  "palette",
  "phf 0.13.1",
- "raw-window-handle",
  "rfd",
  "ron 0.12.0",
  "rust-embed",
@@ -6881,7 +6880,7 @@ checksum = "2fb433233f2df9344722454bc7e96465c9d03bff9d77c248f9e7523fe79585b5"
 [[package]]
 name = "xdg-shell-wrapper-config"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/cosmic-panel#45a62ed812248544290dba11566aa07b92825f07"
+source = "git+https://github.com/pop-os/cosmic-panel#d518c7d25ef96f1a9696aa8cce008656bf66ece4"
 dependencies = [
  "serde",
  "wayland-protocols-wlr",
