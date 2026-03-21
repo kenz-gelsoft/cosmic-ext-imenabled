@@ -61,6 +61,8 @@ jobs:
             ref: iced-rebase
             patch: |
               perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
+              perl -pi -e 's|^cosmic-config = \{[^}]*\}|cosmic-config = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
+              perl -pi -e 's|^cosmic-theme = \{[^}]*\}|cosmic-theme = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
