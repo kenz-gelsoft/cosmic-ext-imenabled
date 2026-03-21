@@ -25,7 +25,7 @@ jobs:
           - applibrary
           - launcher
           - player
-          - settings
+          # - settings
           - edit
           - term
         include:
@@ -64,15 +64,15 @@ jobs:
               perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
               perl -pi -e 's|^cosmic-config = \{[^}]*\}|cosmic-config = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
               perl -pi -e 's|^cosmic-theme = \{[^}]*\}|cosmic-theme = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
-          - id: settings
-            name: cosmic-settings
-            repo: pop-os/cosmic-settings
-            ref: master
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
-              EOF
+          # - id: settings
+          #   name: cosmic-settings
+          #   repo: pop-os/cosmic-settings
+          #   ref: master
+          #   patch: |
+          #     cat <<EOF >> Cargo.toml
+          #     [patch.'https://github.com/pop-os/libcosmic']
+          #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+          #     EOF
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
