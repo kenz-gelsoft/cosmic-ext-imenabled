@@ -20,11 +20,11 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 
 |Package Name|Upstream Version|Fork or Patch|
 |-|-|-|
-|cosmic-term-**ime**|[36c0a39@iced-rebase](https://github.com/pop-os/cosmic-term/commit/36c0a3954e15a422726e8d0dda3ea96f0b53b39e)|[Fork](https://github.com/kenz-gelsoft/cosmic-term/commits/minimal-input-method-support/)|
-|cosmic-edit-**ime**|[b7607f8@iced-rebase](https://github.com/pop-os/cosmic-edit/commit/b7607f859818b2cde1807f7eb32c08633a3a1878)|[Fork](https://github.com/kenz-gelsoft/cosmic-edit/commits/minimal-input-method-support/)|
-|cosmic-files-**ime**|[3609731@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
+|cosmic-term-**ime**|[f62abce@master](https://github.com/pop-os/cosmic-term/commit/f62abcea4efbcd824297b269279826699c47d335)|[Fork](https://github.com/pop-os/cosmic-term/compare/master...kenz-gelsoft:cosmic-term:minimal-input-method-support?expand=1)|
+|cosmic-edit-**ime**|[6326f65@master](https://github.com/pop-os/cosmic-edit/commit/6326f65d84cd696dceb5c31ebb63842cd756051d)|[Fork](https://github.com/pop-os/cosmic-edit/compare/master...kenz-gelsoft:cosmic-edit:minimal-input-method-support?expand=1)|
+|cosmic-files-**ime**|[49d353d@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
 |cosmic-launcher-**ime**|[a3d950b@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
-|cosmic-app-library-**ime**|[eba0f12@iced-rebase](https://github.com/pop-os/cosmic-app-library/commits/iced-rebase/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
+|cosmic-app-library-**ime**|[08ab631@master](https://github.com/pop-os/cosmic-app-library/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
 
 ## Screenshots
 
