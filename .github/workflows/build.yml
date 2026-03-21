@@ -24,6 +24,7 @@ jobs:
           - files
           - applibrary
           - launcher
+          - player
           - edit
           - term
         include:
@@ -54,6 +55,12 @@ jobs:
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
               EOF
+          - id: player
+            name: cosmic-player
+            repo: pop-os/cosmic-player
+            ref: iced-rebase
+            patch: |
+              perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit

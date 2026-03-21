@@ -1,0 +1,25 @@
+Source: cosmic-player-ime
+Section: admin
+Priority: optional
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Build-Depends:
+    clang,
+    debhelper-compat (=13),
+    just (>= 1.13.0),
+    libgstreamer1.0-dev,
+    libgstreamer-plugins-base1.0-dev,
+    libxkbcommon-dev,
+    pkg-config,
+    rust-all,
+Standards-Version: 4.6.2
+Homepage: https://github.com/pop-os/cosmic-player
+
+Package: cosmic-player-ime
+Architecture: amd64 arm64
+Depends: ${misc:Depends}, ${shlibs:Depends},
+      gstreamer1.0-plugins-base,
+      gstreamer1.0-plugins-good,
+Conflicts: cosmic-player
+Replaces: cosmic-player
+Provides: cosmic-player
+Description: Cosmic Media Player
