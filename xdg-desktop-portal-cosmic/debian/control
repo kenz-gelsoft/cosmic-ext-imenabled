@@ -1,0 +1,28 @@
+Source: xdg-desktop-portal-cosmic-ime
+Section: admin
+Priority: optional
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Build-Depends:
+  debhelper (>= 11),
+  debhelper-compat (= 11),
+  cargo,
+  libclang-dev,
+  libglib2.0-dev,
+  libegl-dev,
+  libgbm-dev,
+  libpipewire-0.3-dev,
+  libwayland-dev,
+  libxkbcommon-dev,
+  pkg-config,
+Standards-Version: 4.3.0
+Homepage: https://github.com/pop-os/xdg-desktop-portal-cosmic
+
+Package: xdg-desktop-portal-cosmic-ime
+Architecture: amd64 arm64
+Depends:
+  ${misc:Depends},
+  ${shlibs:Depends}
+Conflicts: xdg-desktop-portal-cosmic
+Replaces: xdg-desktop-portal-cosmic
+Provides: xdg-desktop-portal-cosmic
+Description: Cosmic backend for xdg-desktop-portal

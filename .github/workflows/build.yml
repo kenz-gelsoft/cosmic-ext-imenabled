@@ -25,6 +25,7 @@ jobs:
           - applibrary
           - launcher
           - player
+          - portal
           # - store
           # - settings
           - edit
@@ -65,6 +66,15 @@ jobs:
               perl -pi -e 's|^libcosmic = \{[^}]*\}|libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
               perl -pi -e 's|^cosmic-config = \{[^}]*\}|cosmic-config = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
               perl -pi -e 's|^cosmic-theme = \{[^}]*\}|cosmic-theme = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }|' Cargo.toml
+          - id: portal
+            name: xdg-desktop-portal-cosmic
+            repo: pop-os/xdg-desktop-portal-cosmic
+            ref: master
+            patch: |
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              EOF
           # - id: store
           #   name: cosmic-store
           #   repo: pop-os/cosmic-store
