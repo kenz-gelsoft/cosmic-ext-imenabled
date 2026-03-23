@@ -74,6 +74,7 @@ jobs:
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              cosmic-config = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
               EOF
           # - id: store
           #   name: cosmic-store
