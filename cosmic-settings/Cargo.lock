@@ -1206,7 +1206,7 @@ checksum = "fe6d2e5af09e8c8ad56c969f2157a3d4238cebc7c55f0a517728c38f7b200f81"
 dependencies = [
  "serde",
  "termcolor",
- "unicode-width 0.1.14",
+ "unicode-width 0.2.2",
 ]
 
 [[package]]
@@ -1372,7 +1372,7 @@ name = "cosmic-bg-config"
 version = "1.0.3"
 source = "git+https://github.com/pop-os/cosmic-bg#644993abd84bf04d7b3f2211e3656002c2a6f00b"
 dependencies = [
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "derive_setters",
  "image",
  "serde",
@@ -1397,7 +1397,7 @@ name = "cosmic-comp-config"
 version = "1.0.0"
 source = "git+https://github.com/pop-os/cosmic-comp#b28a435b18a3c1a8dfb8dbf781b40610aca03604"
 dependencies = [
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "input",
  "ron 0.12.0",
  "serde",
@@ -1410,11 +1410,11 @@ version = "1.0.0"
 source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#385932609b48f7e007816ed7f18ae0693a80fc96"
 dependencies = [
  "atomicwrites",
- "cosmic-config-derive 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "cosmic-config-derive",
  "cosmic-settings-daemon",
  "dirs",
  "futures-util",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_futures",
  "known-folders",
  "notify",
  "ron 0.12.0",
@@ -1426,38 +1426,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "cosmic-config"
-version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic#7a5676242259c1c743387b7a23df12bd8be1e53f"
-dependencies = [
- "atomicwrites",
- "cosmic-config-derive 1.0.0 (git+https://github.com/pop-os/libcosmic)",
- "cosmic-settings-daemon",
- "dirs",
- "futures-util",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
- "known-folders",
- "notify",
- "ron 0.12.0",
- "serde",
- "tracing",
- "xdg",
- "zbus",
-]
-
-[[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
 source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#385932609b48f7e007816ed7f18ae0693a80fc96"
-dependencies = [
- "quote",
- "syn 2.0.117",
-]
-
-[[package]]
-name = "cosmic-config-derive"
-version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic#7a5676242259c1c743387b7a23df12bd8be1e53f"
 dependencies = [
  "quote",
  "syn 2.0.117",
@@ -1503,7 +1474,7 @@ name = "cosmic-idle-config"
 version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-idle#c95d066b5b640509a6369634b669ca60dc50e168"
 dependencies = [
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "serde",
 ]
 
@@ -1524,7 +1495,7 @@ version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-panel#45a62ed812248544290dba11566aa07b92825f07"
 dependencies = [
  "anyhow",
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "serde",
  "smithay-client-toolkit",
  "tracing",
@@ -1596,7 +1567,7 @@ dependencies = [
  "color-eyre",
  "cosmic-bg-config",
  "cosmic-comp-config",
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "cosmic-dbus-networkmanager",
  "cosmic-idle-config",
  "cosmic-mime-apps",
@@ -1672,7 +1643,7 @@ name = "cosmic-settings-a11y-manager-subscription"
 version = "1.0.7"
 dependencies = [
  "cosmic-protocols",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "num-derive",
  "num-traits",
  "smithay-client-toolkit",
@@ -1686,7 +1657,7 @@ version = "1.0.7"
 dependencies = [
  "cosmic-dbus-a11y",
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "tokio",
  "tracing",
  "zbus",
@@ -1697,7 +1668,7 @@ name = "cosmic-settings-airplane-mode-subscription"
 version = "1.0.7"
 dependencies = [
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "log",
  "rustix 1.1.4",
  "tokio",
@@ -1709,7 +1680,7 @@ version = "1.0.7"
 dependencies = [
  "bluez-zbus",
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "tokio",
  "tracing",
  "zbus",
@@ -1720,7 +1691,7 @@ name = "cosmic-settings-config"
 version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-settings-daemon#e37160f14d1e7ee428f973cd2848b4e95f83dfe1"
 dependencies = [
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "ron 0.11.0",
  "serde",
  "serde_with",
@@ -1741,7 +1712,7 @@ name = "cosmic-settings-daemon-config"
 version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-settings-daemon#e37160f14d1e7ee428f973cd2848b4e95f83dfe1"
 dependencies = [
- "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic)",
+ "cosmic-config",
  "serde",
 ]
 
@@ -1750,7 +1721,7 @@ name = "cosmic-settings-daemon-subscription"
 version = "1.0.7"
 dependencies = [
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "log",
  "tokio",
  "tokio-stream",
@@ -1764,7 +1735,7 @@ dependencies = [
  "bitflags 2.11.0",
  "cosmic-dbus-networkmanager",
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "itertools 0.14.0",
  "nm-secret-agent-manager",
  "secret-service",
@@ -1793,7 +1764,7 @@ name = "cosmic-settings-pulse-subscription"
 version = "0.1.0"
 dependencies = [
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "libpulse-binding",
  "log",
  "rustix 1.1.4",
@@ -1818,7 +1789,7 @@ name = "cosmic-settings-upower-subscription"
 version = "1.0.7"
 dependencies = [
  "futures",
- "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic)",
+ "iced_futures",
  "log",
  "tokio",
  "tokio-stream",
@@ -1875,7 +1846,7 @@ source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input
 dependencies = [
  "almost",
  "configparser",
- "cosmic-config 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "cosmic-config",
  "csscolorparser",
  "dirs",
  "palette",
@@ -3301,9 +3272,9 @@ source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input
 dependencies = [
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
  "iced_debug",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_futures",
  "iced_program",
  "iced_renderer",
  "iced_runtime",
@@ -3350,34 +3321,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "iced_core"
-version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic#7a5676242259c1c743387b7a23df12bd8be1e53f"
-dependencies = [
- "bitflags 2.11.0",
- "bytes",
- "dnd",
- "glam",
- "lilt",
- "log",
- "mime 0.1.0",
- "num-traits",
- "palette",
- "raw-window-handle",
- "rustc-hash 2.1.1",
- "smol_str",
- "thiserror 2.0.18",
- "web-time",
- "window_clipboard",
-]
-
-[[package]]
 name = "iced_debug"
 version = "0.14.0"
 source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#385932609b48f7e007816ed7f18ae0693a80fc96"
 dependencies = [
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
+ "iced_futures",
  "log",
 ]
 
@@ -3387,23 +3336,10 @@ version = "0.14.0"
 source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support#385932609b48f7e007816ed7f18ae0693a80fc96"
 dependencies = [
  "futures",
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
  "log",
  "rustc-hash 2.1.1",
  "tokio",
- "wasm-bindgen-futures",
- "wasmtimer",
-]
-
-[[package]]
-name = "iced_futures"
-version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic#7a5676242259c1c743387b7a23df12bd8be1e53f"
-dependencies = [
- "futures",
- "iced_core 0.14.0 (git+https://github.com/pop-os/libcosmic)",
- "log",
- "rustc-hash 2.1.1",
  "wasm-bindgen-futures",
  "wasmtimer",
 ]
@@ -3417,8 +3353,8 @@ dependencies = [
  "bytemuck",
  "cosmic-text",
  "half",
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
+ "iced_futures",
  "image",
  "kamadak-exif",
  "log",
@@ -3459,8 +3395,8 @@ dependencies = [
  "cosmic-client-toolkit",
  "dnd",
  "iced_accessibility",
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
+ "iced_futures",
  "raw-window-handle",
  "thiserror 2.0.18",
  "window_clipboard",
@@ -3544,7 +3480,7 @@ dependencies = [
  "dnd",
  "iced_accessibility",
  "iced_debug",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_futures",
  "iced_graphics",
  "iced_program",
  "iced_runtime",
@@ -4604,7 +4540,7 @@ dependencies = [
  "ashpd 0.12.3",
  "auto_enums",
  "cosmic-client-toolkit",
- "cosmic-config 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "cosmic-config",
  "cosmic-freedesktop-icons",
  "cosmic-settings-config",
  "cosmic-settings-daemon",
@@ -4618,8 +4554,8 @@ dependencies = [
  "i18n-embed-fl",
  "iced",
  "iced_accessibility",
- "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
- "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=minimal-input-method-support)",
+ "iced_core",
+ "iced_futures",
  "iced_renderer",
  "iced_runtime",
  "iced_tiny_skia",

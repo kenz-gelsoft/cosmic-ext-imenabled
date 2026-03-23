@@ -27,7 +27,7 @@ jobs:
           - player
           - portal
           # - store
-          # - settings
+          - settings
           - edit
           - term
         include:
@@ -85,15 +85,17 @@ jobs:
           #     [patch.'https://github.com/pop-os/libcosmic']
           #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
           #     EOF
-          # - id: settings
-          #   name: cosmic-settings
-          #   repo: pop-os/cosmic-settings
-          #   ref: master
-          #   patch: |
-          #     cat <<EOF >> Cargo.toml
-          #     [patch.'https://github.com/pop-os/libcosmic']
-          #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
-          #     EOF
+          - id: settings
+            name: cosmic-settings
+            repo: pop-os/cosmic-settings
+            ref: master
+            patch: |
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              cosmic-config = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              iced_futures = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              EOF
           - id: edit
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
