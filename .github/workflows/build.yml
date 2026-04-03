@@ -35,17 +35,17 @@ jobs:
             name: cosmic-files
             repo: pop-os/cosmic-files
             ref: master
-            patch: ""
+            patch: echo test
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
             ref: master
-            patch: ""
+            patch: echo test
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
             ref: master
-            patch: ""
+            patch: echo test
           # - id: player
           #   name: cosmic-player
           #   repo: pop-os/cosmic-player
