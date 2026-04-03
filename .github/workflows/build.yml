@@ -34,7 +34,7 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: update-deps
+            ref: master
             patch: ""
           - id: applibrary
             name: cosmic-app-library
