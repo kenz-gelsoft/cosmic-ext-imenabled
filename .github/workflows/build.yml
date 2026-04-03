@@ -23,7 +23,7 @@ jobs:
         id:
           - files
           # - applibrary
-          # - launcher
+          - launcher
           # - player
           # - portal
           # - store
@@ -45,15 +45,11 @@ jobs:
           #     [patch.'https://github.com/pop-os/libcosmic']
           #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
           #     EOF
-          # - id: launcher
-          #   name: cosmic-launcher
-          #   repo: pop-os/cosmic-launcher
-          #   ref: master
-          #   patch: |
-          #     cat <<EOF >> Cargo.toml
-          #     [patch.'https://github.com/pop-os/libcosmic']
-          #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
-          #     EOF
+          - id: launcher
+            name: cosmic-launcher
+            repo: pop-os/cosmic-launcher
+            ref: master
+            patch: ""
           # - id: player
           #   name: cosmic-player
           #   repo: pop-os/cosmic-player
