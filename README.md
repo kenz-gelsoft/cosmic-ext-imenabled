@@ -20,11 +20,11 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 
 |Package Name|Upstream Version|Fork or Patch|
 |-|-|-|
-|cosmic-term-**ime**|[f62abce@master](https://github.com/pop-os/cosmic-term/commit/f62abcea4efbcd824297b269279826699c47d335)|[Fork](https://github.com/pop-os/cosmic-term/compare/master...kenz-gelsoft:cosmic-term:minimal-input-method-support?expand=1)|
-|cosmic-edit-**ime**|[6326f65@master](https://github.com/pop-os/cosmic-edit/commit/6326f65d84cd696dceb5c31ebb63842cd756051d)|[Fork](https://github.com/pop-os/cosmic-edit/compare/master...kenz-gelsoft:cosmic-edit:minimal-input-method-support?expand=1)|
-|cosmic-files-**ime**|[49d353d@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
-|cosmic-launcher-**ime**|[a3d950b@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
-|cosmic-app-library-**ime**|[08ab631@master](https://github.com/pop-os/cosmic-app-library/commits/master/)|[Patched `libcosmic`](https://github.com/pop-os/libcosmic/compare/master...kenz-gelsoft:libcosmic:minimal-input-method-support)|
+|cosmic-term-**ime**|[8ae5918@master](https://github.com/pop-os/cosmic-term/commit/8ae5918ccd15844a822eb63c091625b8ac798b2b)|[PR](https://github.com/pop-os/cosmic-term/pull/753)|
+|cosmic-edit-**ime**|[cf557a0@master](https://github.com/pop-os/cosmic-edit/commit/cf557a060863a9ad22187ec4b7c4889bde18ddde)|[PR](https://github.com/pop-os/cosmic-edit/pull/539)|
+|cosmic-files-**ime**|[23b5d98@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
+|cosmic-launcher-**ime**|[cf41ed5@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
+|cosmic-app-library-**ime**|[7d31bfa@master](https://github.com/pop-os/cosmic-app-library/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
 
 ## Screenshots
 
