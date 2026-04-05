@@ -1317,14 +1317,14 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "atomicwrites",
- "cosmic-config-derive",
+ "cosmic-config-derive 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "cosmic-settings-daemon",
  "dirs 6.0.0",
  "futures-util",
- "iced_futures",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "known-folders",
  "notify",
  "ron 0.12.1",
@@ -1333,6 +1333,32 @@ dependencies = [
  "tracing",
  "xdg",
  "zbus 5.14.0",
+]
+
+[[package]]
+name = "cosmic-config"
+version = "1.0.0"
+source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+dependencies = [
+ "atomicwrites",
+ "cosmic-config-derive 1.0.0 (git+https://github.com/pop-os/libcosmic.git)",
+ "dirs 6.0.0",
+ "iced_futures 0.14.0 (git+https://github.com/pop-os/libcosmic.git)",
+ "known-folders",
+ "notify",
+ "ron 0.12.1",
+ "serde",
+ "tracing",
+ "xdg",
+]
+
+[[package]]
+name = "cosmic-config-derive"
+version = "1.0.0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
+dependencies = [
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -1460,7 +1486,7 @@ name = "cosmic-settings-config"
 version = "0.1.0"
 source = "git+https://github.com/pop-os/cosmic-settings-daemon#716da6d6af0b252e2f78aba2ad72ee19ae0241e0"
 dependencies = [
- "cosmic-config",
+ "cosmic-config 1.0.0 (git+https://github.com/pop-os/libcosmic.git)",
  "ron 0.11.0",
  "serde",
  "serde_with",
@@ -1479,7 +1505,7 @@ dependencies = [
 [[package]]
 name = "cosmic-text"
 version = "0.18.2"
-source = "git+https://github.com/pop-os/cosmic-text.git#9a5579f5231bc52b3688a2de3643091f1ce32cbd"
+source = "git+https://github.com/pop-os/cosmic-text.git#9a2ab09f06905e91f41d64ac6eee887726e7fd76"
 dependencies = [
  "bitflags 2.11.0",
  "fontdb",
@@ -1502,11 +1528,11 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "almost",
  "configparser",
- "cosmic-config",
+ "cosmic-config 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "csscolorparser",
  "dirs 6.0.0",
  "palette",
@@ -2983,13 +3009,13 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "dnd",
  "iced_accessibility",
- "iced_core",
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "iced_debug",
- "iced_futures",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "iced_program",
  "iced_renderer",
  "iced_runtime",
@@ -3004,7 +3030,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -3013,7 +3039,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "bitflags 2.11.0",
  "bytes",
@@ -3035,22 +3061,44 @@ dependencies = [
 ]
 
 [[package]]
-name = "iced_debug"
+name = "iced_core"
 version = "0.14.0"
 source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
 dependencies = [
- "iced_core",
- "iced_futures",
+ "bitflags 2.11.0",
+ "bytes",
+ "dnd",
+ "glam",
+ "lilt",
+ "log",
+ "mime 0.1.0",
+ "num-traits",
+ "palette",
+ "raw-window-handle",
+ "rustc-hash 2.1.2",
+ "smol_str",
+ "thiserror 2.0.18",
+ "web-time",
+ "window_clipboard",
+]
+
+[[package]]
+name = "iced_debug"
+version = "0.14.0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
+dependencies = [
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "log",
 ]
 
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "futures",
- "iced_core",
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "log",
  "rustc-hash 2.1.2",
  "tokio",
@@ -3059,16 +3107,29 @@ dependencies = [
 ]
 
 [[package]]
-name = "iced_graphics"
+name = "iced_futures"
 version = "0.14.0"
 source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+dependencies = [
+ "futures",
+ "iced_core 0.14.0 (git+https://github.com/pop-os/libcosmic.git)",
+ "log",
+ "rustc-hash 2.1.2",
+ "wasm-bindgen-futures",
+ "wasmtimer",
+]
+
+[[package]]
+name = "iced_graphics"
+version = "0.14.0"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "bitflags 2.11.0",
  "bytemuck",
  "cosmic-text",
  "half",
- "iced_core",
- "iced_futures",
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "image",
  "kamadak-exif",
  "log",
@@ -3082,7 +3143,7 @@ dependencies = [
 [[package]]
 name = "iced_program"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -3091,7 +3152,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -3103,13 +3164,13 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "bytes",
  "cosmic-client-toolkit",
  "dnd",
- "iced_core",
- "iced_futures",
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "raw-window-handle",
  "thiserror 2.0.18",
  "window_clipboard",
@@ -3118,7 +3179,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -3135,7 +3196,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.11.0",
@@ -3166,7 +3227,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.2"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "cosmic-client-toolkit",
  "dnd",
@@ -3184,13 +3245,13 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "cosmic-client-toolkit",
  "cursor-icon",
  "dnd",
  "iced_debug",
- "iced_futures",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "iced_graphics",
  "iced_program",
  "iced_runtime",
@@ -4297,13 +4358,13 @@ checksum = "48f5d2a454e16a5ea0f4ced81bd44e4cfc7bd3a507b61887c99fd3538b28e4af"
 [[package]]
 name = "libcosmic"
 version = "1.0.0"
-source = "git+https://github.com/pop-os/libcosmic.git#1d01054993862f615adb029379307cd5501c79f7"
+source = "git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2#aa2e806f048b5b08753a80ae986e946cbdef95b1"
 dependencies = [
  "apply",
  "ashpd 0.12.3",
  "auto_enums",
  "cosmic-client-toolkit",
- "cosmic-config",
+ "cosmic-config 1.0.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "cosmic-freedesktop-icons",
  "cosmic-settings-config",
  "cosmic-settings-daemon",
@@ -4316,8 +4377,8 @@ dependencies = [
  "i18n-embed",
  "i18n-embed-fl",
  "iced",
- "iced_core",
- "iced_futures",
+ "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
+ "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic/?branch=fix-focus-detection-in-ime2)",
  "iced_renderer",
  "iced_runtime",
  "iced_tiny_skia",
