@@ -1,5 +1,5 @@
 Package: cosmic-app-library-ime
-Version: 0.1.0+167-74f09ba
+Version: 0.1.0+168-a17c157
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 26254
@@ -10,11 +10,11 @@ Provides: cosmic-app-library
 Homepage: https://github.com/pop-os/cosmic-app-library
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+167-74f09ba_amd64.deb
-Size: 7476430
-SHA256: 22831318c1d4bf92d487349b48adaaba70a58178655cccce1cf320386b1afa26
-SHA1: 9216a68e39e6bd2af5ee6643f64aedd6926d957f
-MD5sum: 338e259cd92ac9f061089f4bce032e13
+Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+168-a17c157_amd64.deb
+Size: 7476462
+SHA256: 858b64c217db4b2519e08fa47e8c5c575d76b00ee0cc23359aa050ce27b96678
+SHA1: 159651887f54ab659b076ae29718693f81b02f8d
+MD5sum: 71c65bed46a8771adb5972deff1a3e3b
 Description: Cosmic App Library
 
 Package: cosmic-app-library-ime-dbgsym
@@ -36,7 +36,7 @@ Description: debug symbols for cosmic-app-library-ime
 Build-Ids: ff22602b64cbd5a645710b4e709cf2929bd7a37c
 
 Package: cosmic-edit-ime
-Version: 0.1.0+167-74f09ba
+Version: 0.1.0+168-a17c157
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 42014
@@ -47,11 +47,11 @@ Provides: cosmic-edit
 Homepage: https://github.com/kenz-gelsoft/cosmic-edit
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+167-74f09ba_amd64.deb
-Size: 12730750
-SHA256: 2565bc2cd79c423a166e2848ce43fc71117341b6d25f58d098cc7f8260ec8b2e
-SHA1: 0c013fd7b0c34fc0814c49c578c90f92e82bde1c
-MD5sum: 9e87f9486fa5adb6fbf804079c371503
+Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+168-a17c157_amd64.deb
+Size: 12730746
+SHA256: e697b37975c618699ecebef67bc6e122b4fcfc34e161fed99a7b517627c8be17
+SHA1: 1ff6dd7bed45098a78470a92c2e77cba2315400e
+MD5sum: 148167c28ede0e3bdd792ccaf81926c3
 Description: Cosmic Text Editor
 
 Package: cosmic-edit-ime-dbgsym
@@ -73,10 +73,10 @@ Description: debug symbols for cosmic-edit-ime
 Build-Ids: fc37b9460871173769095e1a260e4d82e3545094
 
 Package: cosmic-files-ime
-Version: 0.1.0+167-74f09ba
+Version: 0.1.0+168-a17c157
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 79440
+Installed-Size: 79449
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0), xdg-utils
 Conflicts: cosmic-files
 Replaces: cosmic-files
@@ -84,11 +84,11 @@ Provides: cosmic-files
 Homepage: https://github.com/pop-os/cosmic-files
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+167-74f09ba_amd64.deb
-Size: 23247096
-SHA256: c5270fc833afb7c0b99d290b021626af961eafe9024e2fac49638439636dc2c4
-SHA1: 02cda4af59c3cb1cb9851b4ea3389b1ab6fa4f97
-MD5sum: 29f36b6edd66b09017d755febafdc95f
+Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+168-a17c157_amd64.deb
+Size: 23262684
+SHA256: 1460234768faa9675034cfb8ac7744f4684c6f53a515f1bb1d6e990fa06a4b49
+SHA1: f195638186a1a7488029751359474b0be68bfcd3
+MD5sum: 3656b95dc77ec5f9317bbd91a87a0028
 Description: Cosmic File Manager
 
 Package: cosmic-files-ime-dbgsym
@@ -110,7 +110,7 @@ Description: debug symbols for cosmic-files-ime
 Build-Ids: 3badfdd193698df670b014ed12fed457285b1f19 4d919dd90007ab90ddf8010cff5cb2bed33fc92d
 
 Package: cosmic-launcher-ime
-Version: 0.1.0+167-74f09ba
+Version: 0.1.0+168-a17c157
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 25791
@@ -121,11 +121,11 @@ Provides: cosmic-launcher
 Homepage: https://github.com/pop-os/cosmic-launcher
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-launcher-ime/cosmic-launcher-ime_0.1.0+167-74f09ba_amd64.deb
-Size: 7320652
-SHA256: 4393a2eef69f9f2f7a0cc837a458c25d61c02d09f3e1a7b065477e2041cc2f5a
-SHA1: e1b8b1c91b1cc85bd6b1341ec2c09e51a8ffb020
-MD5sum: 8aeca87b3ca1830899d41c841fdc8218
+Filename: pool/main/c/cosmic-launcher-ime/cosmic-launcher-ime_0.1.0+168-a17c157_amd64.deb
+Size: 7320636
+SHA256: bcfeb5d9a4f9284fff23dd38a2f5151386d079f8a88a54b94cc1058b69421f12
+SHA1: f2e9f1a9c05e59e9110e5c0a4cec9d1af8804c8b
+MD5sum: b2848cd871031e77d065b579c6802420
 Description: Cosmic Launcher
 
 Package: cosmic-launcher-ime-dbgsym
@@ -184,7 +184,7 @@ Description: debug symbols for cosmic-player-ime
 Build-Ids: 0f946660e97d8a65aaab0e2965e7a9aec28d499e
 
 Package: cosmic-term-ime
-Version: 0.1.0+167-74f09ba
+Version: 0.1.0+168-a17c157
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 40539
@@ -195,11 +195,11 @@ Provides: cosmic-term, x-terminal-emulator
 Homepage: https://github.com/kenz-gelsoft/cosmic-term
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+167-74f09ba_amd64.deb
-Size: 11683044
-SHA256: 404997c0c128adfc2ddf8a8540b87fe8c1fb41cf7634cd3e7f2c48b729d2c11a
-SHA1: 2901fbc2c83a810a5ba9dd7860f406790f50a975
-MD5sum: 2531e6999cd1e49da5eea3e793d55e0c
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+168-a17c157_amd64.deb
+Size: 11683092
+SHA256: 5e58f64c86193b61afb36bdfa58dc45c18d0b17c04a0264cd23f28415642a052
+SHA1: bf2fcc1417f41b4fb7e19ac7daeb034f4c00af6e
+MD5sum: b851d83122f96ce09372a6fcd94df90e
 Description: COSMIC Terminal
 
 Package: cosmic-term-ime-dbgsym
