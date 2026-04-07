@@ -14,6 +14,12 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 
 ![](screenshots/term.png)
 
+## Official COSMIC Apps with IME support
+
+|Package Name|Version|
+|-|-|
+|cosmic-files|[1.0.9](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.9)|
+
 ## Supported COSMIC Apps
 
 [How to install](#how-to-install) (ja: [インストール方法](#インストール方法)).
