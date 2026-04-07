@@ -89,13 +89,9 @@ jobs:
               EOF
           - id: term
             name: cosmic-term
-            repo: pop-os/cosmic-term
-            ref: master
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
-              EOF
+            repo: kenz-gelsoft/cosmic-term
+            ref: minimal-input-method-support
+            patch: ""
 
     name: Build ${{ matrix.name }} (${{ matrix.arch }})
     steps:
