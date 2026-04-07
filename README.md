@@ -20,6 +20,7 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 |-|-|
 |cosmic-files|[1.0.9](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.9)|
 |cosmic-settings|[1.0.9](https://github.com/pop-os/cosmic-settings/releases/tag/epoch-1.0.9)|
+|cosmic-store|[1.0.9](https://github.com/pop-os/cosmic-store/releases/tag/epoch-1.0.9)|
 
 
 
