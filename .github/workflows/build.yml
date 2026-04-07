@@ -34,12 +34,8 @@ jobs:
           - id: files
             name: cosmic-files
             repo: pop-os/cosmic-files
-            ref: update-deps
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-focus-detection-in-ime2" }
-              EOF
+            ref: master
+            patch: ""
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-applibrary
