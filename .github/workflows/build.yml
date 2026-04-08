@@ -44,8 +44,8 @@ jobs:
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
-            ref: master
-            patch: echo test
+            ref: update-libcosmic
+            patch: ""
           # - id: player
           #   name: cosmic-player
           #   repo: pop-os/cosmic-player
