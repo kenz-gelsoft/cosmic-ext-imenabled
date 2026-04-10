@@ -38,9 +38,9 @@ jobs:
             patch: ""
           - id: applibrary
             name: cosmic-app-library
-            repo: pop-os/cosmic-applibrary
-            ref: master
-            patch: echo test
+            repo: hoj-jat/cosmic-applibrary
+            ref: hojjat/fix-height
+            patch: ""
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
@@ -82,11 +82,12 @@ jobs:
             name: cosmic-edit
             repo: kenz-gelsoft/cosmic-edit
             ref: minimal-input-method-support
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-focus-detection-in-ime2" }
-              EOF
+            patch: ""
+            # patch: |
+            #   cat <<EOF >> Cargo.toml
+            #   [patch.'https://github.com/pop-os/libcosmic']
+            #   libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-focus-detection-in-ime2" }
+            #   EOF
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
