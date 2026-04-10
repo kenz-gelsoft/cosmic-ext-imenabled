@@ -30,11 +30,11 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 
 |Package Name|Upstream Version|Fork or Patch|
 |-|-|-|
-|cosmic-term-**ime**|[8ae5918@master](https://github.com/pop-os/cosmic-term/commit/8ae5918ccd15844a822eb63c091625b8ac798b2b)|[PR](https://github.com/pop-os/cosmic-term/pull/753)|
-|cosmic-edit-**ime**|[cf557a0@master](https://github.com/pop-os/cosmic-edit/commit/cf557a060863a9ad22187ec4b7c4889bde18ddde)|[PR](https://github.com/pop-os/cosmic-edit/pull/539)|
-|cosmic-files-**ime**|[23b5d98@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
-|cosmic-launcher-**ime**|[cf41ed5@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
-|cosmic-app-library-**ime**|[7d31bfa@master](https://github.com/pop-os/cosmic-app-library/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
+|cosmic-term-**ime**|[c8b18c2@master](https://github.com/pop-os/cosmic-term/commit/c8b18c282771b2819e9292270c36fc6f98ace033)|[PR](https://github.com/pop-os/cosmic-term/pull/753)|
+|cosmic-edit-**ime**|[ffb2c46@master](https://github.com/pop-os/cosmic-edit/commit/ffb2c46d6efca845de6fdec5765644c8ce2c508e)|[PR](https://github.com/pop-os/cosmic-edit/pull/539)|
+|cosmic-files-**ime**|[175f8ba@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
+|cosmic-launcher-**ime**|[8c66a32@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
+|cosmic-app-library-**ime**|https://github.com/pop-os/cosmic-app-library/pull/356<br>~~[7d31bfa@master](https://github.com/pop-os/cosmic-app-library/commits/master/)~~|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
 
 ## Screenshots
 
