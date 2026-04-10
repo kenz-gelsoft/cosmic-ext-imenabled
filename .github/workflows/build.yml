@@ -38,7 +38,7 @@ jobs:
             patch: ""
           - id: applibrary
             name: cosmic-app-library
-            repo: hoj-jat/cosmic-applibrary
+            repo: hoj-jat/cosmic-app-library
             ref: hojjat/fix-height
             patch: ""
           - id: launcher
