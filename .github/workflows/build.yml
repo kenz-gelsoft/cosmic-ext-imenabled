@@ -1,4 +1,4 @@
-# .github/workflows/build.yml 
+# .github/workflows/build.yml
 name: Build and Publish Apt Repo
 on:
   push:
@@ -38,8 +38,8 @@ jobs:
             patch: ""
           - id: applibrary
             name: cosmic-app-library
-            repo: hoj-jat/cosmic-app-library
-            ref: hojjat/fix-height
+            repo: pop-os/cosmic-app-library
+            ref: master
             patch: ""
           - id: launcher
             name: cosmic-launcher
