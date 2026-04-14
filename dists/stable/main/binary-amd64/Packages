@@ -36,10 +36,10 @@ Description: debug symbols for cosmic-app-library-ime
 Build-Ids: ff22602b64cbd5a645710b4e709cf2929bd7a37c
 
 Package: cosmic-edit-ime
-Version: 0.1.0+179-028e147
+Version: 0.1.0+180-ed53519
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 42111
+Installed-Size: 42116
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.36.0), libxkbcommon0 (>= 0.5.0)
 Conflicts: cosmic-edit
 Replaces: cosmic-edit
@@ -47,11 +47,11 @@ Provides: cosmic-edit
 Homepage: https://github.com/kenz-gelsoft/cosmic-edit
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+179-028e147_amd64.deb
-Size: 12773614
-SHA256: bc6c62eeab3c13f73b8f524e522873129a21374052100d61c65181edc45c41a0
-SHA1: 48519e93659a1e0952f65a9feee4114c3f96cdca
-MD5sum: 67f0403dd7069a2c59f4e1e5951fb754
+Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+180-ed53519_amd64.deb
+Size: 12773466
+SHA256: cb347acb4e4febdc2a90f9fa9d1e9b9526ee729ad2114149972a9c172f7edcae
+SHA1: 94f29187b75b9e4d1b2dda72094058fa5791f4d0
+MD5sum: f15cf9e0479195c9b9ac4d8f84cbbc2b
 Description: Cosmic Text Editor
 
 Package: cosmic-edit-ime-dbgsym
@@ -184,10 +184,10 @@ Description: debug symbols for cosmic-player-ime
 Build-Ids: 0f946660e97d8a65aaab0e2965e7a9aec28d499e
 
 Package: cosmic-term-ime
-Version: 0.1.0+179-028e147
+Version: 0.1.0+180-ed53519
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 40777
+Installed-Size: 40807
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libxkbcommon0 (>= 0.5.0)
 Conflicts: cosmic-term
 Replaces: cosmic-term
@@ -195,11 +195,11 @@ Provides: cosmic-term, x-terminal-emulator
 Homepage: https://github.com/kenz-gelsoft/cosmic-term
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+179-028e147_amd64.deb
-Size: 11745250
-SHA256: 3d78084a00630b0a91efb332afbb4f03ae8f63f3eca89c9659c359bc2c40d217
-SHA1: 457974eb57a074b26e56d5622113c0c56fb4b30a
-MD5sum: 64365e91c3cc4ea91ce81d435b3c5e6d
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+180-ed53519_amd64.deb
+Size: 11770438
+SHA256: bf38d27d15ec2697a52ca561d53fb3374faf8b9f0f781af6fb1e8659cd66d74b
+SHA1: 335b47e2d4d0f4231d16505c3fd4b8e74d948457
+MD5sum: cecf25ef573b20df29abb0dc407a265a
 Description: COSMIC Terminal
 
 Package: cosmic-term-ime-dbgsym
