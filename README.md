@@ -18,11 +18,11 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 
 |Package Name|Version|
 |-|-|
-|cosmic-files|[1.0.9](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.9)|
-|cosmic-settings|[1.0.9](https://github.com/pop-os/cosmic-settings/releases/tag/epoch-1.0.9)|
-|cosmic-store|[1.0.9](https://github.com/pop-os/cosmic-store/releases/tag/epoch-1.0.9)|
-
-
+|cosmic-files|[1.0.9+](https://github.com/pop-os/cosmic-files/releases/tag/epoch-1.0.9)|
+|cosmic-settings|[1.0.9+](https://github.com/pop-os/cosmic-settings/releases/tag/epoch-1.0.9)|
+|cosmic-store|[1.0.9+](https://github.com/pop-os/cosmic-store/releases/tag/epoch-1.0.9)|
+|cosmic-app-library|[1.0.10+](https://github.com/pop-os/cosmic-app-library/releases/tag/epoch-1.0.10)|
+|cosmic-launcher|[1.0.10+](https://github.com/pop-os/cosmic-launcher/releases/tag/epoch-1.0.10)|
 
 ## Supported COSMIC Apps
 
@@ -32,9 +32,6 @@ Now, [COSMIC apps are getting rebased onto the latest iced toolkit](https://gith
 |-|-|-|
 |cosmic-term-**ime**|[c8b18c2@master](https://github.com/pop-os/cosmic-term/commit/c8b18c282771b2819e9292270c36fc6f98ace033)|[PR](https://github.com/pop-os/cosmic-term/pull/753)|
 |cosmic-edit-**ime**|[ffb2c46@master](https://github.com/pop-os/cosmic-edit/commit/ffb2c46d6efca845de6fdec5765644c8ce2c508e)|[PR](https://github.com/pop-os/cosmic-edit/pull/539)|
-|cosmic-files-**ime**|[91243b9@master](https://github.com/pop-os/cosmic-files/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
-|cosmic-launcher-**ime**|[8c66a32@master](https://github.com/pop-os/cosmic-launcher/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
-|cosmic-app-library-**ime**|[ab9e2f5@master](https://github.com/pop-os/cosmic-app-library/commits/master/)|[Merged `libcosmic`](https://github.com/pop-os/libcosmic/pull/1182)|
 
 ## Screenshots
 
