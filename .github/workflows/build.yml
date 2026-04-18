@@ -21,9 +21,9 @@ jobs:
       matrix:
         arch: [amd64, arm64]
         id:
-          # - files
-          # - applibrary
-          # - launcher
+          - files
+          - applibrary
+          - launcher
           # - player
           # - portal
           # - store
@@ -31,21 +31,33 @@ jobs:
           - edit
           - term
         include:
-          # - id: files
-          #   name: cosmic-files
-          #   repo: pop-os/cosmic-files
-          #   ref: master
-          #   patch: ""
-          # - id: applibrary
-          #   name: cosmic-app-library
-          #   repo: pop-os/cosmic-app-library
-          #   ref: master
-          #   patch: ""
-          # - id: launcher
-          #   name: cosmic-launcher
-          #   repo: pop-os/cosmic-launcher
-          #   ref: master
-          #   patch: ""
+          - id: files
+            name: cosmic-files
+            repo: pop-os/cosmic-files
+            ref: master
+            patch: |
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              EOF
+          - id: applibrary
+            name: cosmic-app-library
+            repo: pop-os/cosmic-app-library
+            ref: master
+            patch: |
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              EOF
+          - id: launcher
+            name: cosmic-launcher
+            repo: pop-os/cosmic-launcher
+            ref: master
+            patch: |
+              cat <<EOF >> Cargo.toml
+              [patch.'https://github.com/pop-os/libcosmic']
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              EOF
           # - id: player
           #   name: cosmic-player
           #   repo: pop-os/cosmic-player
