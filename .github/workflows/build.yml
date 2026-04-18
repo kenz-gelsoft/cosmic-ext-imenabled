@@ -38,7 +38,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-gnome-ime-double-commit" }
               EOF
           - id: applibrary
             name: cosmic-app-library
@@ -47,7 +47,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-gnome-ime-double-commit" }
               EOF
           - id: launcher
             name: cosmic-launcher
@@ -56,7 +56,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "minimal-input-method-support" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-gnome-ime-double-commit" }
               EOF
           # - id: player
           #   name: cosmic-player
