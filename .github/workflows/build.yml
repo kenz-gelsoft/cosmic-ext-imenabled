@@ -92,13 +92,9 @@ jobs:
           #   patch: echo test
           - id: edit
             name: cosmic-edit
-            repo: kenz-gelsoft/cosmic-edit
-            ref: minimal-input-method-support
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "fix-gnome-ime-double-commit" }
-              EOF
+            repo: pop-os/cosmic-edit
+            ref: master
+            patch: ""
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
