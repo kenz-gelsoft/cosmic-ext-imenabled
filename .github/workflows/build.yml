@@ -29,7 +29,7 @@ jobs:
           # - store
           # - settings
           - edit
-          - term
+          # - term
         include:
           - id: files
             name: cosmic-files
@@ -95,15 +95,15 @@ jobs:
             repo: pop-os/cosmic-edit
             ref: master
             patch: ""
-          - id: term
-            name: cosmic-term
-            repo: kenz-gelsoft/cosmic-term
-            ref: minimal-input-method-support
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
-              EOF
+          # - id: term
+          #   name: cosmic-term
+          #   repo: kenz-gelsoft/cosmic-term
+          #   ref: minimal-input-method-support
+          #   patch: |
+          #     cat <<EOF >> Cargo.toml
+          #     [patch.'https://github.com/pop-os/libcosmic']
+          #     libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
+          #     EOF
 
     name: Build ${{ matrix.name }} (${{ matrix.arch }})
     steps:
