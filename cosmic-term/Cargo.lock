@@ -1511,7 +1511,7 @@ dependencies = [
  "alacritty_terminal",
  "clap_lex",
  "cosmic-files",
- "cosmic-text 0.19.0 (git+https://github.com/pop-os/cosmic-text.git)",
+ "cosmic-text",
  "fork 0.4.0",
  "hex_color",
  "i18n-embed",
@@ -1540,29 +1540,6 @@ name = "cosmic-text"
 version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be17b688510d934ce13f48a2beba700e11583e281e0fda99c22bb256a14eda73"
-dependencies = [
- "bitflags 2.11.1",
- "fontdb",
- "harfrust",
- "linebender_resource_handle",
- "log",
- "rangemap",
- "rustc-hash 2.1.2",
- "self_cell",
- "skrifa",
- "smol_str",
- "swash",
- "sys-locale",
- "unicode-bidi",
- "unicode-linebreak",
- "unicode-script",
- "unicode-segmentation",
-]
-
-[[package]]
-name = "cosmic-text"
-version = "0.19.0"
-source = "git+https://github.com/pop-os/cosmic-text.git#c24886c2471e5606587c46090cd25dbbf209186b"
 dependencies = [
  "bitflags 2.11.1",
  "fontdb",
@@ -1662,7 +1639,7 @@ name = "cryoglyph"
 version = "0.1.0"
 source = "git+https://github.com/iced-rs/cryoglyph.git?rev=e429a025df36ab8145708acb309080ae3deec17a#e429a025df36ab8145708acb309080ae3deec17a"
 dependencies = [
- "cosmic-text 0.19.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cosmic-text",
  "etagere",
  "lru",
  "rustc-hash 2.1.2",
@@ -3127,7 +3104,7 @@ source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=ignore_del_su
 dependencies = [
  "bitflags 2.11.1",
  "bytemuck",
- "cosmic-text 0.19.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cosmic-text",
  "half",
  "iced_core 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=ignore_del_surrounding)",
  "iced_futures 0.14.0 (git+https://github.com/kenz-gelsoft/libcosmic.git?branch=ignore_del_surrounding)",
@@ -3183,7 +3160,7 @@ version = "0.14.0"
 source = "git+https://github.com/kenz-gelsoft/libcosmic.git?branch=ignore_del_surrounding#2b111ac74a1d28e0da906f19bf0153409a1b83b1"
 dependencies = [
  "bytemuck",
- "cosmic-text 0.19.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cosmic-text",
  "iced_debug",
  "iced_graphics",
  "kurbo 0.10.4",
