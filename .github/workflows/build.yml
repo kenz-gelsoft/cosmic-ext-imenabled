@@ -61,8 +61,8 @@ jobs:
               EOF
           - id: comp
             name: cosmic-comp
-            repo: kenz-gelsoft/cosmic-comp
-            ref: fix2284
+            repo: pop-os/cosmic-comp
+            ref: master
             patch: ""
           # - id: player
           #   name: cosmic-player
