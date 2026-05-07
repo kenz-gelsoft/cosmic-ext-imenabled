@@ -1,0 +1,38 @@
+Source: cosmic-comp-ime
+Section: x11
+Priority: optional
+Maintainer: KENZ <KENZ.gelsoft@gmail.com>
+Build-Depends:
+    cargo,
+    cmake,
+    debhelper-compat (=10),
+    libegl1-mesa-dev,
+    libfontconfig-dev,
+    libgbm-dev,
+    libinput-dev,
+    libpixman-1-dev,
+    libseat-dev,
+    libsystemd-dev,
+    libudev-dev,
+    libwayland-dev,
+    libxcb1-dev,
+    libxkbcommon-dev,
+    libdisplay-info-dev,
+    rustc (>=1.57),
+Standards-Version: 4.1.1
+Homepage: https://github.com/kenz-gelsoft/cosmic-comp
+
+Package: cosmic-comp-ime
+Architecture: amd64 arm64
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends},
+    libegl1,
+    libwayland-server0,
+Recommends:
+    cosmic-session,
+    libgl1-mesa-dri
+Conflicts: cosmic-comp
+Replaces: cosmic-comp
+Provides: cosmic-comp
+Description: Wayland compositor of pop-os cosmic shell

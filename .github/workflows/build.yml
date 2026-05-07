@@ -24,6 +24,7 @@ jobs:
           - files
           - applibrary
           - launcher
+          - comp
           # - player
           # - portal
           # - store
@@ -58,6 +59,11 @@ jobs:
               [patch.'https://github.com/pop-os/libcosmic']
               libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
               EOF
+          - id: comp
+            name: cosmic-comp
+            repo: kenz-gelsoft/cosmic-comp
+            ref: fix2284
+            patch: ""
           # - id: player
           #   name: cosmic-player
           #   repo: pop-os/cosmic-player
