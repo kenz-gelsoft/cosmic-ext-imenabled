@@ -39,7 +39,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
               EOF
           - id: applibrary
             name: cosmic-app-library
@@ -48,7 +48,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
               EOF
           - id: launcher
             name: cosmic-launcher
@@ -57,7 +57,7 @@ jobs:
             patch: |
               cat <<EOF >> Cargo.toml
               [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "ignore_del_surrounding" }
+              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
               EOF
           - id: comp
             name: cosmic-comp
