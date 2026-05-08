@@ -36,29 +36,32 @@ jobs:
             name: cosmic-files
             repo: pop-os/cosmic-files
             ref: master
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
-              EOF
+            patch: ""
+            # patch: |
+            #   cat <<EOF >> Cargo.toml
+            #   [patch.'https://github.com/pop-os/libcosmic']
+            #   libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
+            #   EOF
           - id: applibrary
             name: cosmic-app-library
             repo: pop-os/cosmic-app-library
             ref: master
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
-              EOF
+            patch: ""
+            # patch: |
+            #   cat <<EOF >> Cargo.toml
+            #   [patch.'https://github.com/pop-os/libcosmic']
+            #   libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
+            #   EOF
           - id: launcher
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
             ref: master
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
-              EOF
+            patch: ""
+            # patch: |
+            #   cat <<EOF >> Cargo.toml
+            #   [patch.'https://github.com/pop-os/libcosmic']
+            #   libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
+            #   EOF
           - id: comp
             name: cosmic-comp
             repo: pop-os/cosmic-comp
