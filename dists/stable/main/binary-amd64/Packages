@@ -1,5 +1,5 @@
 Package: cosmic-app-library-ime
-Version: 0.1.0+197-31a47c5
+Version: 0.1.0+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 32212
@@ -10,11 +10,11 @@ Provides: cosmic-app-library
 Homepage: https://github.com/pop-os/cosmic-app-library
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+197-31a47c5_amd64.deb
-Size: 9292592
-SHA256: 19dd517cf48b654a2ae7439bb14a4e379d20fb2291135b5f66cfede119647ffb
-SHA1: 578201d1af27b252746ad5499c24f46b2822f2ad
-MD5sum: 13e1bb70db81dac3856ade99ec4d2873
+Filename: pool/main/c/cosmic-app-library-ime/cosmic-app-library-ime_0.1.0+198-33c5106_amd64.deb
+Size: 9292586
+SHA256: 0ae8676c04dba136545acbc8e5c5813225b9acfd1c425db613155e0f5cc12504
+SHA1: b7733b619047cbd1710795ec06fd9d130a7aa547
+MD5sum: 75f4c2da4d164749fe500e43aaa5943a
 Description: Cosmic App Library
 
 Package: cosmic-app-library-ime-dbgsym
@@ -36,7 +36,7 @@ Description: debug symbols for cosmic-app-library-ime
 Build-Ids: ff22602b64cbd5a645710b4e709cf2929bd7a37c
 
 Package: cosmic-comp-ime
-Version: 0.1+197-31a47c5
+Version: 0.1+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 27163
@@ -48,15 +48,15 @@ Provides: cosmic-comp
 Homepage: https://github.com/kenz-gelsoft/cosmic-comp
 Priority: optional
 Section: x11
-Filename: pool/main/c/cosmic-comp-ime/cosmic-comp-ime_0.1+197-31a47c5_amd64.deb
-Size: 8984610
-SHA256: 9c0229c37461ae369dd002c1054c44a76fd1c2f3fb9a4e9a7d7e6e55f1b8e0da
-SHA1: 232074027c0aa126c7d76c8212d8b447a85cd8d8
-MD5sum: 1b67c9f2a69a72637b4f1733d737d4c0
+Filename: pool/main/c/cosmic-comp-ime/cosmic-comp-ime_0.1+198-33c5106_amd64.deb
+Size: 8984334
+SHA256: 254568a7be1959ede2936656001cd22432450f2b496de38f0e2b0d6de70b5565
+SHA1: bc9284e78146b91704c2a3d68ea5d7ed0fff447d
+MD5sum: 861a2bcab8cdf957205245e2b06f52a8
 Description: Wayland compositor of pop-os cosmic shell
 
 Package: cosmic-edit-ime
-Version: 0.1.0+197-31a47c5
+Version: 0.1.0+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 42178
@@ -67,11 +67,11 @@ Provides: cosmic-edit
 Homepage: https://github.com/kenz-gelsoft/cosmic-edit
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+197-31a47c5_amd64.deb
-Size: 12806206
-SHA256: 13db072fdbd0b3cfab3441c5d527112f7005168cf3a92317eda298a6be766dde
-SHA1: c224d7bd2807ee183e616cc32a061053993d4657
-MD5sum: 6ac863d88f3ea8a57222f7dc2bd83900
+Filename: pool/main/c/cosmic-edit-ime/cosmic-edit-ime_0.1.0+198-33c5106_amd64.deb
+Size: 12806222
+SHA256: fecc0fd4fd7b89825eee7dea56d51069e32f52e076e865797263c0c222a28064
+SHA1: 06c38ba4ab6e47bed6756dc2d6de31f53c34d519
+MD5sum: e1bdf26edf0e160252d1cee41d342777
 Description: Cosmic Text Editor
 
 Package: cosmic-edit-ime-dbgsym
@@ -93,7 +93,7 @@ Description: debug symbols for cosmic-edit-ime
 Build-Ids: fc37b9460871173769095e1a260e4d82e3545094
 
 Package: cosmic-files-ime
-Version: 0.1.0+197-31a47c5
+Version: 0.1.0+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 80877
@@ -104,11 +104,11 @@ Provides: cosmic-files
 Homepage: https://github.com/pop-os/cosmic-files
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+197-31a47c5_amd64.deb
-Size: 23788792
-SHA256: a07e6cf5d346291ff27354a6cb1b08ce062b31e5dc82686fcd3350d10a5ffeec
-SHA1: 2a847adff2315bfc55e6ce7e58724d7311fe06a5
-MD5sum: 7ea6c89bd6bf6402fe6de9bcca770719
+Filename: pool/main/c/cosmic-files-ime/cosmic-files-ime_0.1.0+198-33c5106_amd64.deb
+Size: 23788782
+SHA256: 66930d367879df4ad45430564c698bd04d76490d806f00fdfe9d4afa19c53783
+SHA1: 5d0a8fe3ca7e15d9e101ef5ff7880b9f9ab841c4
+MD5sum: 97d75cb9a61298a2354b6f2305aa90e7
 Description: Cosmic File Manager
 
 Package: cosmic-files-ime-dbgsym
@@ -130,7 +130,7 @@ Description: debug symbols for cosmic-files-ime
 Build-Ids: 3badfdd193698df670b014ed12fed457285b1f19 4d919dd90007ab90ddf8010cff5cb2bed33fc92d
 
 Package: cosmic-launcher-ime
-Version: 0.1.0+197-31a47c5
+Version: 0.1.0+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
 Installed-Size: 25323
@@ -141,11 +141,11 @@ Provides: cosmic-launcher
 Homepage: https://github.com/pop-os/cosmic-launcher
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-launcher-ime/cosmic-launcher-ime_0.1.0+197-31a47c5_amd64.deb
-Size: 7301578
-SHA256: cb100786d106e13f5b9d6a87f5647a274cec493d3d37f3626137078a7b4eefd9
-SHA1: b712688b1de12f4f4db655908260ab5de4cdc1f5
-MD5sum: ce627a8548313fbf394efe76c78cac71
+Filename: pool/main/c/cosmic-launcher-ime/cosmic-launcher-ime_0.1.0+198-33c5106_amd64.deb
+Size: 7301638
+SHA256: dbc4364a1aed5f3529c0e6aa38aaf70ccef627f63c1493b46582741d05e35685
+SHA1: 1d03b90b94b948d3d59f30efd726ac6ed4910679
+MD5sum: 1a93f0021dcabd357397a22617345264
 Description: Cosmic Launcher
 
 Package: cosmic-launcher-ime-dbgsym
@@ -204,10 +204,10 @@ Description: debug symbols for cosmic-player-ime
 Build-Ids: 0f946660e97d8a65aaab0e2965e7a9aec28d499e
 
 Package: cosmic-term-ime
-Version: 0.1.0+197-31a47c5
+Version: 0.1.0+198-33c5106
 Architecture: amd64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 40747
+Installed-Size: 40839
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libxkbcommon0 (>= 0.5.0)
 Conflicts: cosmic-term
 Replaces: cosmic-term
@@ -215,11 +215,11 @@ Provides: cosmic-term, x-terminal-emulator
 Homepage: https://github.com/kenz-gelsoft/cosmic-term
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+197-31a47c5_amd64.deb
-Size: 11768198
-SHA256: 9681577c9ee1e8ceba0b0c349e86120faabc26c5a39e31fea79abd10de84cd5a
-SHA1: db8930e241f78505ccafe2dac3dbed663d71479f
-MD5sum: 4dfba304553acc55c929baf31da4213f
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+198-33c5106_amd64.deb
+Size: 11810508
+SHA256: 77d9a5bb632309ee753be6de504691c370fdc01834d768e38135ae0ae2aecf04
+SHA1: 31146718021de4b312387e647b5360d471f99d87
+MD5sum: d3047508b1f064ec9d7f00a95f5bafcd
 Description: COSMIC Terminal
 
 Package: cosmic-term-ime-dbgsym
