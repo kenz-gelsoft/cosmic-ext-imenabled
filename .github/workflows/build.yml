@@ -36,7 +36,7 @@ jobs:
             name: cosmic-files
             repo: pop-os/cosmic-files
             ref: master
-            patch: ""
+            patch: echo test
             # patch: |
             #   cat <<EOF >> Cargo.toml
             #   [patch.'https://github.com/pop-os/libcosmic']
@@ -46,7 +46,7 @@ jobs:
             name: cosmic-app-library
             repo: pop-os/cosmic-app-library
             ref: master
-            patch: ""
+            patch: echo test
             # patch: |
             #   cat <<EOF >> Cargo.toml
             #   [patch.'https://github.com/pop-os/libcosmic']
@@ -56,7 +56,7 @@ jobs:
             name: cosmic-launcher
             repo: pop-os/cosmic-launcher
             ref: master
-            patch: ""
+            patch: echo test
             # patch: |
             #   cat <<EOF >> Cargo.toml
             #   [patch.'https://github.com/pop-os/libcosmic']
@@ -101,13 +101,14 @@ jobs:
           #   patch: echo test
           - id: edit
             name: cosmic-edit
-            repo: kenz-gelsoft/cosmic-edit
-            ref: minimal-input-method-support
-            patch: |
-              cat <<EOF >> Cargo.toml
-              [patch.'https://github.com/pop-os/libcosmic']
-              libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
-              EOF
+            repo: pop-os/cosmic-edit
+            ref: master
+            patch: echo test
+            # patch: |
+            #   cat <<EOF >> Cargo.toml
+            #   [patch.'https://github.com/pop-os/libcosmic']
+            #   libcosmic = { git = "https://github.com/kenz-gelsoft/libcosmic.git", branch = "revert_iced_workaround_for_comp" }
+            #   EOF
           - id: term
             name: cosmic-term
             repo: kenz-gelsoft/cosmic-term
