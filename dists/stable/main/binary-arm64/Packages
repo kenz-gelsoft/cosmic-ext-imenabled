@@ -204,10 +204,10 @@ Description: debug symbols for cosmic-player-ime
 Build-Ids: 9fccd59f35d6618183f955104d78e1bbba9468cf
 
 Package: cosmic-term-ime
-Version: 0.1.0+198-33c5106
+Version: 0.1.0+199-530d984
 Architecture: arm64
 Maintainer: KENZ <KENZ.gelsoft@gmail.com>
-Installed-Size: 37724
+Installed-Size: 37725
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libxkbcommon0 (>= 0.5.0)
 Conflicts: cosmic-term
 Replaces: cosmic-term
@@ -215,11 +215,11 @@ Provides: cosmic-term, x-terminal-emulator
 Homepage: https://github.com/kenz-gelsoft/cosmic-term
 Priority: optional
 Section: admin
-Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+198-33c5106_arm64.deb
-Size: 11088078
-SHA256: ad9cc7054201fd9100819796ddc9c1b5554f94e3c7fde430995d2c24ad990553
-SHA1: 94635039f9f95e448db36f09b481afb53ca526ac
-MD5sum: 8f32a78bc52a60ef09b95ff9c34407f2
+Filename: pool/main/c/cosmic-term-ime/cosmic-term-ime_0.1.0+199-530d984_arm64.deb
+Size: 11094072
+SHA256: 2936c0e85825f66017fdf75de5739fdddb867c76a59c491d90f854fba38b3e06
+SHA1: c4e1a0f6a7300dbefbfbffa040a8888f148faae4
+MD5sum: 4a666246ba2946773c40f06cacdc2850
 Description: COSMIC Terminal
 
 Package: cosmic-term-ime-dbgsym
